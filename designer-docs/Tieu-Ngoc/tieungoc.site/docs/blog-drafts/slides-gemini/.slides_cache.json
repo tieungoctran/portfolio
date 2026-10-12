@@ -1,0 +1,57 @@
+{
+  "1": {
+    "hash": "d8b7756dc36b08956e8fdcaa48cd8167",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "2": {
+    "hash": "cfe957d02d4da9f0065620e0d780ef9e",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "3": {
+    "hash": "714b517e8fc27de58b0d47d5b3e885cf",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "4": {
+    "hash": "e711a9766af7e5a1bacf84ebd17da7bf",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "5": {
+    "hash": "11945b5a39415b64754777538e4922ab",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "6": {
+    "hash": "293c2ace319c4d4626fb771e2e56f160",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "7": {
+    "hash": "fba5d915569fff76a4826c2430bf6597",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "8": {
+    "hash": "e86dc953a31d1c2e41e6a03a87c39d56",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "9": {
+    "hash": "e415cf6d9572fa1481bb47c5a533b8d1",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "10": {
+    "hash": "6a5c919c006e3cfdac4c10cd7dbbbe6e",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  },
+  "11": {
+    "hash": "9806a10cdb1f5f3cf4982b0eacc0b59b",
+    "style": "professional",
+    "model": "gemini-3-pro-image-preview"
+  }
+}

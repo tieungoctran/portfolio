@@ -1,100 +1,58 @@
-# 🚀 TN-Project - Full-stack Web & DevOps Platform
+# 🎨 tieungoc.site — Trần Tiểu Ngọc Portfolio & Personal Branding
 
-Dự án phát triển web toàn diện kết hợp quy trình DevOps tự động hóa chuẩn công nghiệp tại `D:\TN-Project`.
+Website portfolio chính thức và không gian trưng bày tác phẩm thiết kế của **Trần Tiểu Ngọc** (Mắt Gấu 🐻) — **Graphic Designer — POD & Brand Visual | AI-Powered Workflow** tại TP. Hồ Chí Minh.
+
+---
+
+## 🌟 Giới Thiệu Chủ Nhân
+- **Chủ sở hữu:** Trần Tiểu Ngọc (Nữ, sinh năm 2000, cung Song Ngư ♓)
+- **Công ty:** Vani Ecommerce (Tháng 8/2022 — Hiện tại, 4+ năm kinh nghiệm)
+- **Chuyên môn cốt lõi:** Thiết kế thời trang Print-on-Demand (POD), Brand Visual Identity & E-commerce Marketing Visuals.
+- **Thành tích nổi bật:**
+  - 3500+ sản phẩm POD áo thun 2D/3D, mugs, posters thị trường Mỹ & Châu Âu.
+  - Doanh số $20,000+ USD trong một quý từ bộ sưu tập POD Anime Collection.
+  - Tự lập trình Photoshop Actions & JS Scripts cắt giảm ~40% thời gian sản xuất.
+  - Ứng dụng AI-First Workflow (Adobe Firefly, Generative Fill, Banana Pro) tăng tốc sáng tạo x3 lần.
+- **Kênh kết nối chính:**
+  - Website: [tieungoc.site](https://tieungoc.site)
+  - LinkedIn: [linkedin.com/in/tieungoc-design](https://www.linkedin.com/in/tieungoc-design)
+  - Behance: [behance.net/tieungoctran](https://www.behance.net/tieungoctran)
+  - Substack: [tieungoc.substack.com](https://tieungoc.substack.com/)
+  - Facebook: [facebook.com/trantieungoc.matgau](https://www.facebook.com/trantieungoc.matgau)
+  - Pinterest: [pinterest.com/tieungoc_design](https://www.pinterest.com/tieungoc_design)
+  - YouTube: [youtube.com/@tran.tieungoc](https://www.youtube.com/@tran.tieungoc)
+  - Email: `ngoctt.design@gmail.com`
 
 ---
 
 ## 🏗️ Kiến Trúc Công Nghệ
-
-| Thành phần | Công nghệ chính | Tính năng nổi bật |
-| :--- | :--- | :--- |
-| **Frontend** | React 18, Vite, TypeScript, Tailwind CSS, Lucide Icons | Tốc độ tải trang siêu nhanh, SPA, Dashboard giám sát API thời gian thực |
-| **Backend** | Node.js, Express, TypeScript | RESTful API, Helmet, CORS, Morgan logger, Health Check |
-| **Database** | PostgreSQL 16 (Docker) | Volume lưu trữ dữ liệu bền vững |
-| **DevOps & Containers** | Docker (Multi-stage), Docker Compose, Nginx Reverse Proxy | Image nhỏ gọn, bảo mật non-root user, proxy gateway |
-| **CI/CD** | GitHub Actions Pipeline | Tự động hóa Lint, Unit Test, Build và Docker verification |
-
----
-
-## 📁 Cấu Trúc Dự Án
-
-```text
-D:/TN-Project/
-├── backend/                   # Dịch vụ Backend REST API (Node.js + Express + TS)
-│   ├── src/
-│   │   ├── controllers/       # Xử lý logic API & Health check
-│   │   ├── middleware/        # Error handler, CORS, Helmet
-│   │   ├── routes/            # Khai báo Endpoint /api/v1/*
-│   │   ├── app.ts             # Cấu hình Express app
-│   │   └── index.ts           # Điểm khởi chạy server
-│   ├── tests/                 # Unit & Integration tests (Vitest)
-│   ├── Dockerfile             # Multi-stage build Node Alpine
-│   └── package.json
-│
-├── frontend/                  # Giao diện Web SPA (React + Vite + Tailwind)
-│   ├── src/
-│   │   ├── components/        # UI components
-│   │   ├── App.tsx            # Dashboard theo dõi hệ thống & kết nối API
-│   │   ├── main.tsx           # Entrypoint React
-│   │   └── index.css          # Tailwind CSS styles
-│   ├── Dockerfile             # Multi-stage build -> Nginx Alpine
-│   ├── nginx.conf             # Cấu hình Nginx reverse proxy cho SPA
-│   └── package.json
-│
-├── devops/                    # Tài nguyên DevOps & Điều phối Container
-│   ├── docker-compose.yml     # Khởi chạy Frontend + Backend + Postgres
-│   ├── docker-compose.dev.yml # Môi trường container live-reload
-│   └── nginx/                 # Gateway reverse proxy
-│
-├── .github/workflows/         # CI/CD Pipelines
-│   └── ci.yml                 # Tự động lint, test, build và verify docker
-│
-├── docs/                      # Tài liệu dự án
-│   └── DEVOPS.md              # Cẩm nang DevOps chi tiết
-│
-├── .editorconfig              # Quy chuẩn định dạng code
-├── .env.example               # Mẫu biến môi trường
-├── .gitignore                 # Bỏ qua node_modules, dist, secrets,...
-├── package.json               # Root monorepo quản lý đồng thời cả 2 service
-└── README.md
-```
+- **Frontend SPA:** React 18, Vite 6, TypeScript (Strict), Tailwind CSS 3, Lucide React, React Router 7.
+- **Backend-as-a-Service:** Supabase Database (tiếp nhận thông tin Form liên hệ `contact_inquiries`).
+- **Triển khai:** Tối ưu hóa triển khai trên Vercel Edge Network (Zero-config từ thư mục gốc).
+- **CI/CD:** GitHub Actions (`.github/workflows/ci.yml`) tự động hóa kiểm tra type-check và bundle.
 
 ---
 
 ## ⚡ Hướng Dẫn Khởi Chạy Nhanh
 
-### 1. Cài đặt các gói phụ thuộc (Dependencies)
-
-Tại thư mục gốc `D:\TN-Project`:
-
 ```bash
+# 1. Cài đặt thư viện phụ thuộc
 npm install
-# hoặc chạy:
-npm run install:all
-```
 
-### 2. Chạy môi trường Local Development (Khuyến nghị)
-
-Chạy đồng thời cả Frontend và Backend trong một terminal với hot reload:
-
-```bash
+# 2. Khởi chạy môi trường phát triển cục bộ (cổng 3000)
 npm run dev
+
+# 3. Kiểm tra kiểu dữ liệu TypeScript (Lint)
+npm run lint
+
+# 4. Đóng gói bản Production ra thư mục dist/
+npm run build
+
+# 5. Xem trước bản build Production
+npm run preview
 ```
 
-- 🌐 **Giao diện Web Frontend:** [http://localhost:3000](http://localhost:3000)
-- 🔌 **Backend REST API:** [http://localhost:5000](http://localhost:5000)
-- 🩺 **API Health Check:** [http://localhost:5000/health](http://localhost:5000/health)
+---
 
-### 3. Kiểm thử tự động (Automated Tests)
-
-```bash
-npm run test
-```
-
-### 4. Khởi chạy bằng Docker Compose (Production Stack)
-
-```bash
-npm run docker:up
-```
-
-Chi tiết các thiết lập mở rộng và CI/CD có thể xem tại [docs/DEVOPS.md](file:///D:/TN-Project/docs/DEVOPS.md).
+## 📖 Hướng Dẫn Vận Hành cho AI Agent
+Xem chi tiết tại [AGENTS.md](AGENTS.md) — cẩm nang toàn diện về quy chuẩn thẩm mỹ, Design Tokens, cấu trúc dữ liệu và quy tắc hành vi bắt buộc cho AI Coding Agents.

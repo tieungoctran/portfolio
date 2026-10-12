@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCC Thumbnail Redesign</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    width: 800px; height: 800px; overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* The 800x800 Thumbnail Container */
+  .thumbnail {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Base Image */
+  .base-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* High-CTR Frame */
+  .frame {
+    position: absolute;
+    inset: 0;
+    border: 12px solid #FF3B30; /* Shopee/Lazada attention red */
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  /* TOP BANNER overlay to cover the messy logos and provide a striking CTA */
+  .top-banner {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background: linear-gradient(90deg, #FF3B30 0%, #FF1352 100%);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-bottom: 4px solid #FFD700;
+  }
+  .top-banner span { color: #FFD700; }
+
+  /* Gradient fade at bottom to make UI pop */
+  .bottom-gradient {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 250px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    z-index: 2;
+  }
+
+  /* URGENCY TAG (covering the old "Duy nhất 24-26.3") */
+  .urgency-badge {
+    position: absolute;
+    top: 90px; left: 20px;
+    background: #FFD700;
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 26px;
+    font-weight: 900;
+    z-index: 5;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    transform: rotate(-3deg);
+    border: 3px solid #111;
+  }
+
+  /* GIFT VALUE BADGE */
+  .gift-badge {
+    position: absolute;
+    bottom: 30px; right: 20px;
+    background: #00C853;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    z-index: 5;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    animation: pulse 2s infinite;
+  }
+  .gift-badge small {
+    display: block; font-size: 16px; font-weight: 700; text-transform: uppercase; margin-bottom: 5px; color: #FFF;
+  }
+
+  /* BENEFIT POINTS */
+  .benefits {
+    position: absolute;
+    bottom: 40px; left: 20px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .benefit-item {
+    background: rgba(255,255,255,0.95);
+    color: #111;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    border-left: 6px solid #FF3B30;
+  }
+
+  /* Trust Badges - redrawn clearer */
+  .trust-badges {
+    position: absolute;
+    top: 85px; right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+  }
+  .trust-badge {
+    width: 70px; height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 14px; font-weight: 800; text-align: center;
+    border: 3px solid #0056b3;
+    color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="thumbnail" id="thumbnailRecord">
+  <!-- The original image -->
+  <img src="image source/scc-before.png" class="base-image" alt="SCC Product">
+  
+  <div class="bottom-gradient"></div>
+
+  <!-- CRO Overlays -->
+  <div class="top-banner">🔥 ĐẠI TIỆC THƯƠNG HIỆU - <span>MUA 1 BỘ TẶNG 2</span> 🔥</div>
+  
+  <div class="urgency-badge">⏳ DUY NHẤT 24 - 26.3</div>
+
+  <div class="trust-badges">
+    <div class="trust-badge">OFFICIAL<br>MALL</div>
+    <div class="trust-badge" style="border-color:#d32f2f;color:#d32f2f">CGMP<br>CERT.</div>
+  </div>
+
+  <div class="gift-badge">
+    <small>Tổng Quà Tặng Trị Giá 199K</small>
+    🎁 FULLSIZE + SÁP THƠM
+  </div>
+
+  <div class="benefits">
+    <div class="benefit-item">✅ 5 Chai Mini Tiện Lợi</div>
+    <div class="benefit-item">✅ Lưu Hương Tới 8 Giờ</div>
+  </div>
+
+  <div class="frame"></div>
+</div>
+
+</body>
+</html>

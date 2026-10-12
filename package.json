@@ -1,22 +1,29 @@
 {
-  "name": "tn-project-root",
-  "version": "1.0.0",
+  "name": "tieungoc-portfolio",
   "private": true,
-  "description": "Full-stack Web & DevOps monorepo workspace for TN-Project",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "postinstall": "npm run install:all",
-    "install:all": "npm --prefix backend install && npm --prefix frontend install",
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev",
-    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "build": "npm --prefix backend run build && npm --prefix frontend run build",
-    "test": "npm --prefix backend test",
-    "lint": "npm --prefix backend run lint && npm --prefix frontend run lint",
-    "docker:up": "docker compose -f devops/docker-compose.yml up --build",
-    "docker:down": "docker compose -f devops/docker-compose.yml down",
-    "docker:dev": "docker compose -f devops/docker-compose.dev.yml up --build"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
   }
 }

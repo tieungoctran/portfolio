@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline - tieungoc.site
 
 on:
   push:
@@ -7,11 +7,8 @@ on:
     branches: [ master, main ]
 
 jobs:
-  # ==========================================
-  # Job 1: Kiểm tra Backend (Lint & Test)
-  # ==========================================
-  backend-checks:
-    name: Backend Lint & Tests
+  verify-build:
+    name: Type-check & Production Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,73 +19,12 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: backend/package-lock.json
 
       - name: Install Dependencies
-        working-directory: backend
         run: npm ci
 
-      - name: TypeScript Check
-        working-directory: backend
+      - name: TypeScript Check (Lint)
         run: npm run lint
 
-      - name: Run Automated Tests
-        working-directory: backend
-        run: npm test
-
-  # ==========================================
-  # Job 2: Kiểm tra Frontend (Lint & Build)
-  # ==========================================
-  frontend-checks:
-    name: Frontend Lint & Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-          cache-dependency-path: frontend/package-lock.json
-
-      - name: Install Dependencies
-        working-directory: frontend
-        run: npm ci
-
-      - name: TypeScript Check
-        working-directory: frontend
-        run: npm run lint
-
-      - name: Build Production Assets
-        working-directory: frontend
+      - name: Build Production Bundle
         run: npm run build
-
-  # ==========================================
-  # Job 3: Docker Build Verification
-  # ==========================================
-  docker-build:
-    name: Docker Build Verification
-    needs: [backend-checks, frontend-checks]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build Backend Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./backend
-          push: false
-          tags: tn-backend:latest
-
-      - name: Build Frontend Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./frontend
-          push: false
-          tags: tn-frontend:latest
