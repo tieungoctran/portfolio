@@ -1,0 +1,22 @@
+{
+  "name": "tn-project-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Web & DevOps monorepo workspace for TN-Project",
+  "scripts": {
+    "postinstall": "npm run install:all",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "test": "npm --prefix backend test",
+    "lint": "npm --prefix backend run lint && npm --prefix frontend run lint",
+    "docker:up": "docker compose -f devops/docker-compose.yml up --build",
+    "docker:down": "docker compose -f devops/docker-compose.yml down",
+    "docker:dev": "docker compose -f devops/docker-compose.dev.yml up --build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

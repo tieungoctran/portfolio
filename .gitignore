@@ -37,6 +37,7 @@ env/
 .pytest_cache/
 
 # General build & temporary files
+*.tsbuildinfo
 temp/
 tmp/
 *.tmp
