@@ -67,7 +67,7 @@ export const profileData: ProfileData = {
   location: "Hà Nội, Việt Nam (Làm việc On-site & Remote toàn cầu)",
   email: "hello@tieungoc.site",
   website: "https://tieungoc.site",
-  resumeUrl: "#", // Placeholder file PDF CV của Tiểu Ngọc
+  resumeUrl: "/Tran-Tieu-Ngoc-Resume.pdf",
   socials: [
     {
       name: "GitHub",
