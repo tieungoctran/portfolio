@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { submitContactInquiry, isSupabaseConfigured } from '../lib/supabase';
 import { profileData } from '../data/profile';
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle, ArrowUpRight, Loader2, Briefcase, FileText } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, ArrowUpRight, Loader2, Briefcase, FileText } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -84,6 +84,14 @@ export const Contact: React.FC = () => {
             </h3>
             
             <div className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
+              <a
+                href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
+                className="flex items-center space-x-3 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 text-neutral-400 flex-shrink-0" />
+                <span className="font-mono">{profileData.phoneInternational}</span>
+              </a>
+
               <a
                 href={`mailto:${profileData.email}`}
                 className="flex items-center space-x-3 hover:text-neutral-900 dark:hover:text-white transition-colors"

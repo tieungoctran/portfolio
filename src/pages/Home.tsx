@@ -76,7 +76,7 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-7 space-y-8">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>Trần Tiểu Ngọc (Mắt Gấu 🐻) • Graphic Designer — POD & Brand Visual</span>
+              <span>Trần Tiểu Ngọc (Mắt Gấu 🐻) • Senior Graphic Designer — POD & Brand Visual</span>
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.12]">
@@ -357,43 +357,43 @@ export const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-6 space-y-4">
                 <span className="text-xs uppercase font-mono tracking-wider text-amber-600 dark:text-amber-400 font-semibold">
-                  Tốc độ Sáng tạo Đột phá với AI
+                  Human-Crafted, AI-Accelerated (30% AI — 70% Con người)
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-                  Khai phá 100+ ý tưởng concept thị giác trong vài giờ
+                  AI tăng tốc 3× khâu ý tưởng, nhưng gu thẩm mỹ con người quyết định doanh số
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
-                  Tiểu Ngọc ứng dụng Adobe Firefly, Photoshop Generative Fill và Banana Pro để mở rộng không gian sáng tạo mà vẫn giữ bản sắc riêng:
+                  Tiểu Ngọc làm chủ hệ sinh thái Adobe Firefly, Generative Fill, FLUX.1, Banana Pro, Topview AI, CapCut Pro và Canva Pro như động cơ trợ lực, nhưng tuyệt đối không để công cụ thay thế gu thẩm mỹ riêng:
                 </p>
                 <ul className="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span><strong>Thử nghiệm nhanh (Rapid Ideation):</strong> Khám phá hàng chục phong cách từ retro đến cyberpunk.</span>
+                    <span><strong>Thấu cảm insight con người:</strong> Con người hiểu góc nhìn và cảm xúc của khách hàng sâu sắc hơn mọi thuật toán AI.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span><strong>Mở rộng background vô tận:</strong> Generative Fill xử lý bố cục áo oversize cực kỳ tự nhiên.</span>
+                    <span><strong>Làm chủ công cụ (Chống &quot;AI Slop&quot;):</strong> Dùng AI thử nghiệm nhanh ánh sáng/bố cục, sau đó vẽ tay Wacom 100% nét chính và tinh chỉnh Typography.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span><strong>Hoàn thiện thủ công:</strong> Chắt lọc tinh hoa và chỉnh sửa vector đảm bảo độ độc bản 100%.</span>
+                    <span><strong>Đa kênh thần tốc:</strong> Kết hợp AI Upscaling chuẩn 300 DPI với Topview AI, CapCut Pro & Canva Pro để nhân bản ấn phẩm quảng cáo.</span>
                   </li>
                 </ul>
               </div>
 
               <div className="md:col-span-6 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 space-y-3 font-mono text-xs">
                 <div className="text-neutral-400 text-[11px] pb-2 border-b border-neutral-200 dark:border-neutral-800 flex justify-between">
-                  <span>AI Prompt to Artwork Pipeline</span>
-                  <span className="text-amber-500">Firefly + Wacom</span>
+                  <span>Human-in-the-Loop Pipeline</span>
+                  <span className="text-amber-500">Firefly / FLUX.1 + Wacom + Topview AI</span>
                 </div>
                 <div className="p-3 rounded-lg bg-neutral-900 text-neutral-200 text-[11px] space-y-1">
-                  <span className="text-amber-400">&gt; prompt:</span>
-                  <p className="font-mono text-neutral-400 italic">
-                    &quot;vintage racing skull with flaming exhaust pipes, 90s hot rod apparel illustration, bold outlines, screen-print texture&quot;
+                  <span className="text-amber-400">&gt; Triết lý cốt lõi:</span>
+                  <p className="font-sans text-neutral-300 italic leading-relaxed">
+                    &quot;{profileData.aiPhilosophy.coreBelief}&quot;
                   </p>
                 </div>
                 <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 text-[11px] flex items-center justify-between">
-                  <span>Hậu kỳ vẽ tay Wacom & tách màu in ấn: Hoàn tất</span>
+                  <span>Hậu kỳ vẽ tay Wacom, tách lớp DTG 300 DPI & xuất Video Ads: Hoàn tất</span>
                   <Check className="w-3.5 h-3.5" />
                 </div>
               </div>
@@ -407,13 +407,13 @@ export const Home: React.FC = () => {
         <div className="max-w-6xl mx-auto px-6 space-y-14">
           <div className="max-w-3xl space-y-3">
             <span className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 font-mono">
-              Quy trình phát triển sản phẩm
+              Quy trình phát triển sản phẩm • {profileData.aiPhilosophy.ratio}
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
               Quy trình Thiết kế POD Tăng cường bởi AI & Scripts
             </h2>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-              Cách Tiểu Ngọc kết hợp trực giác thẩm mỹ, bảng vẽ Wacom và các công nghệ tự động hóa để sản xuất hàng ngàn mẫu áo chất lượng cao cho thị trường quốc tế.
+              Cách Tiểu Ngọc kết hợp sự thấu cảm insight khách hàng, nét vẽ Wacom thủ công (70%) cùng hệ sinh thái AI & Tự động hóa (30%) để sản xuất hàng ngàn mẫu áo chất lượng cao.
             </p>
           </div>
 
@@ -447,6 +447,46 @@ export const Home: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Callout: Why AI Cannot Completely Replace Designers */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 shadow-sm space-y-6">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-200 dark:border-neutral-800 pb-6">
+              <div className="space-y-2 max-w-2xl">
+                <span className="text-xs font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-semibold block">
+                  {profileData.aiPhilosophy.badge}
+                </span>
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">
+                  {profileData.aiPhilosophy.headline}
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 italic font-serif">
+                  &ldquo;{profileData.aiPhilosophy.coreBelief}&rdquo;
+                </p>
+              </div>
+              <Link
+                to="/about"
+                className="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-xs font-semibold hover:opacity-90 transition-opacity self-start md:self-center flex-shrink-0"
+              >
+                <span>Xem toàn bộ Tech Stack & Hồ sơ</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {profileData.aiPhilosophy.pillars.map((pillar) => (
+                <div key={pillar.title} className="space-y-2">
+                  <span className="text-[11px] font-mono text-amber-600 dark:text-amber-400 font-semibold block">
+                    {pillar.subtitle}
+                  </span>
+                  <h4 className="font-serif text-base font-bold text-neutral-900 dark:text-white">
+                    {pillar.title}
+                  </h4>
+                  <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                    {pillar.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { profileData } from '../data/profile';
-import { FileText, ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, Heart } from 'lucide-react';
+import { FileText, ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, Heart, GraduationCap, Globe2, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const About: React.FC = () => {
@@ -10,7 +10,7 @@ export const About: React.FC = () => {
       <div className="space-y-8">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-mono font-semibold">
           <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-          <span>Về Trần Tiểu Ngọc • Graphic Designer — POD & Brand Visual</span>
+          <span>Về Trần Tiểu Ngọc • {profileData.role}</span>
         </div>
 
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white leading-[1.15]">
@@ -23,7 +23,7 @@ export const About: React.FC = () => {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 shadow-sm relative group">
               <img
                 src={profileData.avatarUrl}
-                alt="Trần Tiểu Ngọc - AI Product Designer"
+                alt="Trần Tiểu Ngọc - Senior Graphic Designer"
                 className="w-full h-full object-cover grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80";
@@ -31,8 +31,26 @@ export const About: React.FC = () => {
               />
               <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-black/60 backdrop-blur-md text-white text-xs">
                 <span className="font-semibold block">{profileData.name}</span>
-                <span className="opacity-75">{profileData.role}</span>
+                <span className="opacity-75">Senior Graphic Designer</span>
               </div>
+            </div>
+
+            {/* Quick Contact Details */}
+            <div className="p-4 rounded-xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-2 text-xs">
+              <a
+                href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
+                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-mono"
+              >
+                <Phone className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
+                <span>{profileData.phoneInternational}</span>
+              </a>
+              <a
+                href={`mailto:${profileData.email}`}
+                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-mono"
+              >
+                <Mail className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
+                <span>{profileData.email}</span>
+              </a>
             </div>
 
             {/* Quick Actions for Recruiters */}
@@ -71,12 +89,39 @@ export const About: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-neutral-100 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-1">
-              <span className="text-xs font-mono uppercase tracking-wider text-neutral-400">
-                Địa điểm & Tình trạng công việc
-              </span>
-              <p className="text-sm font-medium text-neutral-900 dark:text-white">
-                {profileData.location} • Sẵn sàng nhận lời mời phỏng vấn
+            {/* Job Search Preferences Box */}
+            <div className="p-5 rounded-2xl bg-neutral-100 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-3">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                  Tiêu chí công việc & Tình trạng ứng tuyển
+                </span>
+                <span className="inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-emerald-700 dark:text-emerald-400">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span>{profileData.jobPreferences.status}</span>
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs">
+                <div className="space-y-1">
+                  <span className="text-neutral-400 font-mono block">Vị trí mục tiêu:</span>
+                  <ul className="space-y-1 text-neutral-800 dark:text-neutral-200 font-medium">
+                    {profileData.jobPreferences.targetRoles.map((role) => (
+                      <li key={role}>• {role}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="space-y-1">
+                  <span className="text-neutral-400 font-mono block">Hình thức & Thời gian nhận việc:</span>
+                  <ul className="space-y-1 text-neutral-800 dark:text-neutral-200 font-medium">
+                    {profileData.jobPreferences.workModes.map((mode) => (
+                      <li key={mode}>• {mode}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 pt-2 border-t border-neutral-200 dark:border-neutral-800">
+                📍 {profileData.location} • {profileData.jobPreferences.availability} • Lương: {profileData.jobPreferences.salaryExpectation}
               </p>
             </div>
           </div>
@@ -121,14 +166,14 @@ export const About: React.FC = () => {
         <div className="space-y-1">
           <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
             <Cpu className="w-4 h-4 text-amber-500" />
-            <span>Hệ sinh thái Công cụ Thiết kế & AI Workflow</span>
+            <span>Hệ sinh thái Công cụ Thiết kế, AI & Tự động hóa</span>
           </div>
           <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-            Bộ công cụ làm chủ hàng ngày
+            Tool Tech Stack làm chủ hàng ngày
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {profileData.aiTools.map((group) => (
             <div
               key={group.category}
@@ -152,19 +197,63 @@ export const About: React.FC = () => {
         </div>
       </div>
 
+      {/* Human-Crafted, AI-Accelerated Philosophy Section */}
+      <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+        <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-[#141618] dark:text-neutral-100 border border-neutral-800 space-y-8 relative overflow-hidden">
+          <div className="space-y-3 max-w-3xl">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+              <span>{profileData.aiPhilosophy.badge}</span>
+            </div>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+              {profileData.aiPhilosophy.headline}
+            </h2>
+            <blockquote className="p-4 rounded-2xl bg-neutral-800/80 border-l-4 border-amber-400 text-sm sm:text-base font-serif italic text-amber-100 leading-relaxed">
+              &ldquo;{profileData.aiPhilosophy.coreBelief}&rdquo;
+            </blockquote>
+            <div className="pt-1">
+              <span className="inline-block text-xs font-mono px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-semibold">
+                ⚖️ Tỷ lệ vàng: {profileData.aiPhilosophy.ratio}
+              </span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {profileData.aiPhilosophy.pillars.map((pillar) => (
+              <div
+                key={pillar.title}
+                className="p-5 rounded-2xl bg-neutral-800/60 border border-neutral-700/70 space-y-2.5 flex flex-col justify-between"
+              >
+                <div className="space-y-2">
+                  <span className="text-[11px] font-mono text-amber-400 block font-semibold">
+                    {pillar.subtitle}
+                  </span>
+                  <h3 className="font-serif text-base font-bold text-white">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs text-neutral-300 font-light leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Work Experience Timeline */}
       <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
         <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
           <Briefcase className="w-4 h-4" />
-          <span>Hành trình kinh nghiệm</span>
+          <span>Hành trình kinh nghiệm (Chuẩn định lượng Google XYZ)</span>
         </div>
         <h2 className="font-serif text-3xl font-bold text-neutral-900 dark:text-white">
-          Kinh nghiệm làm việc & Dự án thực tế
+          Kinh nghiệm làm việc & Thành tựu thực tế
         </h2>
 
         <div className="space-y-8 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-neutral-200 dark:before:bg-neutral-800">
           {profileData.experiences.map((exp, index) => (
-            <div key={index} className="relative pl-10 space-y-2">
+            <div key={index} className="relative pl-10 space-y-3">
               <span className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-neutral-900" />
               <div className="flex flex-wrap items-center justify-between text-xs text-neutral-500 font-mono">
                 <span className="font-semibold text-amber-700 dark:text-amber-400">{exp.company}</span>
@@ -176,8 +265,102 @@ export const About: React.FC = () => {
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-light">
                 {exp.description}
               </p>
+              {exp.highlights && exp.highlights.length > 0 && (
+                <ul className="space-y-2 pt-2">
+                  {exp.highlights.map((item, idx) => (
+                    <li key={idx} className="flex items-start space-x-2 text-sm text-neutral-600 dark:text-neutral-300 font-light">
+                      <Check className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Education & Languages + Soft Skills */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+        {/* Education & Languages */}
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
+              <GraduationCap className="w-4 h-4 text-amber-500" />
+              <span>Học vấn & Đào tạo</span>
+            </div>
+            <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
+              Nền tảng Học thuật
+            </h3>
+          </div>
+
+          {profileData.educations.map((edu, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-2"
+            >
+              <span className="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold">
+                {edu.period}
+              </span>
+              <h4 className="font-serif text-lg font-bold text-neutral-900 dark:text-white">
+                {edu.degree}
+              </h4>
+              <p className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                {edu.institution}
+              </p>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed pt-1">
+                {edu.description}
+              </p>
+            </div>
+          ))}
+
+          {/* Languages */}
+          <div className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-4">
+            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
+              <Globe2 className="w-4 h-4 text-amber-500" />
+              <span>Ngoại ngữ</span>
+            </div>
+            <div className="space-y-3">
+              {profileData.languages.map((lang) => (
+                <div key={lang.language} className="space-y-0.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-semibold text-neutral-900 dark:text-white">{lang.language}</span>
+                    <span className="text-amber-700 dark:text-amber-400 font-mono text-[11px]">{lang.level}</span>
+                  </div>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 font-light">
+                    {lang.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Soft Skills */}
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
+              <Sparkles className="w-4 h-4 text-amber-500" />
+              <span>Kỹ năng mềm & Phong cách làm việc</span>
+            </div>
+            <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
+              Tác phong Chuyên nghiệp
+            </h3>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-4">
+            <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+              Kết hợp sự nhạy bén thẩm mỹ của cung Song Ngư với tư duy hệ thống và kỷ luật tiến độ trong môi trường E-commerce quốc tế:
+            </p>
+            <ul className="space-y-2.5">
+              {profileData.softSkills.map((skill) => (
+                <li key={skill} className="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300 font-light">
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span>{skill}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

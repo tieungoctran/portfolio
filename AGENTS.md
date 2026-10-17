@@ -12,18 +12,20 @@
 - **Cung hoàng đạo:** **Cung Song Ngư (Pisces) ♓**
   - *Ý nghĩa thương hiệu cá nhân:* Giàu cảm xúc, trực giác thẩm mỹ sắc bén, đôi chút "overthinking" và cầu toàn, nhưng chính điều đó được chuyển hóa thành sự tỉ mỉ đến từng điểm ảnh (pixel), từng đường nét vector trên bảng vẽ Wacom và sự chuẩn mực trong từng dải màu in ấn.
 - **Nơi sinh sống & Làm việc:** Thủ Đức, TP. Hồ Chí Minh, Việt Nam
+- **Học vấn:** Cử nhân **Thiết kế Đồ họa và Truyền thông** — **Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE)** (2018 — 2022)
 - **Website chính thức:** [tieungoc.site](https://tieungoc.site)
+- **Số điện thoại:** `0393 258 483` (`+84 393 258 483`)
 - **Email công việc:** `ngoctt.design@gmail.com`
 
 ### 🏢 Nơi công tác & Kinh nghiệm thực chiến
 - **Công ty hiện tại:** **Vani Ecommerce** (Gắn bó toàn thời gian từ **Tháng 8/2022 — Hiện tại**, 4+ năm kinh nghiệm)
-- **Vị trí chuyên môn cốt lõi:** **Graphic Designer — POD & Brand Visual | AI-Powered Workflow**
+- **Vị trí chuyên môn cốt lõi:** **Senior Graphic Designer — POD & Brand Visual | AI-Powered Workflow**
 - **Thành tích & Năng lực thực chiến nổi bật:**
   1. **Doanh số thực tế:** Trực tiếp thiết kế **3500+ sản phẩm Print-on-Demand (POD)** (áo thun 2D/3D, mugs, posters, canvas...) phục vụ thị trường Mỹ (US) và Châu Âu (EU). Từng chủ trì thiết kế bộ sưu tập **POD Anime Collection cán mốc $20,000+ USD doanh thu** chỉ trong một quý (Q4/2025).
-  2. **Bậc thầy Tự động hóa (Automation Specialist):** Tự nghiên cứu và viết các **Photoshop Actions & JavaScript Scripts (ExtendScript)** giúp cắt giảm **~40% thời gian sản xuất** file in và ghép mockup hàng loạt cho toàn team.
-  3. **Quy trình AI-First đột phá:** Ứng dụng thành thạo Adobe Firefly, Photoshop Generative Fill, Banana Pro... đẩy nhanh tốc độ sáng tạo ý tưởng gấp **3 lần** so với phương pháp truyền thống.
-  4. **Kỹ thuật thủ công & In ấn chuẩn xưởng:** Vẽ minh họa chi tiết cao bằng **bảng vẽ Wacom Tablet**, am hiểu sâu sắc hệ màu in ấn CMYK / RGB 300 DPI, kỹ thuật in DTG (Direct-to-Garment) và All-Over-Print. Tỷ lệ hoàn trả do lỗi in ấn dưới **0.4%**.
-  5. **E-commerce Marketing Visual:** Thiết kế chuỗi Email Marketing trên nền tảng **Klaviyo** đạt tỷ lệ mở trung bình **28%** (vượt mức chuẩn 21% của ngành thương mại điện tử).
+  2. **Bậc thầy Tự động hóa (Automation Specialist):** Tự nghiên cứu và viết các **Photoshop Actions (.atn) & JavaScript Scripts (.jsx / ExtendScript)** giúp cắt giảm **~40% thời gian sản xuất** file in và ghép mockup Displacement Map hàng loạt cho toàn team.
+  3. **Triết lý "Human-Crafted, AI-Accelerated" (30% AI Trợ lực — 70% Con người Quyết định):** Làm chủ hệ sinh thái AI & Creative Tools (**Adobe Firefly, Photoshop Generative Fill, FLUX.1, Banana Pro, AI Upscaling 300 DPI, ChatGPT/Claude, Topview AI, CapCut Pro, Canva Pro** — *không dùng Midjourney*) để đẩy nhanh tốc độ sáng tạo ý tưởng và làm video/visual quảng cáo gấp **3 lần**. Tuy nhiên, luôn giữ vững quan điểm **AI không thể thay thế hoàn toàn Designer**: con người có gu thẩm mỹ riêng cho từng insight khách hàng và chỉ có con người mới thấu hiểu sâu sắc góc nhìn, cảm xúc của con người.
+  4. **Kỹ thuật thủ công & In ấn chuẩn xưởng:** Vẽ minh họa chi tiết cao bằng **bảng vẽ Wacom Tablet**, am hiểu sâu sắc hệ màu in ấn CMYK / RGB 300 DPI, kỹ thuật tách lớp Halftone in DTG (Direct-to-Garment) và All-Over-Print. Tỷ lệ hoàn trả do lỗi in ấn dưới **0.4%**.
+  5. **E-commerce Marketing Visual & Quản trị luồng SKU:** Thiết kế chuỗi Email Marketing trên nền tảng **Klaviyo** đạt tỷ lệ mở trung bình **28%** (vượt mức chuẩn 21% của ngành thương mại điện tử), kết hợp **Figma**, **Shopify** và **Notion / Trello / Lark**.
 
 ### 🌐 Hệ thống Kênh Truyền thông Chính thức
 | Nền tảng | Đường dẫn | Mục đích |

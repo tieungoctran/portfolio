@@ -54,5 +54,27 @@ export const articlesData: Article[] = [
     url: "https://www.linkedin.com/in/tieungoc-design",
     tags: ["Klaviyo Email", "E-commerce Design", "Conversion Rate"],
     thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80"
+  },
+  {
+    id: "a5",
+    title: "Cẩm nang Prompt Engineering cho Graphic Designer: Tạo concept thời trang chuẩn xưởng in",
+    date: "02 Tháng 03, 2026",
+    readTime: "5 phút đọc",
+    excerpt: "Prompt AI không chỉ là gõ từ khóa ngẫu hứng. Khám phá cách cấu trúc prompt về chất liệu vải, góc chiếu sáng rim-light và phong cách mỹ thuật để cho ra concept visual có thể vẽ lại hoặc tách lớp in ấn thực tế.",
+    platform: "LinkedIn",
+    url: "https://www.linkedin.com/in/tieungoc-design",
+    tags: ["Prompt Engineering", "AI Design", "Print On Demand", "Tips Làm Nghề"],
+    thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
+  },
+  {
+    id: "a6",
+    title: "DesignOps cho Designer Gen Z: Tự viết Photoshop Script ghép 100 mockup áo thun trong 3 phút",
+    date: "18 Tháng 02, 2026",
+    readTime: "6 phút đọc",
+    excerpt: "Đừng để công việc lặp đi lặp lại bào mòn ngọn lửa sáng tạo của bạn. Hướng dẫn từng bước cách tận dụng ExtendScript (JavaScript trong Photoshop) và Actions để tự động hóa toàn bộ công đoạn mockup sản phẩm cho store E-commerce.",
+    platform: "Substack",
+    url: "https://tieungoc.substack.com/",
+    tags: ["DesignOps", "Automation", "Photoshop Script", "Tự Động Hóa"],
+    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
   }
 ];
