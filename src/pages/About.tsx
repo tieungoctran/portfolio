@@ -1,6 +1,6 @@
 import React from 'react';
 import { profileData } from '../data/profile';
-import { ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, Heart, GraduationCap, Globe2, Phone, Mail } from 'lucide-react';
+import { FileText, ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, Heart, GraduationCap, Globe2, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const About: React.FC = () => {
@@ -56,11 +56,13 @@ export const About: React.FC = () => {
             {/* Quick Actions for Recruiters */}
             <div className="space-y-2">
               <a
-                href={profileData.cvRequestUrl}
+                href={profileData.cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center space-x-2 px-4 py-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-xs font-semibold hover:opacity-90 transition-opacity shadow-sm"
               >
-                <Mail className="w-4 h-4" />
-                <span>Xin CV qua email</span>
+                <FileText className="w-4 h-4" />
+                <span>Xem CV (VI/EN)</span>
               </a>
 
               <Link
@@ -414,11 +416,13 @@ export const About: React.FC = () => {
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
           <a
-            href={profileData.cvRequestUrl}
+            href={profileData.cvUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center space-x-1.5 px-5 py-3 rounded-xl text-xs font-semibold border border-neutral-700 dark:border-neutral-300 text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
           >
-            <Mail className="w-3.5 h-3.5" />
-            <span>Xin CV</span>
+            <FileText className="w-3.5 h-3.5" />
+            <span>Xem CV</span>
           </a>
         </div>
       </div>

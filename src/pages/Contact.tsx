@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { submitContactInquiry, isSupabaseConfigured } from '../lib/supabase';
 import { profileData } from '../data/profile';
-import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, ArrowUpRight, Loader2, Briefcase } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, ArrowUpRight, Loader2, Briefcase, FileText } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -66,14 +66,16 @@ export const Contact: React.FC = () => {
               <span>Dành cho Nhà tuyển dụng</span>
             </div>
             <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
-              Cần CV để gửi cho Hiring Manager hoặc Design Director? Gửi mình một email, mình sẽ gửi lại CV bản PDF (tiếng Việt hoặc tiếng Anh).
+              Cần CV để gửi cho Hiring Manager hoặc Design Director? Xem CV trực tuyến, chuyển được tiếng Việt và tiếng Anh, in ra PDF ngay từ trình duyệt.
             </p>
             <a
-              href={profileData.cvRequestUrl}
+              href={profileData.cvUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-xs font-semibold text-neutral-900 dark:text-white underline hover:opacity-80"
             >
-              <Mail className="w-3.5 h-3.5" />
-              <span>Nhận CV qua email</span>
+              <FileText className="w-3.5 h-3.5" />
+              <span>Xem CV (VI/EN)</span>
             </a>
           </div>
 
