@@ -79,7 +79,7 @@ export interface ProfileData {
   phoneInternational: string;
   email: string;
   website: string;
-  resumeUrl: string;
+  cvRequestUrl: string;
   recruiterPitch: string;
   jobPreferences: JobPreferences;
   socials: SocialLink[];
@@ -156,7 +156,8 @@ export const profileData: ProfileData = {
   phoneInternational: "+84 393 258 ###",
   email: "ngoctt.design@gmail.com",
   website: "https://tieungoc.site",
-  resumeUrl: "/Tran-Tieu-Ngoc-Resume.pdf",
+  // CV is shared by email on request to keep personal contact details off the public site
+  cvRequestUrl: "mailto:ngoctt.design@gmail.com?subject=Xin%20CV%20Tr%E1%BA%A7n%20Ti%E1%BB%83u%20Ng%E1%BB%8Dc",
   socials: [
     {
       name: "LinkedIn",

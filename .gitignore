@@ -48,3 +48,6 @@ tmp/
 *.tmp
 
 designer-docs/
+
+# Private CV sources & PDFs (contain personal contact details; shared by email only)
+resume/
