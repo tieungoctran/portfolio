@@ -7,7 +7,7 @@ import {
   ArrowRight, 
   ArrowUpRight, 
   Sparkles, 
-  FileText, 
+  Mail, 
   ExternalLink,
   Layers,
   Wand2,
@@ -51,12 +51,11 @@ export const Home: React.FC = () => {
 
           <div className="flex items-center space-x-4">
             <a
-              href={profileData.resumeUrl}
-              download
+              href={profileData.cvRequestUrl}
               className="inline-flex items-center space-x-1.5 font-semibold text-neutral-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
             >
-              <FileText className="w-3.5 h-3.5" />
-              <span>Tải CV & Portfolio (PDF)</span>
+              <Mail className="w-3.5 h-3.5" />
+              <span>Xin CV qua email</span>
             </a>
             <Link
               to="/contact"
@@ -699,12 +698,11 @@ export const Home: React.FC = () => {
             </Link>
 
             <a
-              href={profileData.resumeUrl}
-              download
+              href={profileData.cvRequestUrl}
               className="inline-flex items-center space-x-2 px-6 py-4 rounded-full border border-neutral-700 dark:border-neutral-300 text-white dark:text-neutral-900 font-semibold text-sm hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
             >
-              <FileText className="w-4 h-4" />
-              <span>Tải CV & Portfolio PDF</span>
+              <Mail className="w-4 h-4" />
+              <span>Xin CV qua email</span>
             </a>
           </div>
         </div>

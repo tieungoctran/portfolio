@@ -14,7 +14,7 @@
 - **Nơi sinh sống & Làm việc:** Thủ Đức, TP. Hồ Chí Minh, Việt Nam
 - **Học vấn:** Cử nhân **Thiết kế Đồ họa và Truyền thông** — **Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE)** (2018 — 2022)
 - **Website chính thức:** [tieungoc.site](https://tieungoc.site)
-- **Số điện thoại:** `0393 258 483` (`+84 393 258 483`)
+- **Số điện thoại:** `0393 258 ###` (không công khai; số đầy đủ chỉ có trong CV gửi riêng cho nhà tuyển dụng)
 - **Email công việc:** `ngoctt.design@gmail.com`
 
 ### 🏢 Nơi công tác & Kinh nghiệm thực chiến
@@ -123,7 +123,6 @@ Phong cách thiết kế chủ đạo: **Minimalist & Editorial High-End** (Tố
 D:/TN-Project/
 ├── public/                       # Tài sản tĩnh phục vụ trực tiếp
 │   ├── images/                   # Ảnh đại diện, ảnh thú cưng, ảnh mockups
-│   ├── Tran-Tieu-Ngoc-Resume.pdf # File CV PDF chính thức của Tiểu Ngọc
 │   └── vite.svg
 │
 ├── src/
