@@ -100,34 +100,34 @@ export const profileData: ProfileData = {
   nickname: "Mắt Gấu 🐻",
   birthYear: 2000,
   zodiac: "Cung Song Ngư (Pisces) ♓",
-  role: "Senior Graphic Designer — POD & Brand Visual | AI-Powered Workflow",
-  subRole: "POD Apparel & Merchandise, E-commerce Visual & Quy trình đồ họa AI-First tăng tốc bằng Scripting Tự động",
+  role: "Senior Graphic Designer — Brand & E-commerce Visual | AI-Powered Workflow",
+  subRole: "Brand Identity, E-commerce & Omnichannel Campaign Visuals, Quy trình đồ họa AI-First tăng tốc bằng Scripting Tự động",
   tagline: "Cô gái Song Ngư thiết kế bằng trực giác thẩm mỹ sắc bén, thấu cảm sâu sắc insight khách hàng và nhân bội năng suất bằng AI & Scripting tự động.",
   avatarUrl: "/images/avatar.jpg",
   petsUrl: "/images/pets.jpg",
   petsBio: "Người bạn bốn chân trung thành và là nguồn năng lượng chữa lành của Tiểu Ngọc sau những giờ tập trung vẽ Wacom và canh màu in ấn.",
-  recruiterPitch: "Bạn đang tìm kiếm một Senior Graphic Designer có gu thẩm mỹ riêng biệt cho từng insight khách hàng Âu-Mỹ, làm chủ kỹ thuật chế bản in ấn chuẩn xưởng (<0.4% lỗi) và biết điều khiển AI kết hợp Automation để tối ưu 40% thời gian sản xuất mà không tạo ra 'AI slop'? Hãy kết nối với Tiểu Ngọc ngay nhé!",
+  recruiterPitch: "Bạn đang tìm kiếm một Senior Graphic Designer có gu thẩm mỹ sắc bén cho Brand & E-commerce Visual, làm chủ kỹ thuật chế bản in ấn chuẩn xưởng (<0.4% lỗi) và biết điều khiển AI kết hợp Automation để tối ưu 40% thời gian sản xuất mà không tạo ra 'AI slop'? Hãy kết nối với Tiểu Ngọc ngay nhé!",
   jobPreferences: {
     status: "Open to Work • Sẵn sàng nhận lời mời phỏng vấn",
     targetRoles: [
-      "Senior Graphic Designer (POD & Apparel)",
-      "Brand & E-commerce Visual Lead",
+      "Senior Graphic Designer (Brand & E-commerce Visual)",
+      "Brand & Creative Marketing Designer",
       "AI-Powered Creative Specialist / DesignOps"
     ],
     workModes: [
       "Full-time On-site / Hybrid (TP. Hồ Chí Minh)",
-      "Remote Global (US / EU E-commerce Stores)",
+      "Remote Global (US / EU / APAC Brands & Agencies)",
       "Freelance & Tư vấn Tự động hóa Quy trình Thiết kế"
     ],
     availability: "Sẵn sàng nhận việc trong vòng 2–4 tuần (linh hoạt trao đổi khi phỏng vấn)",
     salaryExpectation: "Thỏa thuận theo năng lực (Negotiable)"
   },
   bio: [
-    "Xin chào! Mình là Tiểu Ngọc (mọi người hay gọi mình là Mắt Gấu 🐻), một Senior Graphic Designer sinh năm 2000, tốt nghiệp chuyên ngành Thiết kế Đồ họa và Truyền thông tại Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE). Mình mang tâm hồn giàu cảm xúc của cung Song Ngư nhưng lại cực kỳ thực tế khi đối diện với các chỉ số chuyển đổi và doanh thu thương mại điện tử.",
-    "Hơn 4 năm gắn bó toàn thời gian tại Vani Ecommerce (từ 08/2022 đến nay), mình đã trực tiếp thiết kế hơn 3500+ sản phẩm Print-on-Demand (áo thun 2D/3D, mugs, posters, phụ kiện) phục vụ thị trường Mỹ và Châu Âu. Mình từng chủ trì thiết kế bộ sưu tập POD Anime đạt doanh thu hơn $20,000 USD chỉ trong một quý (Q4/2025).",
-    "Mình luôn tâm niệm: AI không bao giờ có thể thay thế hoàn toàn người Designer, bởi con người có gu thẩm mỹ riêng cho từng insight khách hàng và chỉ có con người mới thực sự thấu hiểu góc nhìn của con người. Mình dùng AI (Firefly, Generative Fill, FLUX.1, Banana Pro, Topview AI) và Photoshop JS Scripts như một động cơ trợ lực giúp tăng tốc khâu ý tưởng gấp 3 lần và giảm 40% thời gian xuất file, nhưng chính đôi tay vẽ Wacom, sự cầu toàn trong từng nét chữ và kỹ thuật tách màu in ấn chuẩn xưởng mới là linh hồn tạo nên sản phẩm triệu view."
+    "Xin chào! Mình là Tiểu Ngọc (mọi người hay gọi mình là Mắt Gấu 🐻), một Senior Graphic Designer sinh năm 2000, tốt nghiệp chuyên ngành Thiết kế Đồ họa và Truyền thông tại Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE). Mình mang tâm hồn giàu cảm xúc của cung Song Ngư nhưng lại cực kỳ thực tế khi đối diện với các chỉ số chuyển đổi thương hiệu và doanh thu thương mại điện tử.",
+    "Hơn 4 năm gắn bó toàn thời gian tại Vani Ecommerce (từ 08/2022 đến nay), mình đã trực tiếp thiết kế hơn 3500+ sản phẩm thương mại và ấn phẩm chiến dịch Brand & E-commerce Visual đa kênh phục vụ thị trường quốc tế (US, EU) và Việt Nam. Mình từng chủ trì thiết kế bộ sưu tập thời trang Anime đạt doanh thu hơn $20,000 USD chỉ trong một quý (Q4/2025).",
+    "Mình luôn tâm niệm: AI không bao giờ có thể thay thế hoàn toàn người Designer, bởi con người có gu thẩm mỹ riêng cho từng insight khách hàng và chỉ có con người mới thực sự thấu hiểu góc nhìn của con người. Mình dùng AI (Adobe Firefly, Generative Fill, FLUX.1, Banana Pro, Topview AI) và Photoshop JS Scripts như một động cơ trợ lực giúp tăng tốc khâu ý tưởng gấp 3 lần và giảm 40% thời gian xuất file, nhưng chính đôi tay vẽ Wacom, sự cầu toàn trong từng nét chữ và kỹ thuật tách màu in ấn chuẩn xưởng mới là linh hồn tạo nên sản phẩm triệu view."
   ],
-  philosophy: "AI là động cơ tăng tốc 3× ở khâu ý tưởng, nhưng gu thẩm mỹ riêng cho từng insight khách hàng, sự thấu cảm giữa con người với con người và kỹ thuật chế bản chuẩn xưởng mới là thứ tạo ra sản phẩm $20,000+ doanh thu.",
+  philosophy: "AI là động cơ tăng tốc 3× ở khâu ý tưởng, nhưng gu thẩm mỹ riêng cho từng insight khách hàng, sự thấu cảm giữa con người với con người và kỹ thuật chế bản chuẩn xưởng mới là thứ tạo ra chiến dịch thương hiệu $20,000+ doanh thu.",
   aiPhilosophy: {
     badge: "Triết lý Làm nghề • Human-Crafted, AI-Accelerated",
     headline: "Vì sao AI không thể thay thế hoàn toàn người Thiết kế?",
@@ -137,7 +137,7 @@ export const profileData: ProfileData = {
       {
         title: "01. Gu thẩm mỹ riêng & Sự thấu cảm con người",
         subtitle: "Human-to-Human Insight vs. 'AI Slop'",
-        description: "AI chỉ biết tổng hợp dữ liệu quá khứ nên rất dễ tạo ra những hình ảnh trung bình cộng vô hồn. Khách hàng mua một chiếc áo POD không phải vì thuật toán, mà vì họ tìm thấy câu chuyện và cá tính của chính mình trong từng nét vẽ. Chỉ có con người mới hiểu góc nhìn của con người để tạo ra xu hướng mới từ sự rung động thật."
+        description: "AI chỉ biết tổng hợp dữ liệu quá khứ nên rất dễ tạo ra những hình ảnh trung bình cộng vô hồn. Khách hàng yêu thích một thương hiệu không phải vì thuật toán, mà vì họ tìm thấy câu chuyện và cá tính của chính mình trong từng nét vẽ. Chỉ có con người mới hiểu góc nhìn của con người để tạo ra xu hướng mới từ sự rung động thật."
       },
       {
         title: "02. Làm chủ công cụ, không để công cụ dẫn dắt",
@@ -147,7 +147,7 @@ export const profileData: ProfileData = {
       {
         title: "03. Chuẩn mực Chế bản In ấn & An toàn Bản quyền",
         subtitle: "Physical Print QC (<0.4% Defect) & DMCA Safety",
-        description: "Một bức ảnh trông bắt mắt trên màn hình AI khác hoàn toàn một file in thương mại 300 DPI. AI không thể tự tách layer (Line-art, Base color, Halftone underbase), không thể kiểm soát độ sụt màu CMYK trên nền vải cotton đen hay khớp rập 3D All-Over-Print để cam kết tỷ lệ lỗi in dưới 0.4% và bảo vệ thương hiệu khỏi rủi ro bản quyền."
+        description: "Một bức ảnh trông bắt mắt trên màn hình AI khác hoàn toàn một file in thương mại 300 DPI. AI không thể tự tách layer (Line-art, Base color, Halftone), không thể kiểm soát độ sụt màu CMYK trên các chất liệu thực tế hay dựng chuẩn kích thước POSM để cam kết tỷ lệ lỗi in dưới 0.4% và bảo vệ thương hiệu khỏi rủi ro bản quyền."
       }
     ]
   },
@@ -197,13 +197,13 @@ export const profileData: ProfileData = {
   ],
   skillCategories: [
     {
-      title: "Hard Skills, POSM/Print & Phối cảnh 2D/3D (Core Craft & Print QC)",
+      title: "Hard Skills, Brand Visual, POSM/Print & Phối cảnh 2D/3D",
       skills: [
         "Adobe Photoshop (90%) & Adobe Illustrator (75%) — Chế bản, Key Visual & Vector",
-        "POD & POSM / Print Design (90%) — Áo thun 2D/3D, Poster, Standee, Banner OOH, Brochure, Voucher, Packaging",
+        "Brand & E-commerce Visual / POSM Print (90%) — Key Visuals, Poster, Standee, Banner OOH, Brochure, Voucher, Packaging, Apparel 2D/3D",
         "Phối cảnh Mockup 2D/3D chuyên nghiệp — Gian hàng sự kiện, vật phẩm thương hiệu (Merchandise) & Displacement Map",
         "Wacom Tablet Digital Illustration (85%) — Vẽ tay chi tiết cao, Mascot/Character & Line-art độc bản",
-        "Color Separation & Print QC (CMYK / RGB 300 DPI, Halftone DTG — Tỷ lệ lỗi <0.4%) & Product Photography Art Direction",
+        "Color Separation & Print QC (CMYK / RGB 300 DPI, Halftone — Tỷ lệ lỗi <0.4%) & Product Photography Art Direction",
         "Brand Identity Design (80%) & UI/UX Wireframing, App/Web Banner trên Figma / HTML-CSS (65%)"
       ]
     },
@@ -211,8 +211,8 @@ export const profileData: ProfileData = {
       title: "AI-First Workflow 2026, Video Marketing & Tự động hóa (DesignOps)",
       skills: [
         "Photoshop Actions (.atn) & JavaScript Scripts (.jsx) (85% — Giảm 40% thời gian sản xuất hàng loạt)",
-        "Hệ sinh thái AI Visual 2026 (85%) — Adobe Firefly, Generative Fill, Midjourney, FLUX.1, Banana Pro, AI Upscaling 300 DPI",
-        "AI Research & Prompting — ChatGPT, Claude (Phân tích insight văn hóa US/EU/VN & hỗ trợ lên Moodboard x3 tốc độ)",
+        "Hệ sinh thái AI Visual 2026 (85%) — Adobe Firefly, Generative Fill, FLUX.1, Banana Pro, AI Upscaling 300 DPI",
+        "AI Research & Prompting — ChatGPT, Claude (Phân tích insight văn hóa & hỗ trợ lên Moodboard x3 tốc độ)",
         "Short-form Video Ads & GIF Animation (80%) — CapCut Pro, Motion cơ bản, Topview AI, Canva Pro",
         "E-commerce & Retention Visuals (80%) — Klaviyo Email Marketing (28% Open Rate), App Notification Banner, Shopify"
       ]
@@ -251,7 +251,7 @@ export const profileData: ProfileData = {
         "Adobe Illustrator",
         "Bảng vẽ Wacom",
         "Displacement Map",
-        "Halftone DTG / CMYK 300 DPI"
+        "CMYK / RGB 300 DPI"
       ]
     },
     {
@@ -292,7 +292,7 @@ export const profileData: ProfileData = {
       phase: "01. Thấu cảm Insight & Bắt Trend",
       title: "Human Insight & Trend Research",
       tools: ["ChatGPT / Claude", "Pinterest", "TikTok Trends"],
-      description: "Đặt mình vào góc nhìn của khách hàng Âu-Mỹ để thấu hiểu văn hóa ngách (Anime, Racing, Streetwear). Dùng AI hỗ trợ phân tích từ khóa, nhưng chọn lọc concept bằng trực giác và gu thẩm mỹ riêng của người thiết kế."
+      description: "Đặt mình vào góc nhìn của khách hàng để thấu hiểu văn hóa thị giác. Dùng AI hỗ trợ phân tích từ khóa, nhưng chọn lọc concept bằng trực giác và gu thẩm mỹ riêng của người thiết kế."
     },
     {
       phase: "02. Khám phá Thị giác cùng AI (30%)",
@@ -304,27 +304,27 @@ export const profileData: ProfileData = {
       phase: "03. Vẽ tay Wacom & Chế bản (70%)",
       title: "Human Craft, Wacom & Print QC",
       tools: ["Wacom Tablet", "Illustrator", "Photoshop", "AI Upscaling"],
-      description: "Khâu quyết định mà AI không thể thay thế: Vẽ tay chi tiết bằng Wacom để tạo hồn riêng, căn chỉnh Typography chuẩn xác, nâng cấp 300 DPI và tách lớp màu CMYK / Halftone DTG (tỷ lệ lỗi <0.4%)."
+      description: "Khâu quyết định mà AI không thể thay thế: Vẽ tay chi tiết bằng Wacom để tạo hồn riêng, căn chỉnh Typography chuẩn xác, nâng cấp 300 DPI và tách lớp màu CMYK / RGB chuẩn in ấn (tỷ lệ lỗi <0.4%)."
     },
     {
       phase: "04. Tự động hóa Mockup & Video Ads",
       title: "Scripting & Multi-Channel Output",
       tools: ["PS Scripts (.jsx)", "Topview AI", "CapCut Pro", "Canva Pro"],
-      description: "Chạy script tự động ghép hàng loạt mockup Displacement Map chân thực và sản xuất nhanh ấn phẩm quảng cáo / video thương mại đa kênh bằng Topview AI, CapCut Pro và Canva Pro."
+      description: "Chạy script tự động ghép hàng loạt mockup 2D/3D chân thực và sản xuất nhanh ấn phẩm quảng cáo / video thương mại đa kênh bằng Topview AI, CapCut Pro và Canva Pro."
     }
   ],
   experiences: [
     {
       period: "08/2022 — Hiện tại (4+ năm)",
-      role: "Senior Graphic Designer — POD & Brand Visual",
+      role: "Senior Graphic Designer — Brand & E-commerce Visual",
       company: "Vani Ecommerce · Toàn thời gian",
-      description: "Chủ trì thiết kế 3500+ sản phẩm POD (áo thun 2D/3D, mugs, posters, banners) cho thị trường Mỹ (US) và Châu Âu (EU). Áp dụng triết lý 'Human-Crafted, AI-Accelerated': lấy gu thẩm mỹ con người và nét vẽ Wacom làm cốt lõi (70%), kết hợp AI và Photoshop Scripts làm động cơ tăng tốc (30%).",
+      description: "Chủ trì thiết kế 3500+ sản phẩm thương mại và ấn phẩm truyền thông Brand & E-commerce Visual đa kênh (Key Visuals, Social Ads, POSM, Posters, Banners, Apparel & Merchandise) cho thị trường quốc tế (US/EU). Áp dụng triết lý 'Human-Crafted, AI-Accelerated': lấy gu thẩm mỹ con người và nét vẽ Wacom làm cốt lõi (70%), kết hợp AI và Photoshop Scripts làm động cơ tăng tốc (30%).",
       highlights: [
-        "Đạt mốc doanh thu $20,000+ USD chỉ trong một quý (Q4/2025) từ bộ sưu tập 50+ mẫu thời trang POD Anime thông qua việc thấu hiểu sâu sắc insight khách hàng US, vẽ tay Wacom chi tiết cao và kỹ thuật tách màu in DTG chuẩn 300 DPI.",
-        "Cắt giảm ~40% thời gian sản xuất và ghép mockup Displacement Map hàng loạt cho hơn 3,500+ mã sản phẩm (SKUs) bằng cách tự lập trình hệ thống Photoshop Actions (.atn) và JavaScript Scripts (.jsx), giảm 99% sai sót mã file nhà in.",
+        "Đạt mốc doanh thu $20,000+ USD chỉ trong một quý (Q4/2025) từ bộ sưu tập 50+ thiết kế chủ đề Anime thông qua việc thấu hiểu sâu sắc insight khách hàng, vẽ tay Wacom chi tiết cao và kỹ thuật chế bản in ấn chuẩn 300 DPI.",
+        "Cắt giảm ~40% thời gian sản xuất và ghép phối cảnh mockup 2D/3D hàng loạt cho hơn 3,500+ mã sản phẩm (SKUs) bằng cách tự lập trình hệ thống Photoshop Actions (.atn) và JavaScript Scripts (.jsx), giảm 99% sai sót mã file nhà in.",
         "Tăng tốc độ lên ý tưởng và sản xuất visual/video quảng cáo gấp 3 lần nhờ kết hợp có chọn lọc hệ sinh thái AI & Creative Tools (Adobe Firefly, Generative Fill, FLUX.1, Banana Pro, Topview AI, CapCut Pro, Canva Pro) mà vẫn giữ trọn tính độc bản.",
-        "Kiểm soát chất lượng chế bản in ấn chuẩn xưởng (CMYK/RGB 300 DPI, Halftone DTG & All-Over-Print), duy trì tỷ lệ hoàn trả sản phẩm do lỗi in ấn ở mức cực thấp dưới 0.4%.",
-        "Xây dựng trọn bộ hệ thống nhận diện thương hiệu (Logo, Color Palette, Typography Guidelines, Figma Wireframes) và thiết kế 15+ mẫu email marketing Klaviyo chuẩn responsive đạt tỷ lệ mở trung bình 28% (vượt mức chuẩn 21% của ngành e-commerce)."
+        "Kiểm soát chất lượng chế bản in ấn chuẩn xưởng (CMYK/RGB 300 DPI, POSM & Merchandise), duy trì tỷ lệ hoàn trả sản phẩm do lỗi in ấn ở mức cực thấp dưới 0.4%.",
+        "Xây dựng trọn bộ hệ thống nhận diện thương hiệu (Logo, Color Palette, Typography Guidelines, Figma Banners) và thiết kế 15+ mẫu email marketing Klaviyo chuẩn responsive đạt tỷ lệ mở trung bình 28% (vượt mức chuẩn 21% của ngành e-commerce)."
       ]
     }
   ],
@@ -337,4 +337,3 @@ export const profileData: ProfileData = {
     }
   ]
 };
-

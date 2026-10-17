@@ -52,7 +52,7 @@ export const Contact: React.FC = () => {
           Cùng nhau kết nối & thảo luận cơ hội.
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Tiểu Ngọc luôn cởi mở đón nhận các cơ hội phỏng vấn, dự án thiết kế POD Apparel, Brand Visual Identity và hợp tác thương mại điện tử.
+          Tiểu Ngọc luôn cởi mở đón nhận các cơ hội phỏng vấn, dự án thiết kế Brand & E-commerce Visual, POSM/Print và hợp tác thương mại điện tử.
         </p>
       </div>
 
@@ -175,7 +175,7 @@ export const Contact: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {[
                   { id: 'recruitment', label: '💼 Lời mời tuyển dụng' },
-                  { id: 'project', label: '🚀 Dự án POD & Đồ họa' },
+                  { id: 'project', label: '🚀 Dự án Brand & E-commerce Visual' },
                   { id: 'networking', label: '☕ Kết nối & Trò chuyện' }
                 ].map((item) => (
                   <button
@@ -231,7 +231,7 @@ export const Contact: React.FC = () => {
               <input
                 type="text"
                 required
-                placeholder="Ví dụ: Trao đổi dự án thiết kế BST Áo thun POD / Tuyển dụng Graphic Designer"
+                placeholder="Ví dụ: Trao đổi dự án thiết kế Brand Visual / Tuyển dụng Senior Graphic Designer"
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                 className="w-full px-4 py-2.5 rounded-xl text-sm bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white focus:border-neutral-500 outline-none transition-colors"

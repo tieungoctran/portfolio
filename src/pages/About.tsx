@@ -14,7 +14,7 @@ export const About: React.FC = () => {
         </div>
 
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white leading-[1.15]">
-          Nhà thiết kế đồng hành cùng sự bùng nổ của sản phẩm thời trang POD & thương hiệu E-commerce.
+          Nhà thiết kế đồng hành cùng sự bùng nổ của Brand & E-commerce Visual.
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pt-6">
@@ -402,7 +402,7 @@ export const About: React.FC = () => {
             Sẵn sàng kết nối cùng đội ngũ của bạn
           </h4>
           <p className="text-xs sm:text-sm opacity-85 font-light">
-            Nhận lời mời hợp tác các dự án: Graphic Design, POD Apparel Collection, Brand Visual Identity & E-commerce Creative.
+            Nhận lời mời hợp tác các dự án: Senior Graphic Design, Brand & E-commerce Visual, POSM/Print & AI-Powered Creative.
           </p>
         </div>
 

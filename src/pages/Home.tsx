@@ -46,7 +46,7 @@ export const Home: React.FC = () => {
             </span>
             <span className="font-semibold text-neutral-900 dark:text-white">Dành cho Đối tác & Nhà tuyển dụng:</span>
             <span className="hidden md:inline text-neutral-500 dark:text-neutral-400">|</span>
-            <span className="hidden md:inline">Sẵn sàng nhận dự án Graphic Design, POD Apparel & E-commerce Visual (Toàn thời gian & Freelance).</span>
+            <span className="hidden md:inline">Sẵn sàng cho cơ hội Senior Graphic Designer — Brand & E-commerce Visual, Apparel & Merchandise (Full-time & Freelance).</span>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -76,15 +76,15 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-7 space-y-8">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>Trần Tiểu Ngọc (Mắt Gấu 🐻) • Senior Graphic Designer — POD & Brand Visual</span>
+              <span>Trần Tiểu Ngọc (Mắt Gấu 🐻) • Senior Graphic Designer — Brand & E-commerce Visual</span>
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.12]">
-              Thiết kế thời trang POD & Visual E-commerce <span className="italic font-normal text-amber-700 dark:text-amber-400">bứt phá doanh số</span>.
+              Thiết kế Brand Visual, Apparel & E-commerce <span className="italic font-normal text-amber-700 dark:text-amber-400">bứt phá doanh số</span>.
             </h1>
 
             <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 font-light leading-relaxed max-w-2xl">
-              Nữ Designer cung Song Ngư kết hợp trực giác thẩm mỹ sắc bén, nét vẽ Wacom chi tiết, và quy trình đồ họa tăng tốc bởi AI & Photoshop Scripts. Đã thực chiến cùng <strong className="font-medium text-neutral-900 dark:text-white">3500+ sản phẩm POD</strong> tại Vani Ecommerce và tạo ra bộ sưu tập anime cán mốc <strong className="font-medium text-neutral-900 dark:text-white">$20,000+ doanh thu</strong> trong một quý.
+              Nữ Senior Designer cung Song Ngư kết hợp gu thẩm mỹ sắc bén cho từng insight khách hàng, nét vẽ Wacom chi tiết, và quy trình đồ họa tăng tốc bởi AI & Photoshop Scripts. Đã thực chiến cùng <strong className="font-medium text-neutral-900 dark:text-white">3500+ sản phẩm thương mại (Brand & E-commerce Visual, Apparel & POSM)</strong> tại Vani Ecommerce và tạo ra bộ sưu tập cán mốc <strong className="font-medium text-neutral-900 dark:text-white">$20,000+ doanh thu</strong> trong một quý.
             </p>
 
             {/* CTAs */}
@@ -93,7 +93,7 @@ export const Home: React.FC = () => {
                 to="/projects"
                 className="inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-semibold text-sm hover:opacity-90 transition-opacity shadow-sm"
               >
-                <span>Xem Bộ Sưu Tập POD</span>
+                <span>Xem Dự Án & Bộ Sưu Tập</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
@@ -119,11 +119,11 @@ export const Home: React.FC = () => {
             <div className="pt-8 border-t border-neutral-200 dark:border-neutral-800 grid grid-cols-3 gap-6">
               <div>
                 <span className="block text-2xl sm:text-3xl font-serif font-bold text-neutral-900 dark:text-white">3500+</span>
-                <span className="text-xs text-neutral-500">Sản phẩm POD thị trường US/EU</span>
+                <span className="text-xs text-neutral-500">Sản phẩm Brand & E-commerce US/EU</span>
               </div>
               <div>
                 <span className="block text-2xl sm:text-3xl font-serif font-bold text-neutral-900 dark:text-white">$20,000+</span>
-                <span className="text-xs text-neutral-500">Doanh thu 1 quý từ BST POD Anime</span>
+                <span className="text-xs text-neutral-500">Doanh thu 1 quý từ BST Thời trang</span>
               </div>
               <div>
                 <span className="block text-2xl sm:text-3xl font-serif font-bold text-neutral-900 dark:text-white">-40%</span>
@@ -143,7 +143,7 @@ export const Home: React.FC = () => {
                   <span className="w-3 h-3 rounded-full bg-rose-500" />
                   <span className="w-3 h-3 rounded-full bg-amber-500" />
                   <span className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="text-xs font-mono text-neutral-400 pl-2">POD Anime Collection • DTG 300 DPI</span>
+                  <span className="text-xs font-mono text-neutral-400 pl-2">Anime Streetwear Collection • 300 DPI</span>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                   Best Seller
@@ -230,7 +230,7 @@ export const Home: React.FC = () => {
         {/* Tab Controls */}
         <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 max-w-xl">
           {[
-            { id: 'apparel', label: '1. Thời trang POD & In ấn', icon: Printer },
+            { id: 'apparel', label: '1. Brand Visual & In ấn', icon: Printer },
             { id: 'automation', label: '2. Tự động hóa Photoshop', icon: Layers },
             { id: 'ai', label: '3. AI-First Workflow', icon: Wand2 }
           ].map((tab) => {
@@ -259,13 +259,13 @@ export const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-6 space-y-4">
                 <span className="text-xs uppercase font-mono tracking-wider text-amber-600 dark:text-amber-400 font-semibold">
-                  Chuyên sâu Thời trang POD & In Ấn
+                  Chuyên sâu Brand & E-commerce Visual • POSM & In Ấn
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
                   Làm chủ chất lượng in ấn từ file thiết kế đến thành phẩm
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
-                  Thiết kế đồ họa in ấn (Print Design) đòi hỏi hiểu biết sâu sắc về chất liệu vải, công nghệ in DTG/Sublimation và kiểm soát dải màu:
+                  Thiết kế đồ họa thương mại và in ấn đòi hỏi hiểu biết sâu sắc về chất liệu, công nghệ in POSM/Offset/DTG và kiểm soát dải màu:
                 </p>
                 <ul className="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                   <li className="flex items-start space-x-2">
@@ -274,11 +274,11 @@ export const Home: React.FC = () => {
                   </li>
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span><strong>Độ sắc nét 300 DPI:</strong> Vẽ tay Wacom đảm bảo hạt in mịn, viền áo sắc sảo.</span>
+                    <span><strong>Độ sắc nét 300 DPI:</strong> Vẽ tay Wacom đảm bảo chi tiết sắc sảo trên mọi ấn phẩm.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span><strong>Đa dạng chủng loại:</strong> Áo thun 2D/3D All-Over-Print, cốc sứ, posters canvas.</span>
+                    <span><strong>Đa dạng hạng mục:</strong> Key Visuals, POSM (Poster, Standee, Voucher, Packaging) & Apparel 2D/3D.</span>
                   </li>
                 </ul>
               </div>
@@ -286,7 +286,7 @@ export const Home: React.FC = () => {
               <div className="md:col-span-6 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 space-y-3 font-mono text-xs">
                 <div className="text-neutral-400 text-[11px] pb-2 border-b border-neutral-200 dark:border-neutral-800 flex justify-between">
                   <span>File Output Checklist</span>
-                  <span className="text-emerald-500">● 100% Pass DTG Lab</span>
+                  <span className="text-emerald-500">● 100% Pass Print QC</span>
                 </div>
                 <div className="p-3 rounded-lg bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 space-y-2">
                   <p className="text-neutral-700 dark:text-neutral-200 font-sans text-xs">
@@ -320,7 +320,7 @@ export const Home: React.FC = () => {
                 <ul className="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span><strong>Ghép Mockup hàng loạt:</strong> Tự động render 50+ mẫu lên 4 kiểu áo chỉ trong 3 phút.</span>
+                    <span><strong>Ghép Mockup 2D/3D hàng loạt:</strong> Tự động render 50+ mẫu lên đa góc độ chỉ trong 3 phút.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
@@ -393,7 +393,7 @@ export const Home: React.FC = () => {
                   </p>
                 </div>
                 <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 text-[11px] flex items-center justify-between">
-                  <span>Hậu kỳ vẽ tay Wacom, tách lớp DTG 300 DPI & xuất Video Ads: Hoàn tất</span>
+                  <span>Hậu kỳ vẽ tay Wacom, tách lớp 300 DPI & xuất Video Ads: Hoàn tất</span>
                   <Check className="w-3.5 h-3.5" />
                 </div>
               </div>
@@ -410,10 +410,10 @@ export const Home: React.FC = () => {
               Quy trình phát triển sản phẩm • {profileData.aiPhilosophy.ratio}
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white">
-              Quy trình Thiết kế POD Tăng cường bởi AI & Scripts
+              Quy trình Thiết kế Brand & E-commerce Visual Tăng cường bởi AI & Scripts
             </h2>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-              Cách Tiểu Ngọc kết hợp sự thấu cảm insight khách hàng, nét vẽ Wacom thủ công (70%) cùng hệ sinh thái AI & Tự động hóa (30%) để sản xuất hàng ngàn mẫu áo chất lượng cao.
+              Cách Tiểu Ngọc kết hợp sự thấu cảm insight khách hàng, nét vẽ Wacom thủ công (70%) cùng hệ sinh thái AI & Tự động hóa (30%) để sản xuất hàng ngàn ấn phẩm thương mại chất lượng cao.
             </p>
           </div>
 
@@ -491,7 +491,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* ----------------- FEATURED POD CASE STUDIES ----------------- */}
+      {/* ----------------- FEATURED CASE STUDIES ----------------- */}
       <section className="px-6 max-w-6xl mx-auto space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between">
           <div className="space-y-2">
@@ -499,10 +499,10 @@ export const Home: React.FC = () => {
               Minh chứng thực tế
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">
-              Bộ Sưu Tập POD & Dự Án Đồ Họa Tiêu Biểu
+              Dự Án Brand & E-commerce Visual Tiêu Biểu
             </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 font-light max-w-xl">
-              Những bộ sưu tập thời trang thương mại thực chiến mang lại hiệu quả doanh số thực tế và đánh giá tích cực từ khách hàng quốc tế.
+              Những dự án thiết kế thương hiệu, ấn phẩm thương mại và chiến dịch truyền thông mang lại hiệu quả doanh số thực tế.
             </p>
           </div>
           <Link
@@ -586,7 +586,7 @@ export const Home: React.FC = () => {
               Góc Chia Sẻ & Nhật Ký Làm Nghề
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">
-              Kinh Nghiệm Thực Chiến POD, AI & Tâm Sự Nghề Đồ Họa
+              Kinh Nghiệm Thực Chiến Brand Visual, AI & Tâm Sự Nghề Đồ Họa
             </h2>
           </div>
           <Link
@@ -648,7 +648,7 @@ export const Home: React.FC = () => {
               Giá trị cốt lõi mang lại cho Doanh nghiệp & Thương hiệu của bạn
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              Tại sao chọn Trần Tiểu Ngọc cho dự án Đồ Họa & POD Apparel?
+              Tại sao chọn Trần Tiểu Ngọc cho dự án Brand & E-commerce Visual?
             </h2>
             <p className="text-sm md:text-base opacity-85 font-light leading-relaxed">
               Dù bạn là một Store E-commerce quốc tế đang cần bộ sưu tập áo thun bùng nổ doanh số hay một thương hiệu thời trang mới cần xây dựng hệ thống nhận diện độc bản — Tiểu Ngọc mang đến sự kết hợp trọn vẹn giữa gu thẩm mỹ tinh tế, nét vẽ Wacom chi tiết, và tốc độ sản xuất thần tốc nhờ tự động hóa.

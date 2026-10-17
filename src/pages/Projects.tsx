@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
           <span>Case Studies & Minh chứng Thực tế</span>
         </div>
         <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Dự án Đồ Họa & Bộ Sưu Tập POD
+          Dự án Brand & E-commerce Visual Tiêu Biểu
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
           Tổng hợp các bộ sưu tập thời trang thương mại, nhận diện thương hiệu ngách và hệ thống đồ họa e-commerce thực chiến của Trần Tiểu Ngọc.
