@@ -46,3 +46,5 @@ env/
 temp/
 tmp/
 *.tmp
+
+designer-docs/
