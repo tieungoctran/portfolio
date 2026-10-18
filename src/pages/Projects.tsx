@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { projectsData, Project } from '../data/projects';
 import { ArrowUpRight, Filter, Search, Sparkles } from 'lucide-react';
 import { usePageMeta } from '../lib/page-meta';
+import { Reveal } from '../components/motion/Reveal';
 
 export const Projects: React.FC = () => {
   usePageMeta(
@@ -38,13 +39,13 @@ export const Projects: React.FC = () => {
       <div className="space-y-4 max-w-3xl">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-700 dark:text-brand-300 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Case Studies & Minh chứng Thực tế</span>
+          <span>Case study kèm con số thật</span>
         </div>
         <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Dự án E-commerce Design Tiêu Biểu
+          Dự án E-commerce Design mình đã làm
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Tổng hợp các bộ sưu tập thời trang thương mại, nhận diện thương hiệu ngách và hệ thống đồ họa e-commerce thực chiến của Trần Tiểu Ngọc.
+          Sản phẩm in, banner quảng cáo, email Klaviyo và bộ công cụ Photoshop mình đã làm cho khách Mỹ và Châu Âu. Mỗi dự án có bài toán, cách giải và kết quả.
         </p>
       </div>
 
@@ -83,9 +84,9 @@ export const Projects: React.FC = () => {
       {/* Projects Grid */}
       {filteredProjects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, i) => (
+            <Reveal key={project.id} delay={(i % 2) * 90}>
             <Link
-              key={project.id}
               to={`/projects/${project.slug}`}
               className="group block space-y-4 p-4 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-editorial-surfaceDark hover:border-neutral-400 dark:hover:border-neutral-600 transition-all"
             >
@@ -148,6 +149,7 @@ export const Projects: React.FC = () => {
                 </div>
               </div>
             </Link>
+            </Reveal>
           ))}
         </div>
       ) : (
@@ -157,7 +159,7 @@ export const Projects: React.FC = () => {
             Không tìm thấy dự án phù hợp
           </h3>
           <p className="text-sm text-neutral-500">
-            Hãy thử tìm kiếm với từ khóa khác hoặc đặt lại bộ lọc danh mục.
+            Thử từ khóa khác, hoặc bỏ bộ lọc xem sao.
           </p>
           <button
             onClick={() => {

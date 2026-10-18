@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { submitContactInquiry, isSupabaseConfigured } from '../lib/supabase';
+import { submitContactInquiry } from '../lib/supabase';
 import { profileData } from '../data/profile';
 import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, Loader2, Briefcase } from 'lucide-react';
 import { usePageMeta } from '../lib/page-meta';
@@ -43,7 +43,7 @@ export const Contact: React.FC = () => {
       setSuccess(true);
       setFormData({ name: '', email: '', purpose: 'recruitment', subject: '', message: '' });
     } else {
-      setErrorMsg(res.error || 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại.');
+      setErrorMsg(res.error || 'Tin nhắn chưa gửi được. Bạn thử lại giúp mình nhé, hoặc gửi thẳng qua email.');
     }
   };
 
@@ -55,10 +55,10 @@ export const Contact: React.FC = () => {
           Liên hệ & Tuyển dụng
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Cùng nhau kết nối & thảo luận cơ hội.
+          Có việc hay có brief, cứ nhắn mình
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Tiểu Ngọc luôn cởi mở đón nhận các cơ hội phỏng vấn, dự án thiết kế E-commerce (sản phẩm in POD, banner quảng cáo, mockup), POSM/In ấn và hợp tác thương mại điện tử.
+          Mình đang mở cho lời mời phỏng vấn, dự án thiết kế E-commerce (sản phẩm in POD, banner quảng cáo, mockup), POSM/in ấn và các lời hợp tác trong thương mại điện tử.
         </p>
       </div>
 
@@ -69,7 +69,7 @@ export const Contact: React.FC = () => {
           <div className="p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/60 dark:border-brand-900/50 space-y-3">
             <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-brand-800 dark:text-brand-300 font-semibold">
               <Briefcase className="w-4 h-4 text-brand-500" />
-              <span>Dành cho Nhà tuyển dụng</span>
+              <span>Dành cho nhà tuyển dụng</span>
             </div>
             <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
               Cần CV để gửi cho Hiring Manager hoặc Design Director? Gửi mình một email, mình sẽ gửi lại CV bản PDF (tiếng Việt hoặc tiếng Anh).
@@ -85,7 +85,7 @@ export const Contact: React.FC = () => {
 
           <div className="space-y-4">
             <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-              Thông tin trực tiếp
+              Liên hệ thẳng
             </h3>
             
             <div className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
@@ -114,37 +114,26 @@ export const Contact: React.FC = () => {
 
           <div className="space-y-4 pt-6 border-t border-neutral-200 dark:border-neutral-800">
             <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400">
-              Kênh mạng xã hội & Viết lách
+              Mạng xã hội và nơi mình viết
             </h4>
             <SocialLinks />
           </div>
 
-          {/* Supabase status notice */}
-          <div className="p-4 rounded-xl bg-neutral-100 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 text-xs text-neutral-500 space-y-1">
-            <span className="font-semibold block text-neutral-700 dark:text-neutral-300">
-              ⚡ Hệ thống lưu trữ:
-            </span>
-            <p>
-              {isSupabaseConfigured
-                ? 'Đã kết nối trực tiếp với Supabase Database an toàn.'
-                : 'Đang ở chế độ mô phỏng demo. Thêm khóa VITE_SUPABASE_URL vào .env để lưu vào database thật.'}
-            </p>
-          </div>
         </div>
 
         {/* Contact Form */}
         <div className="md:col-span-2 p-8 rounded-3xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 shadow-sm space-y-6">
           <h2 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-            Gửi lời mời phỏng vấn hoặc lời nhắn
+            Nhắn mình ở đây
           </h2>
 
           {success && (
             <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 flex items-start space-x-3 text-sm text-emerald-800 dark:text-emerald-200">
               <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-emerald-500 mt-0.5" />
               <div>
-                <p className="font-semibold">Tin nhắn đã được gửi thành công!</p>
+                <p className="font-semibold">Mình nhận được tin nhắn rồi!</p>
                 <p className="text-xs opacity-90 mt-1">
-                  Cảm ơn bạn đã liên hệ. Tiểu Ngọc sẽ kiểm tra hộp thư và phản hồi lại qua email trong vòng 24 giờ.
+                  Cảm ơn bạn. Mình sẽ đọc và trả lời qua email trong vòng 24 giờ.
                 </p>
               </div>
             </div>
@@ -167,7 +156,7 @@ export const Contact: React.FC = () => {
                 {[
                   { id: 'recruitment', label: '💼 Lời mời tuyển dụng' },
                   { id: 'project', label: '🚀 Dự án thiết kế E-commerce' },
-                  { id: 'networking', label: '☕ Kết nối & Trò chuyện' }
+                  { id: 'networking', label: '☕ Chỉ muốn làm quen' }
                 ].map((item) => (
                   <button
                     key={item.id}
@@ -217,7 +206,7 @@ export const Contact: React.FC = () => {
 
             <div className="space-y-1.5">
               <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                Tiêu đề lời mời / Dự án <span className="text-rose-500">*</span>
+                Tiêu đề <span className="text-rose-500">*</span>
               </label>
               <input
                 type="text"
@@ -251,11 +240,11 @@ export const Contact: React.FC = () => {
               {loading ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  <span>Đang gửi thông tin...</span>
+                  <span>Đang gửi...</span>
                 </>
               ) : (
                 <>
-                  <span>Gửi lời nhắn ngay</span>
+                  <span>Gửi tin nhắn</span>
                   <Send className="w-4 h-4" />
                 </>
               )}

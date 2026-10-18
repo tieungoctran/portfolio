@@ -20,13 +20,13 @@ export const Blog: React.FC = () => {
       {/* Header */}
       <div className="space-y-4 max-w-2xl">
         <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400 font-mono">
-          Góc chia sẻ & Viết lách
+          Góc chia sẻ
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Bài viết & Góc nhìn
+          Nhật ký làm nghề của mình
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Nơi mình ghi chép những suy tư về tư duy thiết kế, trải nghiệm người dùng, kinh nghiệm làm việc với các nhóm sản phẩm và hành trình sáng tạo cá nhân.
+          Chỗ mình ghi lại chuyện làm thiết kế E-commerce, cách dùng AI mà vẫn giữ được cái hồn, và vài tâm sự của một designer Song Ngư.
         </p>
       </div>
 
@@ -49,10 +49,10 @@ export const Blog: React.FC = () => {
             </span>
           </div>
           <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-            Substack Newsletter
+            Substack
           </h3>
           <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Các bài tiểu luận chuyên sâu về quy trình thiết kế, tư duy trực quan và bài học thực chiến hàng tuần.
+            Những bài viết dài hơn về quy trình thiết kế và bài học làm nghề.
           </p>
         </a>
 
@@ -68,15 +68,15 @@ export const Blog: React.FC = () => {
               <Linkedin className="w-5 h-5" />
             </span>
             <span className="inline-flex items-center space-x-1 text-xs font-semibold text-sky-700 dark:text-sky-300 group-hover:underline">
-              <span>Kết nối mạng lưới</span>
+              <span>Kết nối trên LinkedIn</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
           </div>
           <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-            LinkedIn Pulse
+            LinkedIn
           </h3>
           <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Những góc nhìn nhanh, thảo luận nghề nghiệp cùng cộng đồng Product & Design trong nước và khu vực.
+            Những ý ngắn về nghề, và chỗ mình trò chuyện với các bạn làm Design và E-commerce.
           </p>
         </a>
       </div>
@@ -93,7 +93,7 @@ export const Blog: React.FC = () => {
                 : 'bg-neutral-100 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
             }`}
           >
-            {tab === 'All' ? 'Tất cả bài viết' : `Nền tảng ${tab}`}
+            {tab === 'All' ? 'Tất cả bài viết' : `${tab}`}
           </button>
         ))}
       </div>

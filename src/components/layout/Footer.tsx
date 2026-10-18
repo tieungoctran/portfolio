@@ -8,7 +8,7 @@ import { SocialLinks } from '../SocialLinks';
 const footerLinks = [
   { label: 'Trang chủ', path: '/' },
   { label: 'Dự án thiết kế', path: '/projects' },
-  { label: 'Về tôi & Kỹ năng', path: '/about' },
+  { label: 'Về mình', path: '/about' },
   { label: 'Góc chia sẻ', path: '/blog' },
   { label: 'Liên hệ hợp tác', path: '/contact' },
 ];
@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
           </nav>
 
           <div className="min-w-0 md:col-span-3">
-            <h2 className="font-heading text-sm font-semibold text-ink dark:text-paper mb-4">Kênh kết nối</h2>
+            <h2 className="font-heading text-sm font-semibold text-ink dark:text-paper mb-4">Tìm mình ở</h2>
             <SocialLinks />
           </div>
         </div>

@@ -102,7 +102,7 @@ export const profileData: ProfileData = {
   subRole: "Chuyên viên Thiết kế Đồ họa TMĐT · Sản phẩm Print-on-Demand (POD) · Banner Facebook & Google Ads · Banner Website & Email · Mockup 2D/3D · Tự động hóa Photoshop",
   tagline: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn. AI with taste, design with soul. Never AI slop.",
   avatarUrl: "/images/avatar.jpg",
-  recruiterPitch: "Bạn đang tìm kiếm một Senior Graphic Designer chuyên mảng E-commerce có gu thẩm mỹ rõ ràng, thiết kế từ sản phẩm in ấn đến banner quảng cáo Facebook/Google Ads, kiểm soát chất lượng in chuẩn xưởng (<0.4% lỗi) và tự viết Photoshop Actions & Scripts giúp giảm ~40% thời gian sản xuất? Hãy kết nối với Tiểu Ngọc ngay nhé!",
+  recruiterPitch: "Team bạn cần một Senior Graphic Designer mảng E-commerce, làm được từ sản phẩm in đến banner Facebook/Google Ads. Mình kiểm soát chất lượng in chuẩn xưởng (<0.4% lỗi), và tự viết Photoshop Actions & Scripts giúp cả team giảm ~40% thời gian sản xuất. Nếu hợp, nhắn mình nhé.",
   jobPreferences: {
     status: "Open to Work • Toàn thời gian tại TP. Hồ Chí Minh",
     targetRoles: [
@@ -115,35 +115,35 @@ export const profileData: ProfileData = {
       "Hybrid / Remote cho đội ngũ E-commerce & D2C",
       "Freelance Thiết kế & Tự động hóa Photoshop Scripts"
     ],
-    availability: "Sẵn sàng nhận việc trong vòng 2–4 tuần (linh hoạt trao đổi khi phỏng vấn)",
+    availability: "Nhận việc trong 2–4 tuần, có thể trao đổi thêm khi phỏng vấn",
     salaryExpectation: "Mong muốn 15–20 triệu VNĐ/tháng"
   },
   bio: [
-    "Xin chào! Mình là Tiểu Ngọc, một Senior Graphic Designer sinh năm 2000, tốt nghiệp Cử nhân Thiết kế Đồ họa và Truyền thông tại Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE). Mình mang tâm hồn giàu cảm xúc của cung Song Ngư nhưng luôn hướng tới hiệu quả thực tế: một thiết kế E-commerce tốt phải làm được hai việc cùng lúc: vừa đẹp, vừa bán được hàng.",
-    "Hơn 4 năm gắn bó toàn thời gian tại Vani Ecommerce (từ 08/2022 đến nay), mình đã trực tiếp thiết kế hơn 5,000+ sản phẩm in ấn (POD) cùng toàn bộ hình ảnh bán hàng đi kèm (banner quảng cáo Facebook Ads, Google Ads, banner website, header email Klaviyo và mockup 2D/3D) cho khách hàng Mỹ (US) và Châu Âu (EU). Trong Q3–Q4/2025, mình phụ trách toàn bộ thiết kế cho Dự án D2C gồm 3 thương hiệu E-commerce từ sản phẩm đến quảng cáo, cùng team khép lại Q4/2025 với khoảng $25,000 USD lợi nhuận.",
-    "Điểm khác biệt trong cách mình làm việc là phương châm: 'Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn' (AI with taste, design with soul. Never AI slop). Mình ứng dụng các công cụ AI (Adobe Firefly, ChatGPT Image, Claude, Gemini, AI Agent) để tìm ý tưởng nhanh gấp 3 lần và tự xây dựng Photoshop Actions (.atn) & JS Scripts (.jsx) để cắt giảm ~40% thời gian xử lý việc lặp lại cho cả team, nhưng mọi sản phẩm cuối cùng đều được hoàn thiện thủ công bằng bảng vẽ Wacom và kiểm soát màu in CMYK 300 DPI chuẩn xưởng."
+    "Xin chào! Mình là Tiểu Ngọc, Senior Graphic Designer sinh năm 2000, tốt nghiệp Cử nhân Thiết kế Đồ họa và Truyền thông tại Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE). Mình là Song Ngư, dễ rung động và hay nghĩ nhiều, nhưng với E-commerce thì mình tin một thiết kế tốt phải làm được hai việc: đẹp, và bán được hàng.",
+    "4+ năm toàn thời gian ở Vani Ecommerce (từ 08/2022 đến nay), mình đã thiết kế 5,000+ sản phẩm in (POD) cùng toàn bộ hình ảnh bán hàng đi kèm: banner Facebook Ads, Google Ads, banner website, header email Klaviyo và mockup 2D/3D, cho khách Mỹ (US) và Châu Âu (EU). Q3–Q4/2025, mình phụ trách toàn bộ thiết kế cho Dự án D2C gồm 3 thương hiệu E-commerce, từ sản phẩm đến quảng cáo. Cả team khép lại Q4/2025 với khoảng $25,000 USD lợi nhuận.",
+    "Cách làm của mình gói trong một câu: 'Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn' (AI with taste, design with soul. Never AI slop). Mình dùng AI (Adobe Firefly, ChatGPT Image, Claude, Gemini, AI Agent) để lên ý tưởng nhanh gấp 3 lần, và tự viết Photoshop Actions (.atn) & JS Scripts (.jsx) để cả team bớt ~40% thời gian cho việc lặp lại. Còn sản phẩm cuối cùng thì luôn được hoàn thiện bằng tay trên Wacom, với màu in CMYK 300 DPI chuẩn xưởng."
   ],
   philosophy: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn. AI with taste, design with soul. Never AI slop.",
   aiPhilosophy: {
-    badge: "Quy trình Làm nghề • Con người dẫn dắt, AI tăng tốc",
+    badge: "Cách mình làm • Con người dẫn dắt, AI tăng tốc",
     headline: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn.",
-    coreBelief: "Con người sẽ luôn có gu thẩm mỹ riêng cho từng insight khách hàng, bởi chỉ có con người mới thực sự thấu hiểu góc nhìn, tâm tư và sự rung động của con người sâu sắc hơn bất kỳ thuật toán AI nào.",
+    coreBelief: "Gu thẩm mỹ cho từng insight khách hàng là của con người. Chỉ con người mới hiểu sâu góc nhìn, tâm tư và sự rung động của con người, hơn bất kỳ thuật toán nào.",
     ratio: "Human-Crafted, AI-Accelerated • AI with taste, design with soul. Never AI slop.",
     pillars: [
       {
-        title: "01. Gu thẩm mỹ riêng & Sự thấu cảm con người",
+        title: "01. AI gom dữ liệu cũ, còn gu là của mình",
         subtitle: "Human-to-Human Insight vs. 'AI Slop'",
-        description: "AI chỉ biết tổng hợp dữ liệu quá khứ nên rất dễ tạo ra những hình ảnh đại trà, vô hồn. Khách hàng chọn mua một sản phẩm không phải vì thuật toán, mà vì họ tìm thấy câu chuyện và cá tính của chính mình trong từng nét vẽ. Chỉ có con người mới hiểu góc nhìn của con người để tạo ra sản phẩm có hồn."
+        description: "AI chỉ tổng hợp dữ liệu quá khứ nên rất dễ ra những hình đại trà, vô hồn. Người ta mua một chiếc áo hay cái cốc vì thấy câu chuyện và cá tính của chính mình trong từng nét vẽ, không phải vì thuật toán. Hiểu góc nhìn của một con người thì cần một con người khác."
       },
       {
-        title: "02. Làm chủ công cụ, hoàn thiện bằng đôi tay Designer",
+        title: "02. Mình cầm lái, AI ngồi ghế phụ",
         subtitle: "Intentional Craftsmanship & Wacom Precision",
-        description: "Người Designer điều khiển công cụ chứ không để AI quyết định thẩm mỹ. Sự nhạy cảm và tỉ mỉ giúp Tiểu Ngọc biết chính xác khi nào dùng AI để lên moodboard nhanh, và khi nào tự tay vẽ từng chi tiết trên bảng vẽ Wacom, căn chỉnh Typography và bố cục thị giác."
+        description: "Mình điều khiển công cụ, không để AI quyết định thẩm mỹ. Sự nhạy cảm và tỉ mỉ giúp mình biết lúc nào nên nhờ AI lên moodboard cho nhanh, lúc nào cầm bút Wacom vẽ tay từng chi tiết, chỉnh typography và bố cục."
       },
       {
-        title: "03. Tự động hóa việc lặp lại & Chuẩn mực In ấn",
+        title: "03. Việc lặp lại cho script, màu in thì mình soi",
         subtitle: "Photoshop Automation (-40% Time) & Print QC (<0.4% Defect)",
-        description: "Mọi thao tác lặp đi lặp lại như ghép mockup 2D/3D, xuất file in 300 DPI và đặt tên theo SKU đều được tự động hóa bằng Photoshop Actions (.atn) & Scripts (.jsx) tự viết. Khâu tách màu CMYK / Halftone DTG được kiểm soát chặt chẽ để giữ tỷ lệ hoàn trả do lỗi in dưới 0.4%."
+        description: "Ghép mockup 2D/3D, xuất file in 300 DPI, đặt tên theo SKU: những việc lặp đi lặp lại này đều chạy bằng Photoshop Actions (.atn) & Scripts (.jsx) mình tự viết. Phần tách màu CMYK / Halftone DTG thì mình kiểm tra kỹ bằng tay, để tỷ lệ hoàn trả do lỗi in dưới 0.4%."
       }
     ]
   },
@@ -204,12 +204,12 @@ export const profileData: ProfileData = {
     },
   ],
   softSkills: [
-    "Có gu thẩm mỹ rõ ràng & Thấu cảm insight khách hàng",
-    "Tỉ mỉ từng pixel & Kiểm soát chất lượng đầu ra khắt khe",
-    "Ứng dụng AI có chọn lọc, tạo sản phẩm có hồn, không rập khuôn",
-    "Cam kết đúng deadline trong các mùa sale cao điểm Q3–Q4",
-    "Phối hợp nhịp nhàng cùng team D2C, Marketing & Media Buyer",
-    "Tư duy tối ưu quy trình & Tự động hóa việc lặp lại bằng Action/Script"
+    "Có gu thẩm mỹ rõ ràng, hiểu insight khách hàng",
+    "Tỉ mỉ từng pixel, soi chất lượng đầu ra rất kỹ",
+    "Dùng AI có chọn lọc để sản phẩm vẫn có hồn, không rập khuôn",
+    "Giữ đúng deadline trong mùa sale cao điểm Q3–Q4",
+    "Làm việc ăn ý với team D2C, Marketing và Media Buyer",
+    "Hay tìm cách tối ưu quy trình, việc lặp lại thì viết Action/Script"
   ],
   languages: [
     {
@@ -277,27 +277,27 @@ export const profileData: ProfileData = {
   aiWorkflow: [
     {
       phase: "01. Insight & Trend",
-      title: "Nghiên cứu Khách hàng & Xu hướng",
+      title: "Đọc khách hàng và xu hướng",
       tools: ["ChatGPT / Claude", "Pinterest", "Market Research"],
-      description: "Nghiên cứu khách hàng, văn hóa và xu hướng thị trường US/EU/VN. Dùng AI hỗ trợ tổng hợp nhanh dữ liệu nhưng chọn lọc concept bằng trực giác và gu thẩm mỹ của người thiết kế."
+      description: "Mình tìm hiểu khách hàng, văn hóa và xu hướng thị trường US/EU/VN. AI giúp tổng hợp dữ liệu nhanh, còn chọn concept nào thì mình dựa vào trực giác và gu của người làm thiết kế."
     },
     {
       phase: "02. Ý tưởng cùng AI",
-      title: "AI Ideation (Có Chọn Lọc)",
+      title: "Thử ý tưởng cùng AI",
       tools: ["Adobe Firefly", "ChatGPT Image", "Gemini", "FLUX.1"],
-      description: "Tạo nhanh moodboard, thử nghiệm biến thể ánh sáng và bố cục cho sản phẩm & banner quảng cáo. Chọn lọc khắt khe bằng gu thẩm mỹ để không bao giờ tạo ra sản phẩm rập khuôn."
+      description: "Lên nhanh moodboard, thử biến thể ánh sáng và bố cục cho sản phẩm và banner quảng cáo. Mình chọn lọc khắt khe bằng gu, để không ra sản phẩm rập khuôn."
     },
     {
       phase: "03. Đôi tay Designer",
-      title: "Human Craft, Wacom & Print QC",
+      title: "Vẽ tay trên Wacom, soi màu in",
       tools: ["Wacom Tablet", "Photoshop", "Illustrator", "CMYK 300 DPI"],
-      description: "Hoàn thiện thủ công từng sản phẩm bằng bảng vẽ Wacom, căn chỉnh Typography chuẩn xác và kiểm soát tách màu in CMYK / Halftone DTG để giữ tỷ lệ lỗi in dưới 0.4%."
+      description: "Từng sản phẩm mình hoàn thiện bằng bảng vẽ Wacom, chỉnh typography cho chuẩn, rồi kiểm tra tách màu CMYK / Halftone DTG để tỷ lệ lỗi in dưới 0.4%."
     },
     {
       phase: "04. Tự động hóa",
-      title: "Actions & Scripts Hàng Loạt",
+      title: "Để script chạy hàng loạt",
       tools: ["PS Scripts (.jsx)", "Actions (.atn)", "Batch Mockups"],
-      description: "Đưa Photoshop Actions và Script tự viết vào xử lý các thao tác lặp lại: ghép mockup 2D/3D, xuất file in 300 DPI và đặt tên theo SKU, giúp giảm ~40% thời gian sản xuất cho cả team."
+      description: "Photoshop Actions và Script mình tự viết lo phần lặp lại: ghép mockup 2D/3D, xuất file in 300 DPI, đặt tên theo SKU. Cả team giảm ~40% thời gian sản xuất."
     }
   ],
   experiences: [

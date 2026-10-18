@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { profileData } from '../../data/profile';
-import { Sun, Moon, Menu, X, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide';
+import { MorphIcon } from 'morphicons/react';
 import { RegistrationMark } from '../print/PrintMarks';
 
 interface NavbarProps {
@@ -70,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             aria-label={darkMode ? 'Chuyển sang giao diện sáng' : 'Chuyển sang giao diện tối'}
             className="p-2 rounded-sm text-ink dark:text-paper hover:bg-paper-beige dark:hover:bg-editorial-cardDark transition-colors"
           >
-            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            <MorphIcon icon={darkMode ? Sun : Moon} size={16} spring="smooth" reducedMotion="user" />
           </button>
 
           <a
@@ -87,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             aria-label={isOpen ? 'Đóng menu' : 'Mở menu'}
             aria-expanded={isOpen}
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            <MorphIcon icon={isOpen ? X : Menu} size={20} reducedMotion="user" />
           </button>
         </div>
       </div>

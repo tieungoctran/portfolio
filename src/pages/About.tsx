@@ -19,7 +19,7 @@ export const About: React.FC = () => {
         </div>
 
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white leading-[1.15]">
-          Nhà thiết kế đồng hành cùng sự bùng nổ của thương mại điện tử.
+          Mình là Tiểu Ngọc, người ngồi sau 5,000+ file in
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pt-6">
@@ -86,7 +86,7 @@ export const About: React.FC = () => {
             <div className="p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/50 dark:border-brand-900/50 space-y-2">
               <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-brand-800 dark:text-brand-300 font-semibold">
                 <Rocket className="w-4 h-4 text-brand-500" />
-                <span>Giá trị mang lại cho Nhà tuyển dụng</span>
+                <span>Nếu bạn đang tuyển Senior Graphic Designer</span>
               </div>
               <p className="text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed">
                 {profileData.recruiterPitch}
@@ -97,7 +97,7 @@ export const About: React.FC = () => {
             <div className="p-5 rounded-2xl bg-neutral-100 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-3">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-                  Tiêu chí công việc & Tình trạng ứng tuyển
+                  Mình đang tìm việc gì
                 </span>
                 <span className="inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-emerald-700 dark:text-emerald-400">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -107,7 +107,7 @@ export const About: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs">
                 <div className="space-y-1">
-                  <span className="text-neutral-400 font-mono block">Vị trí mục tiêu:</span>
+                  <span className="text-neutral-400 font-mono block">Vị trí mình nhắm tới:</span>
                   <ul className="space-y-1 text-neutral-800 dark:text-neutral-200 font-medium">
                     {profileData.jobPreferences.targetRoles.map((role) => (
                       <li key={role}>• {role}</li>
@@ -115,7 +115,7 @@ export const About: React.FC = () => {
                   </ul>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-neutral-400 font-mono block">Hình thức & Thời gian nhận việc:</span>
+                  <span className="text-neutral-400 font-mono block">Hình thức làm việc:</span>
                   <ul className="space-y-1 text-neutral-800 dark:text-neutral-200 font-medium">
                     {profileData.jobPreferences.workModes.map((mode) => (
                       <li key={mode}>• {mode}</li>
@@ -139,7 +139,7 @@ export const About: React.FC = () => {
             Năng lực chuyên môn
           </span>
           <h2 className="font-serif text-3xl font-bold text-neutral-900 dark:text-white">
-            Kỹ năng Đồ họa, In ấn & Tự động hóa AI
+            Đồ họa, in ấn, tự động hóa: những gì mình làm mỗi ngày
           </h2>
         </div>
 
@@ -170,10 +170,10 @@ export const About: React.FC = () => {
         <div className="space-y-1">
           <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
             <Cpu className="w-4 h-4 text-brand-500" />
-            <span>Hệ sinh thái Công cụ Thiết kế, AI & Tự động hóa</span>
+            <span>Bộ đồ nghề của mình</span>
           </div>
           <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-            Tool Tech Stack làm chủ hàng ngày
+            Những công cụ mình mở lên mỗi ngày
           </h3>
         </div>
 
@@ -249,10 +249,10 @@ export const About: React.FC = () => {
       <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
         <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
           <Briefcase className="w-4 h-4" />
-          <span>Hành trình kinh nghiệm (Chuẩn định lượng Google XYZ)</span>
+          <span>Kinh nghiệm làm việc</span>
         </div>
         <h2 className="font-serif text-3xl font-bold text-neutral-900 dark:text-white">
-          Kinh nghiệm làm việc & Thành tựu thực tế
+          4+ năm ở Vani Ecommerce, tính bằng kết quả
         </h2>
 
         <div className="space-y-8 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-neutral-200 dark:before:bg-neutral-800">
@@ -294,7 +294,7 @@ export const About: React.FC = () => {
               <span>Học vấn & Đào tạo</span>
             </div>
             <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-              Nền tảng Học thuật
+              Nơi mình học nghề
             </h3>
           </div>
 
@@ -348,13 +348,13 @@ export const About: React.FC = () => {
               <span>Kỹ năng mềm & Phong cách làm việc</span>
             </div>
             <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-              Tác phong Chuyên nghiệp
+              Cách mình làm việc cùng team
             </h3>
           </div>
 
           <div className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4">
             <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-              Kết hợp sự nhạy bén thẩm mỹ của cung Song Ngư với tư duy hệ thống và kỷ luật tiến độ trong môi trường E-commerce quốc tế:
+              Mình nhạy cảm kiểu Song Ngư, nhưng làm cho khách quốc tế thì phải có hệ thống và đúng tiến độ. Đại loại thế này:
             </p>
             <ul className="space-y-2.5">
               {profileData.softSkills.map((skill) => (
@@ -372,10 +372,10 @@ export const About: React.FC = () => {
       <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div className="space-y-2 max-w-xl">
           <h4 className="font-serif text-2xl font-bold">
-            Sẵn sàng kết nối cùng đội ngũ của bạn
+            Team bạn cần thêm một designer E-commerce?
           </h4>
           <p className="text-xs sm:text-sm opacity-85 font-light">
-            Nhận lời mời hợp tác các dự án: thiết kế sản phẩm in (Print-on-Demand), banner Facebook & Google Ads, mockup 2D/3D, POSM/In ấn & thiết kế ứng dụng công cụ AI.
+            Mình nhận thiết kế sản phẩm in (Print-on-Demand), banner Facebook & Google Ads, mockup 2D/3D, POSM/in ấn và ứng dụng công cụ AI vào quy trình làm việc.
           </p>
         </div>
 

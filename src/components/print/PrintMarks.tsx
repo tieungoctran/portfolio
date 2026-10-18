@@ -44,10 +44,11 @@ export const CropMarks: React.FC<{ offset?: number; length?: number; className?:
           [top ? 'top' : 'bottom']: 0,
           [left ? 'left' : 'right']: -(offset + length),
         };
+        const corner = `${top ? 't' : 'b'}${left ? 'l' : 'r'}`;
         return (
           <React.Fragment key={`${top}-${left}`}>
-            <span aria-hidden="true" className={`bg-current pointer-events-none ${className}`} style={v} />
-            <span aria-hidden="true" className={`bg-current pointer-events-none ${className}`} style={h} />
+            <span aria-hidden="true" data-crop={corner} className={`crop-mark bg-current pointer-events-none ${className}`} style={v} />
+            <span aria-hidden="true" data-crop={corner} className={`crop-mark bg-current pointer-events-none ${className}`} style={h} />
           </React.Fragment>
         );
       })}
