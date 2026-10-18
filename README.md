@@ -1,18 +1,19 @@
 # 🎨 tieungoc.site — Trần Tiểu Ngọc Portfolio & Personal Branding
 
-Website portfolio chính thức và không gian trưng bày tác phẩm thiết kế của **Trần Tiểu Ngọc** (Mắt Gấu 🐻) — **Graphic Designer — POD & Brand Visual | AI-Powered Workflow** tại TP. Hồ Chí Minh.
+Website portfolio chính thức và không gian trưng bày tác phẩm thiết kế của **Trần Tiểu Ngọc** — **Senior Graphic Designer (E-commerce)** tại TP. Hồ Chí Minh.
 
 ---
 
 ## 🌟 Giới Thiệu Chủ Nhân
 - **Chủ sở hữu:** Trần Tiểu Ngọc (Nữ, sinh năm 2000, cung Song Ngư ♓)
 - **Công ty:** Vani Ecommerce (Tháng 8/2022 — Hiện tại, 4+ năm kinh nghiệm)
-- **Chuyên môn cốt lõi:** Thiết kế thời trang Print-on-Demand (POD), Brand Visual Identity & E-commerce Marketing Visuals.
+- **Chuyên môn cốt lõi:** E-commerce Design: sản phẩm in ấn (POD), banner quảng cáo Facebook & Google Ads, banner website & email Klaviyo, mockup 2D/3D, tự động hóa Photoshop. Nhận diện thương hiệu là kỹ năng bổ trợ.
 - **Thành tích nổi bật:**
-  - 3500+ sản phẩm POD áo thun 2D/3D, mugs, posters thị trường Mỹ & Châu Âu.
-  - Doanh số $20,000+ USD trong một quý từ bộ sưu tập POD Anime Collection.
+  - 5,000+ sản phẩm in ấn (POD) cho niche Anime, Racing, Sport, Music, phục vụ thị trường Mỹ & Châu Âu.
+  - Phụ trách toàn bộ thiết kế Dự án D2C 3 thương hiệu E-commerce (Q3–Q4/2025), đóng góp ~$25,000 USD lợi nhuận team D2C trong Q4/2025.
   - Tự lập trình Photoshop Actions & JS Scripts cắt giảm ~40% thời gian sản xuất.
-  - Ứng dụng AI-First Workflow (Adobe Firefly, Generative Fill, Banana Pro) tăng tốc sáng tạo x3 lần.
+  - Quy trình "Con người dẫn dắt, AI tăng tốc" (Adobe Firefly, ChatGPT Image, Claude, Gemini, Generative Fill) tăng tốc lên ý tưởng gấp 3 lần, hoàn thiện thủ công bằng Wacom.
+  - Kiểm soát chất lượng in chuẩn xưởng (tỷ lệ lỗi <0.4%) và 15+ mẫu email Klaviyo đạt tỷ lệ mở 28%.
 - **Kênh kết nối chính:**
   - Website: [tieungoc.site](https://tieungoc.site)
   - LinkedIn: [linkedin.com/in/tieungoc-design](https://www.linkedin.com/in/tieungoc-design)
