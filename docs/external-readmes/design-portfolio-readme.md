@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Trần Tiểu Ngọc (Mắt Gấu 🐻)</strong> · Graphic Designer — POD & Brand Visual | AI-Powered Workflow<br>
+  <strong>Trần Tiểu Ngọc</strong> · Senior Graphic Designer (E-commerce)<br>
   <em>"Nơi nghệ thuật thị giác giao thoa cùng tư duy số liệu thương mại và tự động hóa AI."</em>
 </p>
 
@@ -20,15 +20,15 @@
 
 ## 📌 Tổng Quan Về Tiểu Ngọc
 
-Xin chào! Mình là **Trần Tiểu Ngọc** (Mắt Gấu 🐻), Graphic Designer sinh năm 2000, hiện đang sống và làm việc tại Thủ Đức, TP. Hồ Chí Minh. 
+Xin chào! Mình là **Trần Tiểu Ngọc**, Graphic Designer sinh năm 2000, hiện đang sống và làm việc tại Thủ Đức, TP. Hồ Chí Minh. 
 
 Với hơn **4+ năm gắn bó toàn thời gian tại Vani Ecommerce (08/2022 — Hiện tại)**, mình chuyên sâu thiết kế thời trang **Print-on-Demand (POD)** phục vụ thị trường Mỹ và Châu Âu, xây dựng hệ thống nhận diện thương hiệu thương mại điện tử, đồng thời tiên phong kết hợp **Generative AI** và **Scripting tự động (Photoshop ExtendScript / JSX)** vào quy trình sản xuất thực chiến.
 
 ### 🏆 Những Con Số Biết Nói
 | Chỉ số | Kết quả thực tế | Ghi chú & Giá trị mang lại |
 | :---: | :---: | :--- |
-| 👕 **3,500+** | Sản phẩm POD | Áo thun 2D/3D, Mugs, Posters, Canvas cho thị trường US & EU |
-| 💰 **$20,000+** | Doanh số / Quý | Bộ sưu tập POD Anime Collection cán mốc doanh số kỷ lục trong Q4/2025 |
+| 👕 **5,000+** | Sản phẩm POD | Áo thun 2D/3D, Mugs, Posters, Canvas cho thị trường US & EU |
+| 💰 **~$25,000** | Lợi nhuận team D2C Q4/2025 | Phụ trách toàn bộ thiết kế Dự án D2C 3 thương hiệu E-commerce (Q3–Q4/2025) |
 | ⚡ **~40%** | Thời gian tiết kiệm | Nhờ tự lập trình kịch bản Photoshop Actions & JavaScript Scripts (JSX) |
 | 🎯 **28%** | Average Open Rate | Chuỗi Email Marketing Klaviyo (vượt xa chuẩn ngành thương mại điện tử 21%) |
 | 🛡️ **< 0.4%** | Tỷ lệ hoàn trả | Chuẩn hóa quy trình in ấn DTG, AOP và hệ màu CMYK 300 DPI |
@@ -37,7 +37,7 @@ Với hơn **4+ năm gắn bó toàn thời gian tại Vani Ecommerce (08/2022 �
 
 ## 🎨 Trưng Bày Tác Phẩm & Case Studies Thực Chiến
 
-### 1. ⚔️ POD Anime Collection — Doanh Thu $20,000+ (Q4/2025)
+### 1. ⚔️ POD Anime Collection — Dự án D2C 3 thương hiệu E-commerce (Q4/2025)
 > *Bộ sưu tập 50+ mẫu áo thun thời trang ngách Anime Cyberpunk & Neo-Tokyo phục vụ thị trường Mỹ, kết hợp vẽ tay Wacom tỉ mỉ và chuẩn hóa màu in DTG.*
 
 | Key Visual Artwork | Mockup Áo Thực Tế |
@@ -132,6 +132,6 @@ Với hơn **4+ năm gắn bó toàn thời gian tại Vani Ecommerce (08/2022 �
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/tieungoctran/portfolio/main/public/images/avatar.jpg" width="110" height="110" style="border-radius: 50%; object-fit: cover;" alt="Trần Tiểu Ngọc" /><br>
-  <strong>Trần Tiểu Ngọc (Mắt Gấu 🐻)</strong><br>
+  <strong>Trần Tiểu Ngọc</strong><br>
   <em>Designed with passion & precision · Saigon, Vietnam 🇻🇳</em>
 </p>

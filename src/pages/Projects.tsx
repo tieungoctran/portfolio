@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { projectsData, Project } from '../data/projects';
 import { ArrowUpRight, Filter, Search, Sparkles } from 'lucide-react';
+import { usePageMeta } from '../lib/page-meta';
 
 export const Projects: React.FC = () => {
+  usePageMeta(
+    'Dự án thiết kế đồ họa E-commerce | Trần Tiểu Ngọc',
+    'Case study thiết kế đồ họa thương mại điện tử: sản phẩm POD, banner quảng cáo Facebook & Google Ads, email Klaviyo và tự động hóa Photoshop cho thị trường US/EU.'
+  );
   const [selectedCategory, setSelectedCategory] = useState<string>('Tất cả');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -31,12 +36,12 @@ export const Projects: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 space-y-12">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-semibold">
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-700 dark:text-brand-300 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Case Studies & Minh chứng Thực tế</span>
         </div>
         <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Dự án Brand & E-commerce Visual Tiêu Biểu
+          Dự án E-commerce Design Tiêu Biểu
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
           Tổng hợp các bộ sưu tập thời trang thương mại, nhận diện thương hiệu ngách và hệ thống đồ họa e-commerce thực chiến của Trần Tiểu Ngọc.
@@ -82,17 +87,17 @@ export const Projects: React.FC = () => {
             <Link
               key={project.id}
               to={`/projects/${project.slug}`}
-              className="group block space-y-4 p-4 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121316] hover:border-neutral-400 dark:hover:border-neutral-600 transition-all"
+              className="group block space-y-4 p-4 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-editorial-surfaceDark hover:border-neutral-400 dark:hover:border-neutral-600 transition-all"
             >
               <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-neutral-200 dark:bg-neutral-800 border border-neutral-200/80 dark:border-neutral-800">
                 <img
                   src={project.coverImage}
-                  alt={project.title}
+                  alt={`${project.title}: dự án thiết kế đồ họa E-commerce`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-neutral-900/85 backdrop-blur-md text-amber-300 border border-neutral-700">
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-neutral-900/85 backdrop-blur-md text-brand-300 border border-neutral-700">
                     {project.category}
                   </span>
                 </div>
@@ -109,7 +114,7 @@ export const Projects: React.FC = () => {
                   <span>{project.year}</span>
                 </div>
 
-                <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   {project.title}
                 </h3>
 
@@ -123,7 +128,7 @@ export const Projects: React.FC = () => {
                     {project.aiHighlights.slice(0, 2).map((hl, i) => (
                       <span
                         key={i}
-                        className="text-[11px] px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-800 dark:text-amber-300 font-medium"
+                        className="text-[11px] px-2 py-0.5 rounded-md bg-brand-500/10 text-brand-800 dark:text-brand-300 font-medium"
                       >
                         ✦ {hl}
                       </span>

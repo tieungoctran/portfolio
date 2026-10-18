@@ -1,4 +1,4 @@
-# Hi there, I'm Trần Tiểu Ngọc (Mắt Gấu 🐻) 👋
+# Hi there, I'm Trần Tiểu Ngọc 👋
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=9e7362&height=180&section=header&text=Trần%20Tiểu%20Ngọc&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=Graphic%20Designer%20%E2%80%94%20POD%20%7C%20AI-First%20Workflow%20%7C%20ExtendScript%20Automation&descSize=16&descAlignY=68" width="100%" alt="Header Banner" />
@@ -20,11 +20,11 @@
 ---
 
 ### 🌟 About Me
-- 🎨 **Role:** Graphic Designer chuyên sâu **Print-on-Demand (POD)**, Brand Visual & E-commerce Creative.
+- 🎨 **Role:** Senior Graphic Designer chuyên **E-commerce Design**: sản phẩm in ấn (POD), banner Ads, banner website & email, mockup 2D/3D.
 - 🏢 **Kinh nghiệm:** **4+ năm thực chiến** tại **Vani Ecommerce** (08/2022 — Hiện tại).
 - 🏆 **Thành tích:**
-  - Trực tiếp thiết kế **3,500+ sản phẩm POD** (T-shirts 2D/3D, Mugs, Posters, Canvas...) phục vụ thị trường US & EU.
-  - Chủ trì bộ sưu tập **POD Anime Collection cán mốc $20,000+ USD doanh thu** trong một quý (Q4/2025).
+  - Trực tiếp thiết kế **5,000+ sản phẩm POD** (T-shirts 2D/3D, Mugs, Posters, Canvas...) phục vụ thị trường US & EU.
+  - Phụ trách toàn bộ thiết kế **Dự án D2C 3 thương hiệu E-commerce**, đóng góp **~$25,000 USD lợi nhuận team D2C** trong Q4/2025.
   - Tỷ lệ lỗi in ấn hoàn trả dưới **0.4%** nhờ am hiểu sâu sắc hệ màu CMYK và kỹ thuật in DTG / AOP.
 - ⚡ **Vũ khí bí mật:** Viết các đoạn mã **Photoshop ExtendScript (JSX)** và **Photoshop Actions** giúp cắt giảm **~40% thời gian sản xuất** mockup và xuất file in ấn hàng loạt.
 - 📍 **Location:** TP. Hồ Chí Minh, Việt Nam (Gen Z · Cung Song Ngư ♓).
@@ -107,5 +107,5 @@ Nếu bạn muốn trao đổi về ý tưởng POD, tối ưu quy trình thiế
 | ✉️ **Email** | [ngoctt.design@gmail.com](mailto:ngoctt.design@gmail.com) | Hợp tác công việc & tuyển dụng |
 
 <p align="center">
-  Made with 🤎 by <strong>Trần Tiểu Ngọc (Mắt Gấu 🐻)</strong> · Saigon, Vietnam
+  Made with 🤎 by <strong>Trần Tiểu Ngọc</strong> · Saigon, Vietnam
 </p>

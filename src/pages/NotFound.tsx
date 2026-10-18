@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
+import { usePageMeta } from '../lib/page-meta';
 
 export const NotFound: React.FC = () => {
+  usePageMeta('Không tìm thấy trang | Trần Tiểu Ngọc', 'Trang bạn tìm không tồn tại trên tieungoc.site.', { noindex: true });
   return (
     <div className="max-w-2xl mx-auto px-6 py-28 text-center space-y-6">
       <span className="text-xs uppercase tracking-widest font-mono text-neutral-400">

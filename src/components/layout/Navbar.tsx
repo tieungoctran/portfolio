@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { profileData } from '../../data/profile';
-import { Sun, Moon, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Sun, Moon, Menu, X, Mail } from 'lucide-react';
+import { RegistrationMark } from '../print/PrintMarks';
 
 interface NavbarProps {
   darkMode: boolean;
   setDarkMode: (value: boolean) => void;
 }
+
+const navLinks = [
+  { label: 'Trang chủ', path: '/' },
+  { label: 'Dự án', path: '/projects' },
+  { label: 'Về tôi', path: '/about' },
+  { label: 'Góc chia sẻ', path: '/blog' },
+  { label: 'Liên hệ', path: '/contact' },
+];
 
 export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,130 +26,98 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  const navLinks = [
-    { label: 'Trang chủ', path: '/' },
-    { label: 'Dự án', path: '/projects' },
-    { label: 'Về tôi', path: '/about' },
-    { label: 'Góc chia sẻ', path: '/blog' },
-    { label: 'Liên hệ', path: '/contact' },
-  ];
-
-  const isActive = (path: string) => {
-    if (path === '/' && location.pathname === '/') return true;
-    if (path !== '/' && location.pathname.startsWith(path)) return true;
-    return false;
-  };
+  const isActive = (path: string) =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#fbfbfb]/85 dark:bg-[#0c0d0e]/85 border-b border-neutral-200/60 dark:border-neutral-800/60 transition-colors">
-      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Brand Logo with Avatar */}
-        <Link to="/" className="group flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-full overflow-hidden border border-neutral-300 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 flex-shrink-0">
-            <img
-              src={profileData.avatarUrl}
-              alt={profileData.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-              onError={(e) => {
-                // Fallback to high-res portrait if local file not placed yet
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80";
-              }}
-            />
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center space-x-2">
-              <span className="font-heading font-bold text-lg tracking-tight text-neutral-900 dark:text-neutral-50 group-hover:opacity-75 transition-opacity">
-                Trần Tiểu Ngọc
-              </span>
-              <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-800 dark:text-amber-300 border border-amber-500/20">
-                Graphic Designer
-              </span>
-            </div>
-            <span className="text-xs text-neutral-500 dark:text-neutral-400 font-mono tracking-wide">
-              tieungoc.site
+    <header className="sticky top-0 z-50 bg-paper/95 dark:bg-editorial-dark/95 backdrop-blur-sm border-b border-paper-line dark:border-editorial-borderDark transition-colors">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+        <Link to="/" className="group flex items-center gap-2.5 min-w-0">
+          <RegistrationMark className="w-5 h-5 flex-shrink-0 text-ink dark:text-paper group-hover:rotate-90 transition-transform duration-500" />
+          <span className="flex flex-col leading-tight min-w-0">
+            <span className="font-heading font-bold text-[17px] tracking-tight text-ink dark:text-paper">
+              Trần Tiểu Ngọc
             </span>
-          </div>
+            <span className="hidden sm:block text-[11px] text-paper-muted dark:text-editorial-textDark truncate">
+              {profileData.role}
+            </span>
+          </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <nav aria-label="Điều hướng chính" className="hidden md:flex items-center gap-7 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`transition-colors relative py-1 ${
+              aria-current={isActive(link.path) ? 'page' : undefined}
+              className={`relative py-1.5 transition-colors ${
                 isActive(link.path)
-                  ? 'text-neutral-950 dark:text-white font-semibold'
-                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200'
+                  ? 'text-ink dark:text-paper font-semibold'
+                  : 'text-paper-text dark:text-editorial-textDark hover:text-ink dark:hover:text-paper'
               }`}
             >
               {link.label}
               {isActive(link.path) && (
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-neutral-900 dark:bg-neutral-100 rounded-full" />
+                <span aria-hidden="true" className="absolute -bottom-0.5 left-0 w-full h-[2px] bg-brand-500 dark:bg-brand-300" />
               )}
             </Link>
           ))}
         </nav>
 
-        {/* Action Controls */}
-        <div className="flex items-center space-x-4">
-          {/* Dark / Light Toggle */}
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            aria-label="Chuyển đổi giao diện Sáng / Tối"
-            className="p-2 rounded-full text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200/60 dark:hover:bg-neutral-800 transition-colors"
+            aria-label={darkMode ? 'Chuyển sang giao diện sáng' : 'Chuyển sang giao diện tối'}
+            className="p-2 rounded-sm text-ink dark:text-paper hover:bg-paper-beige dark:hover:bg-editorial-cardDark transition-colors"
           >
-            {darkMode ? <Sun className="w-4 h-4 text-amber-300" /> : <Moon className="w-4 h-4 text-neutral-700" />}
+            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          {/* Quick CTA to Contact */}
-          <Link
-            to="/contact"
-            className="hidden sm:inline-flex items-center space-x-1 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 hover:opacity-90 transition-opacity"
+          <a
+            href={profileData.cvRequestUrl}
+            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded-sm bg-ink text-paper dark:bg-paper dark:text-ink hover:bg-brand-600 dark:hover:bg-brand-300 transition-colors"
           >
-            <span>Hợp tác</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </Link>
+            <Mail className="w-3.5 h-3.5" />
+            <span>Xin CV</span>
+          </a>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200/60 dark:hover:bg-neutral-800 transition-colors"
-            aria-label="Mở menu"
+            className="md:hidden p-2 rounded-sm text-ink dark:text-paper hover:bg-paper-beige dark:hover:bg-editorial-cardDark transition-colors"
+            aria-label={isOpen ? 'Đóng menu' : 'Mở menu'}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       {isOpen && (
-        <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#0c0d0e] px-6 py-6 space-y-4">
-          <nav className="flex flex-col space-y-3">
+        <div className="md:hidden border-t border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark px-4 py-4">
+          <nav aria-label="Điều hướng di động" className="flex flex-col">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-base font-medium py-2 px-3 rounded-lg transition-colors ${
+                aria-current={isActive(link.path) ? 'page' : undefined}
+                className={`flex items-center justify-between py-3 border-b border-paper-line dark:border-editorial-borderDark text-base ${
                   isActive(link.path)
-                    ? 'bg-neutral-200/70 dark:bg-neutral-800 text-neutral-950 dark:text-white font-semibold'
-                    : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800/50'
+                    ? 'text-ink dark:text-paper font-semibold'
+                    : 'text-paper-text dark:text-editorial-textDark'
                 }`}
               >
                 {link.label}
+                {isActive(link.path) && <span aria-hidden="true" className="w-2 h-2 bg-brand-500 dark:bg-brand-300" />}
               </Link>
             ))}
           </nav>
-          <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex justify-between items-center">
-            <span className="text-xs text-neutral-500 font-mono">tieungoc.site</span>
-            <Link
-              to="/contact"
-              className="inline-flex items-center space-x-1 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900"
-            >
-              <span>Liên hệ ngay</span>
-              <ArrowUpRight className="w-3 h-3" />
-            </Link>
-          </div>
+          <a
+            href={profileData.cvRequestUrl}
+            className="mt-4 flex items-center justify-center gap-2 py-3 text-sm font-semibold rounded-sm bg-ink text-paper dark:bg-paper dark:text-ink"
+          >
+            <Mail className="w-4 h-4" />
+            <span>Xin CV qua email</span>
+          </a>
         </div>
       )}
     </header>

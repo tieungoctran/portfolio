@@ -1,20 +1,25 @@
 import React from 'react';
 import { profileData } from '../data/profile';
-import { ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, Heart, GraduationCap, Globe2, Phone, Mail } from 'lucide-react';
+import { ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, GraduationCap, Globe2, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../lib/page-meta';
 
 export const About: React.FC = () => {
+  usePageMeta(
+    'Giới thiệu Trần Tiểu Ngọc | Chuyên viên Thiết kế Đồ họa TMĐT',
+    'Senior Graphic Designer (E-commerce) 4+ năm tại Vani Ecommerce, tốt nghiệp HCMUTE. Photoshop, Illustrator, Figma, công cụ AI và tự động hóa Photoshop.'
+  );
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-20">
       {/* Header & Portrait Bio */}
       <div className="space-y-8">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-mono font-semibold">
-          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-700 dark:text-brand-300 text-xs font-mono font-semibold">
+          <Sparkles className="w-3.5 h-3.5 text-brand-500" />
           <span>Về Trần Tiểu Ngọc • {profileData.role}</span>
         </div>
 
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white leading-[1.15]">
-          Nhà thiết kế đồng hành cùng sự bùng nổ của Brand & E-commerce Visual.
+          Nhà thiết kế đồng hành cùng sự bùng nổ của thương mại điện tử.
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pt-6">
@@ -23,7 +28,7 @@ export const About: React.FC = () => {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 shadow-sm relative group">
               <img
                 src={profileData.avatarUrl}
-                alt="Trần Tiểu Ngọc - Senior Graphic Designer"
+                alt="Chân dung Trần Tiểu Ngọc, Senior Graphic Designer (E-commerce) tại TP.HCM"
                 className="w-full h-full object-cover grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80";
@@ -39,16 +44,16 @@ export const About: React.FC = () => {
             <div className="p-4 rounded-xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-2 text-xs">
               <a
                 href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
-                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-mono"
+                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors font-mono"
               >
-                <Phone className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-brand-500 flex-shrink-0" />
                 <span>{profileData.phoneInternational}</span>
               </a>
               <a
                 href={`mailto:${profileData.email}`}
-                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-mono"
+                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors font-mono"
               >
-                <Mail className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-brand-500 flex-shrink-0" />
                 <span>{profileData.email}</span>
               </a>
             </div>
@@ -78,9 +83,9 @@ export const About: React.FC = () => {
               <p key={index}>{paragraph}</p>
             ))}
 
-            <div className="p-6 rounded-2xl bg-amber-500/10 dark:bg-amber-950/20 border border-amber-300/50 dark:border-amber-900/50 space-y-2">
-              <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-amber-800 dark:text-amber-300 font-semibold">
-                <Rocket className="w-4 h-4 text-amber-500" />
+            <div className="p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/50 dark:border-brand-900/50 space-y-2">
+              <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-brand-800 dark:text-brand-300 font-semibold">
+                <Rocket className="w-4 h-4 text-brand-500" />
                 <span>Giá trị mang lại cho Nhà tuyển dụng</span>
               </div>
               <p className="text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed">
@@ -130,7 +135,7 @@ export const About: React.FC = () => {
       {/* Skills Matrix */}
       <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
         <div className="space-y-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 font-mono">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 font-mono">
             Năng lực chuyên môn
           </span>
           <h2 className="font-serif text-3xl font-bold text-neutral-900 dark:text-white">
@@ -142,7 +147,7 @@ export const About: React.FC = () => {
           {profileData.skillCategories.map((cat) => (
             <div
               key={cat.title}
-              className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-4"
+              className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4"
             >
               <h3 className="font-serif text-lg font-bold text-neutral-900 dark:text-white flex items-center space-x-2">
                 <span>{cat.title}</span>
@@ -164,7 +169,7 @@ export const About: React.FC = () => {
       <div className="space-y-6 pt-8 border-t border-neutral-200 dark:border-neutral-800">
         <div className="space-y-1">
           <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-            <Cpu className="w-4 h-4 text-amber-500" />
+            <Cpu className="w-4 h-4 text-brand-500" />
             <span>Hệ sinh thái Công cụ Thiết kế, AI & Tự động hóa</span>
           </div>
           <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
@@ -198,21 +203,21 @@ export const About: React.FC = () => {
 
       {/* Human-Crafted, AI-Accelerated Philosophy Section */}
       <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-[#141618] dark:text-neutral-100 border border-neutral-800 space-y-8 relative overflow-hidden">
+        <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-editorial-surfaceDark dark:text-neutral-100 border border-neutral-800 space-y-8 relative overflow-hidden">
           <div className="space-y-3 max-w-3xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-mono font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-brand-400" />
               <span>{profileData.aiPhilosophy.badge}</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
               {profileData.aiPhilosophy.headline}
             </h2>
-            <blockquote className="p-4 rounded-2xl bg-neutral-800/80 border-l-4 border-amber-400 text-sm sm:text-base font-serif italic text-amber-100 leading-relaxed">
+            <blockquote className="p-4 rounded-2xl bg-neutral-800/80 border-l-4 border-brand-400 text-sm sm:text-base font-quote italic text-brand-100 leading-relaxed">
               &ldquo;{profileData.aiPhilosophy.coreBelief}&rdquo;
             </blockquote>
             <div className="pt-1">
               <span className="inline-block text-xs font-mono px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-semibold">
-                ⚖️ Tỷ lệ vàng: {profileData.aiPhilosophy.ratio}
+                ✦ {profileData.aiPhilosophy.ratio}
               </span>
             </div>
           </div>
@@ -224,7 +229,7 @@ export const About: React.FC = () => {
                 className="p-5 rounded-2xl bg-neutral-800/60 border border-neutral-700/70 space-y-2.5 flex flex-col justify-between"
               >
                 <div className="space-y-2">
-                  <span className="text-[11px] font-mono text-amber-400 block font-semibold">
+                  <span className="text-[11px] font-mono text-brand-400 block font-semibold">
                     {pillar.subtitle}
                   </span>
                   <h3 className="font-serif text-base font-bold text-white">
@@ -255,7 +260,7 @@ export const About: React.FC = () => {
             <div key={index} className="relative pl-10 space-y-3">
               <span className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-neutral-900" />
               <div className="flex flex-wrap items-center justify-between text-xs text-neutral-500 font-mono">
-                <span className="font-semibold text-amber-700 dark:text-amber-400">{exp.company}</span>
+                <span className="font-semibold text-brand-700 dark:text-brand-400">{exp.company}</span>
                 <span>{exp.period}</span>
               </div>
               <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
@@ -268,7 +273,7 @@ export const About: React.FC = () => {
                 <ul className="space-y-2 pt-2">
                   {exp.highlights.map((item, idx) => (
                     <li key={idx} className="flex items-start space-x-2 text-sm text-neutral-600 dark:text-neutral-300 font-light">
-                      <Check className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -285,7 +290,7 @@ export const About: React.FC = () => {
         <div className="space-y-6">
           <div className="space-y-2">
             <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-              <GraduationCap className="w-4 h-4 text-amber-500" />
+              <GraduationCap className="w-4 h-4 text-brand-500" />
               <span>Học vấn & Đào tạo</span>
             </div>
             <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
@@ -296,9 +301,9 @@ export const About: React.FC = () => {
           {profileData.educations.map((edu, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-2"
+              className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-2"
             >
-              <span className="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold">
+              <span className="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">
                 {edu.period}
               </span>
               <h4 className="font-serif text-lg font-bold text-neutral-900 dark:text-white">
@@ -314,9 +319,9 @@ export const About: React.FC = () => {
           ))}
 
           {/* Languages */}
-          <div className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-4">
+          <div className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4">
             <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-              <Globe2 className="w-4 h-4 text-amber-500" />
+              <Globe2 className="w-4 h-4 text-brand-500" />
               <span>Ngoại ngữ</span>
             </div>
             <div className="space-y-3">
@@ -324,7 +329,7 @@ export const About: React.FC = () => {
                 <div key={lang.language} className="space-y-0.5">
                   <div className="flex items-center justify-between text-xs">
                     <span className="font-semibold text-neutral-900 dark:text-white">{lang.language}</span>
-                    <span className="text-amber-700 dark:text-amber-400 font-mono text-[11px]">{lang.level}</span>
+                    <span className="text-brand-700 dark:text-brand-400 font-mono text-[11px]">{lang.level}</span>
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400 font-light">
                     {lang.detail}
@@ -339,7 +344,7 @@ export const About: React.FC = () => {
         <div className="space-y-6">
           <div className="space-y-2">
             <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-              <Sparkles className="w-4 h-4 text-amber-500" />
+              <Sparkles className="w-4 h-4 text-brand-500" />
               <span>Kỹ năng mềm & Phong cách làm việc</span>
             </div>
             <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
@@ -347,7 +352,7 @@ export const About: React.FC = () => {
             </h3>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 space-y-4">
+          <div className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4">
             <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
               Kết hợp sự nhạy bén thẩm mỹ của cung Song Ngư với tư duy hệ thống và kỷ luật tiến độ trong môi trường E-commerce quốc tế:
             </p>
@@ -363,37 +368,6 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Life Outside Design & Pets Section */}
-      <div className="p-8 sm:p-10 rounded-3xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-        <div className="md:col-span-4 aspect-square rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 relative group shadow-sm">
-          <img
-            src={profileData.petsUrl}
-            alt="Thú cưng của Trần Tiểu Ngọc"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80";
-            }}
-          />
-          <div className="absolute bottom-2.5 left-2.5 right-2.5 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[11px] font-mono flex items-center justify-between">
-            <span>🐾 Best Co-pilot</span>
-            <span className="text-amber-300">Companion</span>
-          </div>
-        </div>
-
-        <div className="md:col-span-8 space-y-3">
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-semibold">
-            <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
-            <span>Góc nhỏ đời thường & Người bạn 4 chân</span>
-          </div>
-          <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-            Nguồn năng lượng tích cực đằng sau những bản thiết kế
-          </h3>
-          <p className="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
-            {profileData.petsBio} Khi không đắm chìm vào các luồng người dùng phức tạp hay thử nghiệm prompt mới, thời gian vui đùa bên thú cưng giúp Tiểu Ngọc tái tạo năng lượng sáng tạo, giữ tâm thế an yên và luôn tìm thấy niềm vui trong những điều giản dị nhất.
-          </p>
-        </div>
-      </div>
-
       {/* Recruiter Callout */}
       <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div className="space-y-2 max-w-xl">
@@ -401,7 +375,7 @@ export const About: React.FC = () => {
             Sẵn sàng kết nối cùng đội ngũ của bạn
           </h4>
           <p className="text-xs sm:text-sm opacity-85 font-light">
-            Nhận lời mời hợp tác các dự án: Senior Graphic Design, Brand & E-commerce Visual, POSM/Print & AI-Powered Creative.
+            Nhận lời mời hợp tác các dự án: thiết kế sản phẩm in (Print-on-Demand), banner Facebook & Google Ads, mockup 2D/3D, POSM/In ấn & thiết kế ứng dụng công cụ AI.
           </p>
         </div>
 

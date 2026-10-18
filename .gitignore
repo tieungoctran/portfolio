@@ -51,3 +51,19 @@ designer-docs/
 
 # Private CV sources & PDFs (contain personal contact details; shared by email only)
 resume/
+
+# Impeccable local engine binaries (auto-downloaded on first run if missing)
+**/scripts/bin/
+
+# Local MCP config (contains API keys)
+mcp_config.json
+
+# Local AI tool installs and per-machine agent config
+.claude/
+.codex/
+.gemini/
+.impeccable/
+.agents/skills/impeccable/
+.github/agents/
+.github/hooks/
+.github/skills/

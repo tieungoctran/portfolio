@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { articlesData, Article } from '../data/articles';
 import { ArrowUpRight, BookOpen, Linkedin, ExternalLink } from 'lucide-react';
+import { usePageMeta } from '../lib/page-meta';
 
 export const Blog: React.FC = () => {
+  usePageMeta(
+    'Góc chia sẻ nghề thiết kế E-commerce | Trần Tiểu Ngọc',
+    'Nhật ký làm nghề của một Graphic Designer E-commerce: thiết kế banner quảng cáo, sản phẩm POD, ứng dụng AI có gu và tự động hóa Photoshop.'
+  );
   const [platformFilter, setPlatformFilter] = useState<'All' | 'Substack' | 'LinkedIn'>('All');
 
   const filteredArticles = articlesData.filter((art: Article) => {
@@ -32,13 +37,13 @@ export const Blog: React.FC = () => {
           href="https://tieungoc.substack.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-6 rounded-2xl bg-amber-500/10 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/50 hover:border-amber-400 dark:hover:border-amber-700 transition-all space-y-3"
+          className="group p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-200/80 dark:border-brand-900/50 hover:border-brand-400 dark:hover:border-brand-700 transition-all space-y-3"
         >
           <div className="flex items-center justify-between">
-            <span className="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400">
+            <span className="w-10 h-10 rounded-xl bg-brand-500/20 flex items-center justify-center text-brand-600 dark:text-brand-400">
               <BookOpen className="w-5 h-5" />
             </span>
-            <span className="inline-flex items-center space-x-1 text-xs font-semibold text-amber-700 dark:text-amber-300 group-hover:underline">
+            <span className="inline-flex items-center space-x-1 text-xs font-semibold text-brand-700 dark:text-brand-300 group-hover:underline">
               <span>Đăng ký nhận bài</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
@@ -101,12 +106,12 @@ export const Blog: React.FC = () => {
             href={article.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121316] hover:border-neutral-400 dark:hover:border-neutral-600 transition-all space-y-4"
+            className="group block p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-editorial-surfaceDark hover:border-neutral-400 dark:hover:border-neutral-600 transition-all space-y-4"
           >
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${
                 article.platform === 'Substack'
-                  ? 'bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-300'
+                  ? 'bg-brand-100 text-brand-900 dark:bg-brand-950/60 dark:text-brand-300'
                   : 'bg-sky-100 text-sky-900 dark:bg-sky-950/60 dark:text-sky-300'
               }`}>
                 Đọc trên {article.platform}

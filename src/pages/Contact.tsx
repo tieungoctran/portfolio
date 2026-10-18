@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { submitContactInquiry, isSupabaseConfigured } from '../lib/supabase';
 import { profileData } from '../data/profile';
-import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, ArrowUpRight, Loader2, Briefcase } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, Loader2, Briefcase } from 'lucide-react';
+import { usePageMeta } from '../lib/page-meta';
+import { SocialLinks } from '../components/SocialLinks';
 
 export const Contact: React.FC = () => {
+  usePageMeta(
+    'Liên hệ tuyển dụng Graphic Designer E-commerce | Trần Tiểu Ngọc',
+    'Open to Work: Senior Graphic Designer (E-commerce) toàn thời gian tại TP.HCM. Gửi lời mời phỏng vấn, yêu cầu CV hoặc dự án thiết kế.'
+  );
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,14 +51,14 @@ export const Contact: React.FC = () => {
     <div className="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-16">
       {/* Header */}
       <div className="space-y-4 max-w-2xl">
-        <span className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 font-mono">
+        <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 font-mono">
           Liên hệ & Tuyển dụng
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
           Cùng nhau kết nối & thảo luận cơ hội.
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Tiểu Ngọc luôn cởi mở đón nhận các cơ hội phỏng vấn, dự án thiết kế Brand & E-commerce Visual, POSM/Print và hợp tác thương mại điện tử.
+          Tiểu Ngọc luôn cởi mở đón nhận các cơ hội phỏng vấn, dự án thiết kế E-commerce (sản phẩm in POD, banner quảng cáo, mockup), POSM/In ấn và hợp tác thương mại điện tử.
         </p>
       </div>
 
@@ -60,9 +66,9 @@ export const Contact: React.FC = () => {
         {/* Contact Info Sidebar */}
         <div className="space-y-8">
           {/* Recruiter fast-track box */}
-          <div className="p-6 rounded-2xl bg-amber-500/10 dark:bg-amber-950/20 border border-amber-300/60 dark:border-amber-900/50 space-y-3">
-            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-amber-800 dark:text-amber-300 font-semibold">
-              <Briefcase className="w-4 h-4 text-amber-500" />
+          <div className="p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/60 dark:border-brand-900/50 space-y-3">
+            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-brand-800 dark:text-brand-300 font-semibold">
+              <Briefcase className="w-4 h-4 text-brand-500" />
               <span>Dành cho Nhà tuyển dụng</span>
             </div>
             <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
@@ -110,21 +116,7 @@ export const Contact: React.FC = () => {
             <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400">
               Kênh mạng xã hội & Viết lách
             </h4>
-            <ul className="space-y-2 text-sm">
-              {profileData.socials.map((social) => (
-                <li key={social.name}>
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1.5 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
-                  >
-                    <span>{social.name}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400" />
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <SocialLinks />
           </div>
 
           {/* Supabase status notice */}
@@ -141,7 +133,7 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="md:col-span-2 p-8 rounded-3xl bg-white dark:bg-[#121316] border border-neutral-200 dark:border-neutral-800 shadow-sm space-y-6">
+        <div className="md:col-span-2 p-8 rounded-3xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 shadow-sm space-y-6">
           <h2 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
             Gửi lời mời phỏng vấn hoặc lời nhắn
           </h2>
@@ -174,7 +166,7 @@ export const Contact: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {[
                   { id: 'recruitment', label: '💼 Lời mời tuyển dụng' },
-                  { id: 'project', label: '🚀 Dự án Brand & E-commerce Visual' },
+                  { id: 'project', label: '🚀 Dự án thiết kế E-commerce' },
                   { id: 'networking', label: '☕ Kết nối & Trò chuyện' }
                 ].map((item) => (
                   <button
@@ -230,7 +222,7 @@ export const Contact: React.FC = () => {
               <input
                 type="text"
                 required
-                placeholder="Ví dụ: Trao đổi dự án thiết kế Brand Visual / Tuyển dụng Senior Graphic Designer"
+                placeholder="Ví dụ: Trao đổi dự án thiết kế E-commerce / Tuyển dụng Senior Graphic Designer (E-commerce)"
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                 className="w-full px-4 py-2.5 rounded-xl text-sm bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white focus:border-neutral-500 outline-none transition-colors"
