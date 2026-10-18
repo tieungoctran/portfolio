@@ -104,8 +104,79 @@
   animation: pen-draw 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.15s both;
 }
 
+/*
+ * Motion system: one signature ease (0.16, 1, 0.3, 1), durations 150 / 320 / 700ms,
+ * one entrance ("ink pass": the block prints left to right like a print head).
+ * Hidden states apply only under html.motion-ready, which Layout sets when JS runs and motion is allowed,
+ * so content is always visible without JS or with reduced motion.
+ */
+.motion-ready .reveal {
+  clip-path: inset(0 100% 0 0);
+  transform: translateY(8px);
+}
+
+.motion-ready .reveal.is-in {
+  /* Ends wider than the box so crop marks and shadows outside it are never clipped */
+  clip-path: inset(-48px -48px -48px -48px);
+  transform: none;
+  transition:
+    clip-path 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+}
+
+/* Route change: the new page gets one short ink pass */
+@keyframes ink-pass {
+  from { clip-path: inset(0 100% 0 0); transform: translateY(8px); }
+  to { clip-path: inset(0 0 0 0); transform: none; }
+}
+
+.motion-ready .page-enter {
+  animation: ink-pass 0.42s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Separation tabs: the newly selected plate prints in */
+.motion-ready .plate-print {
+  animation: ink-pass 0.32s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Workflow: the press line between registration marks draws in, station by station */
+.motion-ready .press-line {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.motion-ready .is-in .press-line {
+  transform: scaleX(1);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--reveal-delay, 0ms) + 0.15s);
+}
+
+/* Reading progress: the CMYK strip prints across the top edge with scroll */
+.proof-progress {
+  clip-path: inset(0 calc((1 - var(--progress, 0)) * 100%) 0 0);
+}
+
+/* Proof cards: trim marks step out to frame the hovered proof */
+.crop-mark {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .crop-mark[data-crop^='t'],
+.group:focus-visible .crop-mark[data-crop^='t'] { --crop-y: -4px; }
+.group:hover .crop-mark[data-crop^='b'],
+.group:focus-visible .crop-mark[data-crop^='b'] { --crop-y: 4px; }
+.group:hover .crop-mark[data-crop$='l'],
+.group:focus-visible .crop-mark[data-crop$='l'] { --crop-x: -4px; }
+.group:hover .crop-mark[data-crop$='r'],
+.group:focus-visible .crop-mark[data-crop$='r'] { --crop-x: 4px; }
+
+.crop-mark {
+  transform: translate(var(--crop-x, 0), var(--crop-y, 0));
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .plate-ghost { animation: none; opacity: 0; }
   .pen-stroke { animation: none; stroke-dashoffset: 0; }
+  .crop-mark { transition: none; }
+  .proof-progress { display: none; }
 }

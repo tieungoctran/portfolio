@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import { ScrollProofStrip } from '../motion/ScrollProofStrip';
+import { prefersReducedMotion } from '../../lib/motion';
 
 export const Layout: React.FC = () => {
   const location = useLocation();
@@ -25,6 +27,13 @@ export const Layout: React.FC = () => {
     }
   }, [darkMode]);
 
+  // Entrance motion only hides content once JS runs and the visitor allows motion
+  useEffect(() => {
+    if (prefersReducedMotion() || typeof IntersectionObserver === 'undefined') return;
+    document.documentElement.classList.add('motion-ready');
+    return () => document.documentElement.classList.remove('motion-ready');
+  }, []);
+
   // Scroll to top whenever the URL path changes
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,9 +41,12 @@ export const Layout: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-paper dark:bg-editorial-dark text-ink dark:text-paper transition-colors duration-200">
+      <ScrollProofStrip />
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="flex-grow">
-        <Outlet />
+        <div key={location.pathname} className="page-enter">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </div>

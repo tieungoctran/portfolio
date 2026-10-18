@@ -11,10 +11,10 @@ export const NotFound: React.FC = () => {
         404 • Trang không tìm thấy
       </span>
       <h1 className="font-serif text-5xl sm:text-6xl font-bold text-neutral-900 dark:text-white">
-        Lạc lối trong không gian thiết kế.
+        File này mình tìm mãi không ra.
       </h1>
       <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-md mx-auto">
-        Trang bạn đang tìm kiếm có thể đã được đổi tên, chuyển hướng hoặc tạm thời không khả dụng.
+        Đường dẫn có thể đã đổi, hoặc gõ nhầm một chữ. Bạn về trang chủ hay xem dự án giúp mình nhé.
       </p>
       <div className="pt-4 flex items-center justify-center space-x-4">
         <Link

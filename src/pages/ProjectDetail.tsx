@@ -76,7 +76,7 @@ export const ProjectDetail: React.FC = () => {
         <div className="p-8 rounded-3xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/60 dark:border-brand-900/50 space-y-4">
           <div className="flex items-center space-x-2 text-brand-800 dark:text-brand-300 font-semibold text-sm">
             <Cpu className="w-5 h-5 text-brand-500" />
-            <span>Điểm nhấn Giải pháp Đồ họa, In ấn & Tự động hóa:</span>
+            <span>Điểm nhấn trong cách làm:</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
             {project.aiHighlights.map((hl, i) => (
@@ -112,7 +112,7 @@ export const ProjectDetail: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
         <div className="p-8 rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-4">
           <span className="text-xs uppercase tracking-wider text-rose-500 font-mono font-bold">
-            01. Vấn đề & Rào cản Trải nghiệm
+            01. Bài toán
           </span>
           <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
             Bài toán cần giải quyết
@@ -124,10 +124,10 @@ export const ProjectDetail: React.FC = () => {
 
         <div className="p-8 rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-4">
           <span className="text-xs uppercase tracking-wider text-emerald-500 font-mono font-bold">
-            02. Tư duy & Giải pháp Thiết kế
+            02. Cách mình giải
           </span>
           <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-            Giải pháp của Tiểu Ngọc
+            Mình đã làm gì
           </h3>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
             {project.solution}
@@ -169,7 +169,7 @@ export const ProjectDetail: React.FC = () => {
       {/* Key Results */}
       <div className="p-8 rounded-3xl bg-neutral-900 text-white dark:bg-editorial-cardDark dark:text-neutral-100 border border-neutral-800 space-y-6">
         <h3 className="font-serif text-2xl font-bold">
-          Hiệu quả & Tác động Kinh doanh (Business Impact)
+          Kết quả bằng con số
         </h3>
         <div className="space-y-3">
           {project.results.map((result, idx) => (

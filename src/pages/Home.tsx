@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom';
 import { profileData } from '../data/profile';
 import { projectsData, type Project } from '../data/projects';
 import { articlesData } from '../data/articles';
-import { ArrowRight, ArrowUpRight, Mail, Copy, Check } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
+import { Copy, Check } from 'lucide';
+import { MorphIcon } from 'morphicons/react';
 import { CmykStrip, CropMarks, PenCircle, PenLeader, RegistrationMark } from '../components/print/PrintMarks';
 import { usePageMeta } from '../lib/page-meta';
+import { useCountUp } from '../lib/motion';
+import { Reveal } from '../components/motion/Reveal';
+import { CountUp } from '../components/motion/CountUp';
 
 // Measured results only (PRODUCT.md): never add self-scored or unverified numbers here.
 const proofSpecs = [
@@ -21,8 +26,8 @@ const separations = [
     letter: 'C',
     ink: '#3fa7cf',
     tab: 'Sản phẩm POD & In ấn',
-    heading: 'Thiết kế 5,000+ sản phẩm in, giữ màu chuẩn đến tận xưởng',
-    body: 'Áo, mũ, cốc, giày, thảm, home & living và poster cho các niche Anime, Racing, Sport, Music. Mỗi sản phẩm được vẽ hoàn thiện trên Wacom và kiểm tra chế bản kỹ trước khi ra xưởng.',
+    heading: '5,000+ sản phẩm in, file nào cũng soi màu trước khi ra xưởng',
+    body: 'Áo, mũ, cốc, giày, thảm, home & living và poster cho các niche Anime, Racing, Sport, Music, bán cho khách Mỹ và Châu Âu. Mình vẽ hoàn thiện trên Wacom, rồi kiểm tra chế bản kỹ trước khi gửi xưởng.',
     spec: [
       ['Hệ màu', 'CMYK / RGB 300 DPI'],
       ['Tách lớp', 'Halftone cho DTG & All-Over-Print'],
@@ -35,8 +40,8 @@ const separations = [
     letter: 'M',
     ink: '#c8467f',
     tab: 'Banner quảng cáo & Email',
-    heading: 'Visual bán hàng đồng bộ trên mọi điểm chạm',
-    body: 'Banner Facebook Ads, Google Ads, banner website và header email Klaviyo được thiết kế cùng một chiến dịch, để khách nhận ra thương hiệu ở bất cứ đâu họ lướt qua.',
+    heading: 'Từ feed Facebook đến header email, cùng một bộ nhận diện',
+    body: 'Banner Facebook & Google Ads, banner website và header email Klaviyo mình làm chung một bộ, để khách lướt tới đâu cũng nhận ra thương hiệu.',
     spec: [
       ['Quảng cáo', 'Facebook Ads, Google Ads'],
       ['Website', 'Banner cho Shopify, WooCommerce, Etsy, Amazon'],
@@ -50,7 +55,7 @@ const separations = [
     ink: '#e8c547',
     tab: 'AI có gu',
     heading: 'AI lo tốc độ, mình lo cái hồn',
-    body: 'AI giúp mình thử moodboard và biến thể nhanh gấp 3 lần. Còn quyết định thẩm mỹ và nét hoàn thiện cuối cùng luôn do chính tay mình làm trên Wacom, nên sản phẩm vẫn độc bản và an toàn bản quyền.',
+    body: 'AI giúp mình thử moodboard và biến thể nhanh gấp 3 lần. Quyết định thẩm mỹ và nét hoàn thiện cuối cùng thì luôn do tay mình làm trên Wacom, nên sản phẩm vẫn độc bản và an toàn bản quyền.',
     spec: [
       ['Lên ý tưởng', 'Adobe Firefly, ChatGPT Image, Gemini, FLUX.1'],
       ['Trợ lý', 'Claude, AI Agent'],
@@ -63,7 +68,7 @@ const separations = [
     letter: 'K',
     ink: '#121212',
     tab: 'Tự động hóa Photoshop',
-    heading: 'Để script làm việc lặp lại, để mình làm việc sáng tạo',
+    heading: 'Việc lặp lại giao cho script, mình giữ phần vẽ',
     body: 'Mình tự viết Photoshop Actions và ExtendScript để ghép mockup 2D/3D hàng loạt, xuất file in 300 DPI và đặt tên theo SKU cho cả team.',
     spec: [
       ['Công cụ', 'Actions (.atn), Scripts (.jsx)'],
@@ -75,10 +80,10 @@ const separations = [
 ] as const;
 
 const reasons = [
-  { title: 'Nhanh nhờ tự động hóa', text: 'Photoshop Actions & Scripts tự viết giúp cả team giảm ~40% thời gian sản xuất.' },
-  { title: 'Vẽ tay Wacom tỉ mỉ', text: 'Mình vẽ tay từng chi tiết trên Wacom, nên sản phẩm có nét riêng, không đụng hàng.' },
-  { title: 'Chuẩn in ấn', text: 'Am hiểu hệ màu CMYK và kỹ thuật in DTG, tỷ lệ hoàn trả do lỗi in dưới 0.4%.' },
-  { title: 'Tư duy doanh số', text: 'Mình thiết kế để khách bấm mua, nên mọi lựa chọn đều bắt đầu từ insight khách hàng.' },
+  { title: 'Việc lặp lại giao cho script', text: 'Photoshop Actions & Scripts mình tự viết giúp cả team bớt ~40% thời gian sản xuất, và lỗi đặt tên file giảm 99%.' },
+  { title: 'Nét vẽ từ bút Wacom', text: 'Từng chi tiết trên áo, cốc, poster đều vẽ tay trên Wacom, nên sản phẩm có nét riêng, ít bị đụng hàng.' },
+  { title: 'File ra xưởng đúng màu', text: 'Mình rành CMYK và tách halftone cho DTG, nên tỷ lệ hoàn trả do lỗi in dưới 0.4%.' },
+  { title: 'Thiết kế để khách bấm mua', text: 'Mình bắt đầu từ insight khách hàng rồi mới chọn màu và bố cục. Đẹp mà không ai bấm mua thì mình chưa hài lòng.' },
 ];
 
 const plateGhosts = [
@@ -111,7 +116,7 @@ const SectionHead: React.FC<{ id: string; title: string; intro?: string; link?: 
   intro,
   link,
 }) => (
-  <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-end mb-8 sm:mb-14">
+  <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-end mb-8 sm:mb-14">
     <h2 id={id} className="lg:col-span-7 font-heading font-bold text-3xl sm:text-4xl leading-[1.2] sm:leading-[1.2] text-ink dark:text-paper">
       {keepCompounds(title)}
     </h2>
@@ -127,7 +132,7 @@ const SectionHead: React.FC<{ id: string; title: string; intro?: string; link?: 
         </Link>
       )}
     </div>
-  </div>
+  </Reveal>
 );
 
 // Stock covers stand in until Ngoc's own mockups arrive; label them so they are never read as her work
@@ -193,6 +198,9 @@ export const Home: React.FC = () => {
   const recentArticles = articlesData.slice(0, 3);
 
   const [activePlate, setActivePlate] = useState(0);
+  const [plateSwitched, setPlateSwitched] = useState(false);
+  // The display numeral counts up while its separations slide into register (same clock as plate-register)
+  const heroCount = useCountUp('5,000+', true, { delay: 250, duration: 1100 });
   const [copiedEmail, setCopiedEmail] = useState(false);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -215,8 +223,13 @@ export const Home: React.FC = () => {
     if (event.key === 'End') next = last;
     if (next === null) return;
     event.preventDefault();
-    setActivePlate(next);
+    selectPlate(next);
     tabRefs.current[next]?.focus();
+  };
+
+  const selectPlate = (index: number) => {
+    setActivePlate(index);
+    setPlateSwitched(true);
   };
 
   const plate = separations[activePlate];
@@ -259,7 +272,9 @@ export const Home: React.FC = () => {
                   <div className="mt-10 sm:mt-14">
                     <div className="relative inline-block px-3">
                       <span className="relative block font-heading font-extrabold leading-[0.85] tracking-[-0.04em] tabular-nums text-[clamp(4rem,11vw,6rem)] text-ink dark:text-paper">
-                        5,000+
+                        <span className="invisible" aria-hidden="true">5,000+</span>
+                        <span className="absolute left-0 top-0" aria-hidden="true">{heroCount}</span>
+                        <span className="sr-only">5,000+</span>
                         {plateGhosts.map((g) => (
                           <span
                             key={g.color}
@@ -267,7 +282,7 @@ export const Home: React.FC = () => {
                             className="plate-ghost absolute inset-0 mix-blend-multiply dark:mix-blend-screen"
                             style={{ color: g.color, ['--plate-x' as string]: g.x, ['--plate-y' as string]: g.y }}
                           >
-                            5,000+
+                            {heroCount}
                           </span>
                         ))}
                       </span>
@@ -281,7 +296,7 @@ export const Home: React.FC = () => {
                     </div>
                   </div>
                   <p className="mt-6 sm:mt-3 text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark max-w-md">
-                    sản phẩm in ấn POD do mình thiết kế cho thị trường Mỹ và Châu Âu, trong 4+ năm làm việc tại Vani Ecommerce.
+                    sản phẩm in POD mình thiết kế cho khách Mỹ và Châu Âu, qua 4+ năm ở Vani Ecommerce.
                   </p>
 
                   <blockquote className="mt-10 pt-6 border-t border-paper-line dark:border-editorial-borderDark max-w-2xl">
@@ -297,10 +312,12 @@ export const Home: React.FC = () => {
                 <div className="lg:col-span-4 flex flex-col lg:border-l border-paper-line dark:border-editorial-borderDark lg:pl-8">
                   <h2 className="font-heading text-sm font-semibold text-ink dark:text-paper">Thông số bản in</h2>
                   <dl className="mt-2 grid grid-cols-2 gap-x-5 lg:grid-cols-1 lg:divide-y divide-paper-line dark:divide-editorial-borderDark">
-                    {proofSpecs.map((spec) => (
+                    {proofSpecs.map((spec, i) => (
                       <div key={spec.value} className="flex flex-col-reverse justify-end py-3 lg:py-4 border-t border-paper-line dark:border-editorial-borderDark lg:border-t-0">
                         <dt className="mt-1 text-[13px] leading-snug text-paper-text dark:text-editorial-textDark">{keepCompounds(spec.label)}</dt>
-                        <dd className="font-heading font-bold text-[1.75rem] lg:text-3xl tracking-[-0.02em] tabular-nums text-ink dark:text-paper">{spec.value}</dd>
+                        <dd className="font-heading font-bold text-[1.75rem] lg:text-3xl tracking-[-0.02em] tabular-nums text-ink dark:text-paper">
+                          <CountUp value={spec.value} delay={i * 90} />
+                        </dd>
                       </div>
                     ))}
                   </dl>
@@ -327,7 +344,7 @@ export const Home: React.FC = () => {
                       onClick={handleCopyEmail}
                       className="inline-flex items-center gap-1.5 text-xs text-paper-text dark:text-editorial-textDark hover:text-ink dark:hover:text-paper"
                     >
-                      {copiedEmail ? <Check className="w-3.5 h-3.5 text-[#3f9a6b]" /> : <Copy className="w-3.5 h-3.5" />}
+                      <MorphIcon icon={copiedEmail ? Check : Copy} size={14} reducedMotion="user" className={copiedEmail ? 'text-[#3f9a6b]' : undefined} />
                       <span aria-live="polite">{copiedEmail ? 'Đã sao chép email' : `Sao chép ${profileData.email}`}</span>
                     </button>
                   </div>
@@ -353,8 +370,8 @@ export const Home: React.FC = () => {
       <section aria-labelledby="separations-title" className={`${sectionShell} py-14 sm:py-28`}>
         <SectionHead
           id="separations-title"
-          title="Bốn bản tách màu làm nên một sản phẩm bán được"
-          intro="Như một file in bốn màu, mỗi bản đảm nhận một phần việc. Chồng lên nhau đúng vị trí, chúng thành một sản phẩm vừa đẹp vừa ra đơn."
+          title="Bốn việc mình làm, chồng khít như bốn bản màu in"
+          intro="File in bốn màu thì bản nào cũng có phần việc của nó, lệch một bản là ra bản in xấu. Việc của mình cũng vậy: bốn phần chồng khít vào nhau mới thành sản phẩm vừa đẹp vừa ra đơn."
         />
 
         <div role="tablist" aria-label="Năng lực theo bản tách màu" className="grid grid-cols-2 lg:grid-cols-4 border-t border-paper-line dark:border-editorial-borderDark">
@@ -371,7 +388,7 @@ export const Home: React.FC = () => {
                 aria-selected={selected}
                 aria-controls={`panel-${sep.id}`}
                 tabIndex={selected ? 0 : -1}
-                onClick={() => setActivePlate(i)}
+                onClick={() => selectPlate(i)}
                 onKeyDown={(e) => handleTabKey(e, i)}
                 className={`relative flex items-center gap-3 text-left px-3 sm:px-4 py-4 -mt-px border-t-[3px] transition-colors ${
                   selected
@@ -394,10 +411,11 @@ export const Home: React.FC = () => {
         </div>
 
         <div
+          key={plate.id}
           role="tabpanel"
           id={`panel-${plate.id}`}
           aria-labelledby={`tab-${plate.id}`}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-paper-beige dark:bg-editorial-surfaceDark px-6 sm:px-10 py-10 sm:py-12"
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-10 bg-paper-beige dark:bg-editorial-surfaceDark px-6 sm:px-10 py-10 sm:py-12 ${plateSwitched ? 'plate-print' : ''}`}
         >
           <div className="lg:col-span-7 space-y-4">
             <h3 className="font-heading font-bold text-2xl sm:text-[1.75rem] leading-snug text-ink dark:text-paper">{plate.heading}</h3>
@@ -426,33 +444,33 @@ export const Home: React.FC = () => {
           />
 
           <ol aria-label="Các bước trong quy trình" className={`${swipeRail} lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:mx-0 lg:px-0 lg:pb-0`}>
-            {profileData.aiWorkflow.map((step) => (
-              <li key={step.phase} className={`${swipeItem} lg:w-auto relative pt-10 space-y-2.5`}>
-                <span aria-hidden="true" className="absolute left-0 -right-4 lg:-right-8 top-[9px] h-px bg-ink/25 dark:bg-paper/20" />
+            {profileData.aiWorkflow.map((step, i) => (
+              <Reveal as="li" key={step.phase} delay={i * 90} className={`${swipeItem} lg:w-auto relative pt-10 space-y-2.5`}>
+                <span aria-hidden="true" className="press-line absolute left-0 -right-4 lg:-right-8 top-[9px] h-px bg-ink/25 dark:bg-paper/20" />
                 <span className="absolute left-0 top-0 bg-paper-beige dark:bg-editorial-surfaceDark">
                   <RegistrationMark className="w-5 h-5 text-ink dark:text-paper" />
                 </span>
                 <h3 className="font-heading font-bold text-lg leading-snug text-ink dark:text-paper">{step.title}</h3>
                 <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">{step.description}</p>
                 <p className="text-xs text-paper-muted dark:text-editorial-textDark">{step.tools.join(' · ')}</p>
-              </li>
+              </Reveal>
             ))}
           </ol>
 
-          <figure className="mt-12 sm:mt-24 pt-10 sm:pt-12 border-t border-ink/15 dark:border-paper/15">
+          <Reveal as="figure" className="mt-12 sm:mt-24 pt-10 sm:pt-12 border-t border-ink/15 dark:border-paper/15">
             <blockquote className="font-quote italic text-[clamp(1.35rem,2.6vw,2rem)] leading-snug text-ink dark:text-paper max-w-4xl">
               {profileData.aiPhilosophy.coreBelief}
             </blockquote>
             <figcaption className="mt-4 font-hand text-[2.25rem] leading-none text-brand-600 dark:text-brand-300">Tiểu Ngọc</figcaption>
-          </figure>
+          </Reveal>
 
           <div className={`mt-10 sm:mt-14 ${swipeRail} md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:mx-0 md:px-0 md:pb-0`}>
-            {profileData.aiPhilosophy.pillars.map((pillar) => (
-              <div key={pillar.title} className={`${swipeItem} md:w-auto pt-5 border-t border-ink/15 dark:border-paper/15 space-y-2`}>
+            {profileData.aiPhilosophy.pillars.map((pillar, i) => (
+              <Reveal key={pillar.title} delay={i * 90} className={`${swipeItem} md:w-auto pt-5 border-t border-ink/15 dark:border-paper/15 space-y-2`}>
                 <h3 className="font-heading font-bold text-base leading-snug text-ink dark:text-paper">{pillar.title.replace(/^\d+\.\s*/, '')}</h3>
                 <p className="text-xs font-semibold text-brand-600 dark:text-brand-300">{pillar.subtitle}</p>
                 <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">{pillar.description}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -462,20 +480,20 @@ export const Home: React.FC = () => {
       <section aria-labelledby="projects-title" className={`${sectionShell} py-14 sm:py-28`}>
         <SectionHead
           id="projects-title"
-          title="Dự án E-commerce tiêu biểu"
+          title="Dự án E-commerce mình đã làm, kèm con số"
           intro="Mỗi dự án kể lại bài toán, cách mình giải và con số sau cùng."
           link={{ to: '/projects', label: `Tất cả dự án (${projectsData.length})` }}
         />
         <div className={`${swipeRail} md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-20 md:overflow-visible md:mx-0 md:px-0 md:pb-0`}>
           {leadProject && (
-            <div className={`${swipeItem} md:w-auto md:col-span-2`}>
+            <Reveal className={`${swipeItem} md:w-auto md:col-span-2`}>
               <ProofCard project={leadProject} lead />
-            </div>
+            </Reveal>
           )}
-          {otherProjects.map((project) => (
-            <div key={project.id} className={`${swipeItem} md:w-auto`}>
+          {otherProjects.map((project, i) => (
+            <Reveal key={project.id} delay={i * 90} className={`${swipeItem} md:w-auto`}>
               <ProofCard project={project} />
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -485,12 +503,12 @@ export const Home: React.FC = () => {
         <SectionHead
           id="journal-title"
           title="Nhật ký làm nghề"
-          intro="Kinh nghiệm thực chiến E-commerce Design, AI và những tâm sự nghề đồ họa, viết trên Substack và LinkedIn."
+          intro="Chuyện làm E-commerce Design, dùng AI và vài tâm sự của người làm đồ họa, mình viết trên Substack và LinkedIn."
           link={{ to: '/blog', label: 'Đọc tất cả bài viết' }}
         />
         <ul className="border-t border-paper-line dark:border-editorial-borderDark divide-y divide-paper-line dark:divide-editorial-borderDark">
-          {recentArticles.map((article) => (
-            <li key={article.id}>
+          {recentArticles.map((article, i) => (
+            <Reveal as="li" key={article.id} delay={i * 60}>
               <a
                 href={article.url}
                 target="_blank"
@@ -514,22 +532,22 @@ export const Home: React.FC = () => {
                   <span className="sr-only">(mở trong tab mới)</span>
                 </p>
               </a>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </section>
 
       {/* Sign-off: the approval block */}
       <section aria-labelledby="signoff-title" className={sectionShell}>
-        <div className="relative bg-ink text-paper dark:bg-editorial-cardDark">
+        <Reveal className="relative bg-ink text-paper dark:bg-editorial-cardDark">
           <CmykStrip className="h-1.5" />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 px-5 sm:px-10 lg:px-14 py-10 sm:py-16">
             <div className="lg:col-span-8">
               <h2 id="signoff-title" className="font-heading font-bold text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.2] sm:leading-[1.2]">
-                Tại sao chọn Trần Tiểu Ngọc cho dự án <span className="whitespace-nowrap">E-commerce</span> Design?
+                Có brief là mình làm, từ file in đến banner quảng cáo
               </h2>
               <p className="mt-5 text-[15px] leading-relaxed text-paper/80 max-w-[62ch]">
-                Bạn cần một bộ sưu tập POD cho store quốc tế, hay hình ảnh bán hàng riêng cho một thương hiệu mới? Mình lo được cả phần đẹp lẫn phần ra đơn, và làm đủ nhanh cho mùa sale cao điểm.
+                Cần một bộ sưu tập POD cho store quốc tế, hay bộ banner cho một thương hiệu mới? Mình nhận cả hai. Mình làm sao cho vừa đẹp vừa ra đơn, và kịp tiến độ mùa sale Q3 đến Q4.
               </p>
               <dl className="mt-8 sm:mt-10 grid grid-cols-2 gap-x-5 sm:gap-x-8 gap-y-6">
                 {reasons.map((reason) => (
@@ -573,7 +591,7 @@ export const Home: React.FC = () => {
               </figcaption>
             </figure>
           </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   );
