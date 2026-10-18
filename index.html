@@ -27,58 +27,159 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Trần Tiểu Ngọc",
-      "alternateName": [
-        "Tiểu Ngọc",
-        "Mắt Gấu"
-      ],
-      "jobTitle": "Senior Graphic Designer (E-commerce)",
-      "description": "Chuyên viên Thiết kế Đồ họa TMĐT: thiết kế sản phẩm Print-on-Demand, banner quảng cáo Facebook & Google Ads, banner website & email, mockup 2D/3D, ứng dụng công cụ AI và tự động hóa Photoshop.",
-      "url": "https://tieungoc.site/",
-      "image": "https://tieungoc.site/images/avatar.jpg",
-      "email": "mailto:ngoctt.design@gmail.com",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Vani Ecommerce"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE)"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Thủ Đức, TP. Hồ Chí Minh",
-        "addressCountry": "VN"
-      },
-      "knowsAbout": [
-        "Graphic Design",
-        "E-commerce Design",
-        "Thiết kế đồ họa thương mại điện tử",
-        "Print-on-Demand Product Design",
-        "Facebook Ads Creative",
-        "Google Ads Banner",
-        "Website Banner",
-        "Email Design",
-        "Klaviyo",
-        "2D/3D Mockup",
-        "POSM",
-        "Retouch ảnh sản phẩm",
-        "Amazon & Etsy Listing Images",
-        "Social Media Design",
-        "Short Video & Motion",
-        "Adobe Photoshop",
-        "Adobe Illustrator",
-        "Figma",
-        "Adobe Firefly",
-        "Photoshop Automation",
-        "Prepress CMYK 300 DPI"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/tieungoc-design",
-        "https://www.behance.net/tieungoctran",
-        "https://tieungoc.substack.com/",
-        "https://www.pinterest.com/tieungoc_design"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tieungoc.site/#website",
+          "url": "https://tieungoc.site/",
+          "name": "Trần Tiểu Ngọc Portfolio",
+          "description": "Portfolio chính thức của Trần Tiểu Ngọc, Senior Graphic Designer (E-commerce) tại TP. Hồ Chí Minh.",
+          "publisher": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "inLanguage": "vi-VN"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://tieungoc.site/#webpage",
+          "url": "https://tieungoc.site/",
+          "name": "Trần Tiểu Ngọc | Senior Graphic Designer E-commerce, TP.HCM",
+          "isPartOf": {
+            "@id": "https://tieungoc.site/#website"
+          },
+          "about": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "mainEntity": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "dateModified": "2026-10-18T00:00:00+07:00",
+          "inLanguage": "vi-VN"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tieungoc.site/#person",
+          "name": "Trần Tiểu Ngọc",
+          "alternateName": [
+            "Tiểu Ngọc",
+            "Tieu Ngoc Tran",
+            "Tieu Ngoc T.",
+            "Mắt Gấu"
+          ],
+          "gender": "Female",
+          "birthDate": "2000",
+          "jobTitle": "Senior Graphic Designer (E-commerce)",
+          "description": "Senior Graphic Designer chuyên mảng E-commerce tại TP.HCM với hơn 4 năm kinh nghiệm toàn thời gian tại Vani Ecommerce. Trực tiếp thiết kế 5,000+ sản phẩm Print-on-Demand cho thị trường US/EU, sản xuất chuỗi banner quảng cáo Facebook/Google Ads, dàn dựng email Klaviyo và tự động hóa Photoshop bằng Actions và ExtendScript giúp giảm ~40% thời gian sản xuất.",
+          "url": "https://tieungoc.site/",
+          "image": "https://tieungoc.site/images/avatar.jpg",
+          "email": "mailto:ngoctt.design@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Thủ Đức",
+            "addressRegion": "TP. Hồ Chí Minh",
+            "addressCountry": "VN"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE)",
+            "sameAs": "https://hcmute.edu.vn/"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Vani Ecommerce"
+          },
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Senior Graphic Designer (E-commerce)",
+            "occupationalCategory": "27-1024.00",
+            "description": "Thiết kế sản phẩm in ấn Print-on-Demand (POD), visual quảng cáo đa kênh Facebook/Google Ads, email marketing Klaviyo, chế bản in CMYK 300 DPI và tự động hóa quy trình Photoshop.",
+            "skills": [
+              "Print-on-Demand Product Design",
+              "Facebook & Google Ads Creative Design",
+              "Website Banners & Landing Visuals",
+              "Klaviyo Responsive Email Design",
+              "2D & 3D Mockup Compositing",
+              "Photoshop Automation (Actions & ExtendScript .jsx)",
+              "Prepress & Print QC (CMYK 300 DPI, DTG Halftone)",
+              "Human-Crafted AI-Accelerated Workflow (Adobe Firefly, FLUX.1, Generative Fill)",
+              "Wacom Digital Illustration"
+            ]
+          },
+          "knowsAbout": [
+            "Graphic Design",
+            "E-commerce Design",
+            "Thiết kế đồ họa thương mại điện tử",
+            "Print-on-Demand Product Design",
+            "Facebook Ads Creative",
+            "Google Ads Banner",
+            "Website Banner",
+            "Email Design",
+            "Klaviyo",
+            "2D/3D Mockup",
+            "POSM",
+            "Retouch ảnh sản phẩm",
+            "Amazon & Etsy Listing Images",
+            "Social Media Design",
+            "Short Video & Motion",
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Figma",
+            "Adobe Firefly",
+            "FLUX.1",
+            "Photoshop Automation",
+            "Prepress CMYK 300 DPI"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/tieungoc-design",
+            "https://www.behance.net/tieungoctran",
+            "https://tieungoc.substack.com/",
+            "https://www.pinterest.com/tieungoc_design"
+          ]
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://tieungoc.site/#project-pod-anime-collection",
+          "name": "Dự án D2C: 3 thương hiệu E-commerce",
+          "creator": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "genre": "E-commerce & POD Product Design",
+          "description": "Phụ trách toàn bộ thiết kế sản phẩm in ấn và visual quảng cáo đa kênh mùa cao điểm Q3-Q4/2025, đóng góp vào kết quả ~$25,000 USD lợi nhuận của team D2C trong Q4/2025.",
+          "url": "https://tieungoc.site/projects/pod-anime-collection"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://tieungoc.site/#project-racing-apparel-line",
+          "name": "Bộ sưu tập Thời trang Đường đua Racing Apparel Line",
+          "creator": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "genre": "Apparel & Print-on-Demand Design",
+          "description": "Thiết kế dòng trang phục All-Over-Print và áo thun in đồ họa cho thị trường xe thể thao Mỹ, áp dụng kỹ thuật tách lớp halftone và kiểm soát màu CMYK chuẩn xưởng.",
+          "url": "https://tieungoc.site/projects/racing-apparel-line"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://tieungoc.site/#project-ecommerce-email-marketing-system",
+          "name": "Hệ thống Email Visual E-commerce Klaviyo",
+          "creator": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "genre": "Email Marketing & Visual Design",
+          "description": "Dàn dựng chuỗi 15+ mẫu email Klaviyo chuẩn responsive, tối ưu dung lượng ảnh dưới 200KB và đạt tỷ lệ mở trung bình 28% (vượt mức chuẩn ngành 21%).",
+          "url": "https://tieungoc.site/projects/ecommerce-email-marketing-system"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://tieungoc.site/#project-photoshop-automation-toolkit",
+          "name": "Bộ công cụ Tự động hóa Photoshop (ExtendScript & Actions)",
+          "creator": {
+            "@id": "https://tieungoc.site/#person"
+          },
+          "genre": "Design Automation & Scripting",
+          "description": "Xây dựng kịch bản ExtendScript (.jsx) và Actions (.atn) tự động hóa ghép mockup 2D/3D và xuất file in theo SKU, cắt giảm ~40% thời gian sản xuất và 99% lỗi đặt tên file.",
+          "url": "https://tieungoc.site/projects/photoshop-automation-toolkit"
+        }
       ]
     }
     </script>

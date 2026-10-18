@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold rounded-sm bg-ink text-paper dark:bg-paper dark:text-ink hover:bg-brand-600 dark:hover:bg-brand-300 transition-colors"
           >
             <Mail className="w-3.5 h-3.5" />
-            <span>Xin CV</span>
+            <span>Nhận CV</span>
           </a>
 
           <button
@@ -118,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             className="mt-4 flex items-center justify-center gap-2 py-3 text-sm font-semibold rounded-sm bg-ink text-paper dark:bg-paper dark:text-ink"
           >
             <Mail className="w-4 h-4" />
-            <span>Xin CV qua email</span>
+            <span>Nhận CV qua email</span>
           </a>
         </div>
       )}

@@ -329,7 +329,7 @@ export const Home: React.FC = () => {
                     >
                       <span className="inline-flex items-center gap-2">
                         <Mail className="w-4 h-4" />
-                        Xin CV qua email
+                        Nhận CV qua email
                       </span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
@@ -563,7 +563,7 @@ export const Home: React.FC = () => {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-sm bg-paper text-ink font-semibold text-sm hover:bg-brand-300 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  Xin CV qua email
+                  Nhận CV qua email
                 </a>
                 <Link
                   to="/contact"

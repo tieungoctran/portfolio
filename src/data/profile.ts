@@ -153,7 +153,7 @@ export const profileData: ProfileData = {
   email: "ngoctt.design@gmail.com",
   website: "https://tieungoc.site",
   // CV is shared by email on request to keep personal contact details off the public site
-  cvRequestUrl: "mailto:ngoctt.design@gmail.com?subject=Xin%20CV%20Tr%E1%BA%A7n%20Ti%E1%BB%83u%20Ng%E1%BB%8Dc",
+  cvRequestUrl: "mailto:ngoctt.design@gmail.com?subject=Nh%E1%BA%ADn%20CV%20Tr%E1%BA%A7n%20Ti%E1%BB%83u%20Ng%E1%BB%8Dc",
   socials: [
     {
       name: "LinkedIn",

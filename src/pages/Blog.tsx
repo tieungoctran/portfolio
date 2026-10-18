@@ -1,7 +1,24 @@
 import React, { useState } from 'react';
-import { articlesData, Article } from '../data/articles';
-import { ArrowUpRight, BookOpen, Linkedin, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { articlesData, type Article } from '../data/articles';
+import { profileData } from '../data/profile';
+import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
+import { CmykStrip, RegistrationMark } from '../components/print/PrintMarks';
 import { usePageMeta } from '../lib/page-meta';
+import { Reveal } from '../components/motion/Reveal';
+
+const keepCompounds = (text: string): React.ReactNode =>
+  text.split(/(E-commerce|E-Commerce|2D\/3D|Print-on-Demand)/).map((part, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+
+const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
 
 export const Blog: React.FC = () => {
   usePageMeta(
@@ -16,143 +33,204 @@ export const Blog: React.FC = () => {
   });
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-16">
-      {/* Header */}
-      <div className="space-y-4 max-w-2xl">
-        <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400 font-mono">
-          Góc chia sẻ
-        </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Nhật ký làm nghề của mình
-        </h1>
-        <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Chỗ mình ghi lại chuyện làm thiết kế E-commerce, cách dùng AI mà vẫn giữ được cái hồn, và vài tâm sự của một designer Song Ngư.
-        </p>
-      </div>
-
-      {/* Featured Channel CTAs */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {/* Substack Card */}
-        <a
-          href="https://tieungoc.substack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-200/80 dark:border-brand-900/50 hover:border-brand-400 dark:hover:border-brand-700 transition-all space-y-3"
-        >
-          <div className="flex items-center justify-between">
-            <span className="w-10 h-10 rounded-xl bg-brand-500/20 flex items-center justify-center text-brand-600 dark:text-brand-400">
-              <BookOpen className="w-5 h-5" />
+    <div className="pb-14 sm:pb-28">
+      {/* Proof Sheet Header */}
+      <section className="bg-paper-beige dark:bg-editorial-surfaceDark border-b border-paper-line dark:border-editorial-borderDark">
+        <div className={`${sectionShell} py-12 sm:py-20`}>
+          <Reveal className="flex flex-wrap items-center justify-between gap-2 pb-5 border-b border-paper-line dark:border-editorial-borderDark text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+            <span className="inline-flex items-center gap-2">
+              <RegistrationMark className="w-3.5 h-3.5 text-ink dark:text-paper" />
+              <span>EDITORIAL INDEX · JOURNAL 01–0{articlesData.length}</span>
             </span>
-            <span className="inline-flex items-center space-x-1 text-xs font-semibold text-brand-700 dark:text-brand-300 group-hover:underline">
-              <span>Đăng ký nhận bài</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </span>
-          </div>
-          <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-            Substack
-          </h3>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Những bài viết dài hơn về quy trình thiết kế và bài học làm nghề.
-          </p>
-        </a>
+            <span>SUBSTACK &amp; LINKEDIN ESSAYS · HCMC</span>
+          </Reveal>
 
-        {/* LinkedIn Card */}
-        <a
-          href="https://www.linkedin.com/in/tieungoc-design"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group p-6 rounded-2xl bg-sky-500/10 dark:bg-sky-950/20 border border-sky-200/80 dark:border-sky-900/50 hover:border-sky-400 dark:hover:border-sky-700 transition-all space-y-3"
-        >
-          <div className="flex items-center justify-between">
-            <span className="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-600 dark:text-sky-400">
-              <Linkedin className="w-5 h-5" />
-            </span>
-            <span className="inline-flex items-center space-x-1 text-xs font-semibold text-sky-700 dark:text-sky-300 group-hover:underline">
-              <span>Kết nối trên LinkedIn</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </span>
-          </div>
-          <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-            LinkedIn
-          </h3>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Những ý ngắn về nghề, và chỗ mình trò chuyện với các bạn làm Design và E-commerce.
-          </p>
-        </a>
-      </div>
-
-      {/* Filter Tabs */}
-      <div className="flex items-center space-x-2 pb-4 border-b border-neutral-200 dark:border-neutral-800">
-        {(['All', 'Substack', 'LinkedIn'] as const).map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setPlatformFilter(tab)}
-            className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
-              platformFilter === tab
-                ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 shadow-sm'
-                : 'bg-neutral-100 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
-            }`}
-          >
-            {tab === 'All' ? 'Tất cả bài viết' : `${tab}`}
-          </button>
-        ))}
-      </div>
-
-      {/* Articles Feed */}
-      <div className="space-y-8">
-        {filteredArticles.map((article) => (
-          <a
-            key={article.id}
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-editorial-surfaceDark hover:border-neutral-400 dark:hover:border-neutral-600 transition-all space-y-4"
-          >
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${
-                article.platform === 'Substack'
-                  ? 'bg-brand-100 text-brand-900 dark:bg-brand-950/60 dark:text-brand-300'
-                  : 'bg-sky-100 text-sky-900 dark:bg-sky-950/60 dark:text-sky-300'
-              }`}>
-                Đọc trên {article.platform}
-              </span>
-
-              <div className="flex items-center space-x-3 text-xs text-neutral-500 font-mono">
-                <span>{article.date}</span>
-                <span>•</span>
-                <span>{article.readTime}</span>
-              </div>
+          <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pt-8 sm:pt-10">
+            <div className="lg:col-span-7 space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300">
+                Góc chia sẻ &amp; Nhật ký làm nghề
+              </p>
+              <h1 className="font-heading font-bold text-3xl sm:text-5xl leading-[1.15] sm:leading-[1.15] tracking-[-0.03em] text-ink dark:text-paper">
+                Nhật ký làm nghề của mình
+              </h1>
             </div>
-
-            <div className="space-y-2">
-              <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
-                {article.title}
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-                {article.excerpt}
+            <div className="lg:col-span-5">
+              <p className="text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark">
+                Chỗ mình ghi lại chuyện làm thiết kế E-commerce, cách dùng AI có gu mà vẫn giữ được cái hồn vẽ tay trên Wacom, chuyện tự động hóa Photoshop và vài tâm sự của một designer Song Ngư.
               </p>
             </div>
+          </Reveal>
 
-            <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-1.5">
-                {article.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[11px] px-2 py-0.5 rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-500"
-                  >
-                    #{tag}
+          {/* Official Writing Channels */}
+          <Reveal className="mt-10 grid grid-cols-1 md:grid-cols-2 border border-paper-line dark:border-editorial-borderDark divide-y md:divide-y-0 md:divide-x divide-paper-line dark:divide-editorial-borderDark bg-paper dark:bg-editorial-dark">
+            <a
+              href="https://tieungoc.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 sm:p-8 flex flex-col justify-between gap-4 hover:bg-paper-beige/60 dark:hover:bg-editorial-cardDark transition-colors"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                  <span>CHANNEL 01 · LONG-FORM</span>
+                  <span className="font-semibold text-brand-600 dark:text-brand-300 inline-flex items-center gap-1">
+                    Đăng ký nhận bài
+                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
-                ))}
+                </div>
+                <h2 className="font-heading font-bold text-xl sm:text-2xl text-ink dark:text-paper group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors">
+                  Substack · tieungoc.substack.com
+                </h2>
+                <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">
+                  Những bài viết dài hơn phân tích quy trình thiết kế sản phẩm POD, kiểm soát màu in CMYK và nhật ký làm nghề thực tế.
+                </p>
               </div>
+            </a>
 
-              <span className="inline-flex items-center space-x-1 text-xs font-semibold text-neutral-900 dark:text-white group-hover:underline">
-                <span>Mở bài viết gốc</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </span>
+            <a
+              href="https://www.linkedin.com/in/tieungoc-design"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 sm:p-8 flex flex-col justify-between gap-4 hover:bg-paper-beige/60 dark:hover:bg-editorial-cardDark transition-colors"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                  <span>CHANNEL 02 · PROFESSIONAL NETWORK</span>
+                  <span className="font-semibold text-brand-600 dark:text-brand-300 inline-flex items-center gap-1">
+                    Kết nối trên LinkedIn
+                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </div>
+                <h2 className="font-heading font-bold text-xl sm:text-2xl text-ink dark:text-paper group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors">
+                  LinkedIn · @tieungoc-design
+                </h2>
+                <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">
+                  Những góc nhìn ngắn gọn về E-commerce Design, tự động hóa Photoshop và nơi mình kết nối với các anh chị làm nghề.
+                </p>
+              </div>
+            </a>
+          </Reveal>
+
+          {/* Platform Filter Tabs */}
+          <Reveal className="mt-8 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Lọc bài viết theo nền tảng">
+              {(['All', 'Substack', 'LinkedIn'] as const).map((tab) => {
+                const active = platformFilter === tab;
+                const count =
+                  tab === 'All'
+                    ? articlesData.length
+                    : articlesData.filter((a) => a.platform === tab).length;
+                return (
+                  <button
+                    key={tab}
+                    type="button"
+                    role="tab"
+                    aria-selected={active}
+                    onClick={() => setPlatformFilter(tab)}
+                    className={`px-3.5 py-2 rounded-sm text-xs font-semibold transition-colors border ${
+                      active
+                        ? 'bg-ink text-paper dark:bg-paper dark:text-ink border-ink dark:border-paper'
+                        : 'bg-paper dark:bg-editorial-dark text-paper-text dark:text-editorial-textDark border-paper-line dark:border-editorial-borderDark hover:bg-paper-beige dark:hover:bg-editorial-cardDark'
+                    }`}
+                  >
+                    <span>{tab === 'All' ? 'Tất cả bài viết' : tab}</span>
+                    <span className="ml-1.5 text-[11px] tabular-nums opacity-70">({count})</span>
+                  </button>
+                );
+              })}
             </div>
-          </a>
-        ))}
-      </div>
+            <span className="text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+              HIỂN THỊ {filteredArticles.length} BÀI VIẾT
+            </span>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Editorial Reading Index */}
+      <section className={`${sectionShell} pt-10 sm:pt-16`}>
+        <ul className="border-t border-paper-line dark:border-editorial-borderDark divide-y divide-paper-line dark:divide-editorial-borderDark">
+          {filteredArticles.map((article, i) => (
+            <Reveal as="li" key={article.id} delay={i * 60}>
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-3 py-6 sm:py-9 hover:bg-paper-beige/40 dark:hover:bg-editorial-surfaceDark/50 px-2 sm:px-4 -mx-2 sm:-mx-4 transition-colors"
+              >
+                <div className="md:col-span-2 text-xs tabular-nums text-paper-muted dark:text-editorial-textDark space-y-1">
+                  <span className="inline-flex items-center gap-1.5 font-semibold text-ink dark:text-paper">
+                    <span className="w-1.5 h-1.5 bg-brand-500 dark:bg-brand-300" />
+                    {article.platform}
+                  </span>
+                  <span className="block">{article.date}</span>
+                </div>
+
+                <div className="md:col-span-8 space-y-2.5">
+                  <h2 className="font-heading font-bold text-xl sm:text-2xl leading-snug sm:leading-snug text-ink dark:text-paper group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors">
+                    {keepCompounds(article.title)}
+                  </h2>
+                  <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark max-w-[68ch]">
+                    {article.excerpt}
+                  </p>
+                  <div className="pt-1 flex flex-wrap gap-1.5">
+                    {article.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[11px] px-2 py-0.5 bg-paper-beige dark:bg-editorial-cardDark text-paper-muted dark:text-editorial-textDark border border-paper-line dark:border-editorial-borderDark"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="md:col-span-2 md:text-right flex md:flex-col justify-between items-center md:items-end text-xs tabular-nums text-paper-muted dark:text-editorial-textDark">
+                  <span>{article.readTime}</span>
+                  <span className="inline-flex items-center gap-1 font-semibold text-ink dark:text-paper group-hover:text-brand-600 dark:group-hover:text-brand-300">
+                    Đọc bài viết
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </div>
+              </a>
+            </Reveal>
+          ))}
+        </ul>
+      </section>
+
+      {/* Sign-Off Block */}
+      <section className={`${sectionShell} pt-14 sm:pt-24`}>
+        <Reveal className="relative bg-ink text-paper dark:bg-editorial-cardDark">
+          <CmykStrip className="h-1.5" />
+          <div className="px-5 sm:px-10 lg:px-14 py-10 sm:py-12 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="space-y-2 max-w-2xl">
+              <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-300">
+                OPEN TO WORK · SENIOR GRAPHIC DESIGNER (E-COMMERCE)
+              </p>
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl leading-[1.2] sm:leading-[1.2]">
+                {keepCompounds('Thích cách mình tư duy sản phẩm và quy trình làm việc?')}
+              </h2>
+              <p className="text-sm leading-relaxed text-paper/80">
+                Mình đang mở cho cơ hội Full-time Senior Graphic Designer (E-commerce) tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ hoặc trao đổi về vị trí tuyển dụng của team bạn.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href={profileData.cvRequestUrl}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm bg-paper text-ink font-semibold text-sm hover:bg-brand-300 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                Nhận CV qua email
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm border border-paper/40 text-paper font-semibold text-sm hover:border-paper transition-colors"
+              >
+                Liên hệ hợp tác
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </Reveal>
+      </section>
     </div>
   );
 };

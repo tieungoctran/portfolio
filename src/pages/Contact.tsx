@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
 import { submitContactInquiry } from '../lib/supabase';
 import { profileData } from '../data/profile';
-import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, Loader2, Briefcase } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle, Loader2, ArrowUpRight } from 'lucide-react';
+import { Copy, Check } from 'lucide';
+import { MorphIcon } from 'morphicons/react';
+import { CmykStrip, RegistrationMark } from '../components/print/PrintMarks';
 import { usePageMeta } from '../lib/page-meta';
 import { SocialLinks } from '../components/SocialLinks';
+import { Reveal } from '../components/motion/Reveal';
+
+const keepCompounds = (text: string): React.ReactNode =>
+  text.split(/(E-commerce|E-Commerce|2D\/3D|Print-on-Demand)/).map((part, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+
+const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
 
 export const Contact: React.FC = () => {
   usePageMeta(
@@ -21,6 +38,17 @@ export const Contact: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profileData.email);
+      setCopiedEmail(true);
+      window.setTimeout(() => setCopiedEmail(false), 1800);
+    } catch {
+      window.location.href = `mailto:${profileData.email}`;
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,215 +71,320 @@ export const Contact: React.FC = () => {
       setSuccess(true);
       setFormData({ name: '', email: '', purpose: 'recruitment', subject: '', message: '' });
     } else {
-      setErrorMsg(res.error || 'Tin nhắn chưa gửi được. Bạn thử lại giúp mình nhé, hoặc gửi thẳng qua email.');
+      setErrorMsg(res.error || 'Tin nhắn chưa gửi được. Bạn thử lại giúp mình nhé, hoặc gửi thẳng qua email bên dưới.');
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-16">
-      {/* Header */}
-      <div className="space-y-4 max-w-2xl">
-        <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 font-mono">
-          Liên hệ & Tuyển dụng
-        </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white">
-          Có việc hay có brief, cứ nhắn mình
-        </h1>
-        <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-          Mình đang mở cho lời mời phỏng vấn, dự án thiết kế E-commerce (sản phẩm in POD, banner quảng cáo, mockup), POSM/in ấn và các lời hợp tác trong thương mại điện tử.
-        </p>
-      </div>
+    <div className="pb-14 sm:pb-28">
+      {/* Proof Sheet Header */}
+      <section className="bg-paper-beige dark:bg-editorial-surfaceDark border-b border-paper-line dark:border-editorial-borderDark">
+        <div className={`${sectionShell} py-12 sm:py-20`}>
+          <Reveal className="flex flex-wrap items-center justify-between gap-2 pb-5 border-b border-paper-line dark:border-editorial-borderDark text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+            <span className="inline-flex items-center gap-2">
+              <RegistrationMark className="w-3.5 h-3.5 text-ink dark:text-paper" />
+              <span>JOB REQUISITION &amp; CONTACT DESK · HCMC</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5 font-semibold text-ink dark:text-paper">
+              <span className="w-2 h-2 rounded-full bg-[#3f9a6b]" />
+              Open to Work · Sẵn sàng trong 2–4 tuần
+            </span>
+          </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-        {/* Contact Info Sidebar */}
-        <div className="space-y-8">
-          {/* Recruiter fast-track box */}
-          <div className="p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/60 dark:border-brand-900/50 space-y-3">
-            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-brand-800 dark:text-brand-300 font-semibold">
-              <Briefcase className="w-4 h-4 text-brand-500" />
-              <span>Dành cho nhà tuyển dụng</span>
+          <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pt-8 sm:pt-10">
+            <div className="lg:col-span-7 space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300">
+                Liên hệ &amp; Tuyển dụng
+              </p>
+              <h1 className="font-heading font-bold text-3xl sm:text-5xl leading-[1.15] sm:leading-[1.15] tracking-[-0.03em] text-ink dark:text-paper">
+                Có việc hay có brief, cứ nhắn mình
+              </h1>
             </div>
-            <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
-              Cần CV để gửi cho Hiring Manager hoặc Design Director? Gửi mình một email, mình sẽ gửi lại CV bản PDF (tiếng Việt hoặc tiếng Anh).
-            </p>
-            <a
-              href={profileData.cvRequestUrl}
-              className="inline-flex items-center space-x-2 text-xs font-semibold text-neutral-900 dark:text-white underline hover:opacity-80"
-            >
-              <Mail className="w-3.5 h-3.5" />
-              <span>Nhận CV qua email</span>
-            </a>
-          </div>
+            <div className="lg:col-span-5">
+              <p className="text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark">
+                {keepCompounds(
+                  'Mình đang mở cho lời mời phỏng vấn vị trí Full-time Senior Graphic Designer (E-commerce) tại TP.HCM, cùng các dự án thiết kế sản phẩm in POD, banner quảng cáo, mockup 2D/3D và tự động hóa Photoshop.'
+                )}
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-          <div className="space-y-4">
-            <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-              Liên hệ thẳng
-            </h3>
-            
-            <div className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
-              <a
-                href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
-                className="flex items-center space-x-3 hover:text-neutral-900 dark:hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 text-neutral-400 flex-shrink-0" />
-                <span className="font-mono">{profileData.phoneInternational}</span>
-              </a>
-
-              <a
-                href={`mailto:${profileData.email}`}
-                className="flex items-center space-x-3 hover:text-neutral-900 dark:hover:text-white transition-colors"
-              >
-                <Mail className="w-4 h-4 text-neutral-400 flex-shrink-0" />
-                <span className="font-mono">{profileData.email}</span>
-              </a>
-
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-neutral-400 flex-shrink-0" />
-                <span>{profileData.location}</span>
+      {/* Main Contact Grid */}
+      <section className={`${sectionShell} pt-12 sm:pt-20`}>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left Column: Recruiter Fast-Track + Direct Spec Table */}
+          <Reveal className="lg:col-span-5 space-y-8">
+            {/* Fast-Track CV Box */}
+            <div className="relative bg-ink text-paper dark:bg-editorial-cardDark">
+              <CmykStrip className="h-1.5" />
+              <div className="p-6 sm:p-8 space-y-4">
+                <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-300">
+                  FAST-TRACK · DÀNH CHO NHÀ TUYỂN DỤNG
+                </p>
+                <h2 className="font-heading font-bold text-xl sm:text-2xl leading-snug">
+                  Cần bản CV PDF 1 trang A4 (VI/EN) kèm số điện thoại đầy đủ?
+                </h2>
+                <p className="text-sm leading-relaxed text-paper/80">
+                  Để bảo mật thông tin cá nhân trên web công khai, mình gửi CV trực tiếp qua email. Bạn chỉ cần bấm nút dưới đây (đã điền sẵn tiêu đề) hoặc nhắn qua form bên cạnh, mình sẽ phản hồi ngay trong ngày.
+                </p>
+                <div className="pt-2 flex flex-wrap gap-3">
+                  <a
+                    href={profileData.cvRequestUrl}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-sm bg-paper text-ink font-semibold text-xs hover:bg-brand-300 transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    <span>Nhận CV qua email</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="space-y-4 pt-6 border-t border-neutral-200 dark:border-neutral-800">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400">
-              Mạng xã hội và nơi mình viết
-            </h4>
-            <SocialLinks />
-          </div>
+            {/* Direct Contact Spec Table (Fixed P0 invalid tel:# link) */}
+            <div className="border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark divide-y divide-paper-line dark:divide-editorial-borderDark text-xs">
+              <div className="px-5 py-3 bg-paper-beige/70 dark:bg-editorial-cardDark flex items-center justify-between text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                <span>LIÊN HỆ TRỰC TIẾP</span>
+                <span>PHẢN HỒI TRONG 24H</span>
+              </div>
 
-        </div>
+              <div className="p-5 space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-2 text-paper-muted dark:text-editorial-textDark">
+                    <Mail className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
+                    <span>Email công việc</span>
+                  </span>
+                  <button
+                    type="button"
+                    onClick={copyEmail}
+                    className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-ink dark:text-paper hover:text-brand-600 dark:hover:text-brand-300 transition-colors"
+                  >
+                    <MorphIcon icon={copiedEmail ? Check : Copy} size={13} className={copiedEmail ? 'text-[#3f9a6b]' : ''} />
+                    <span>{copiedEmail ? 'Đã chép email' : 'Chép địa chỉ'}</span>
+                  </button>
+                </div>
+                <a
+                  href={`mailto:${profileData.email}`}
+                  className="block text-sm font-semibold tabular-nums text-ink dark:text-paper underline decoration-brand-500 dark:decoration-brand-300 hover:text-brand-600 dark:hover:text-brand-300"
+                >
+                  {profileData.email}
+                </a>
+              </div>
 
-        {/* Contact Form */}
-        <div className="md:col-span-2 p-8 rounded-3xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 shadow-sm space-y-6">
-          <h2 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-            Nhắn mình ở đây
-          </h2>
-
-          {success && (
-            <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 flex items-start space-x-3 text-sm text-emerald-800 dark:text-emerald-200">
-              <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-emerald-500 mt-0.5" />
-              <div>
-                <p className="font-semibold">Mình nhận được tin nhắn rồi!</p>
-                <p className="text-xs opacity-90 mt-1">
-                  Cảm ơn bạn. Mình sẽ đọc và trả lời qua email trong vòng 24 giờ.
+              {/* Phone row: text + CV request link instead of broken tel:0393258### */}
+              <div className="p-5 space-y-1.5">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-2 text-paper-muted dark:text-editorial-textDark">
+                    <Phone className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
+                    <span>Điện thoại / Zalo</span>
+                  </span>
+                  <a
+                    href={profileData.cvRequestUrl}
+                    className="text-[11px] font-semibold text-brand-600 dark:text-brand-300 underline hover:opacity-80"
+                  >
+                    Nhận số đầy đủ trong CV
+                  </a>
+                </div>
+                <p className="text-sm font-semibold tabular-nums text-ink dark:text-paper">
+                  {profileData.phoneInternational}
+                  <span className="ml-2 text-xs font-normal text-paper-muted dark:text-editorial-textDark">
+                    (ẩn 3 số cuối trên web công khai)
+                  </span>
                 </p>
               </div>
-            </div>
-          )}
 
-          {errorMsg && (
-            <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 flex items-start space-x-3 text-sm text-rose-800 dark:text-rose-200">
-              <AlertCircle className="w-5 h-5 flex-shrink-0 text-rose-500 mt-0.5" />
-              <span>{errorMsg}</span>
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Purpose selection for recruiter vs client */}
-            <div className="space-y-1.5">
-              <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                Mục đích liên hệ
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {[
-                  { id: 'recruitment', label: '💼 Lời mời tuyển dụng' },
-                  { id: 'project', label: '🚀 Dự án thiết kế E-commerce' },
-                  { id: 'networking', label: '☕ Chỉ muốn làm quen' }
-                ].map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => setFormData({ ...formData, purpose: item.id })}
-                    className={`py-2 px-3 rounded-xl text-xs font-medium text-left border transition-all ${
-                      formData.purpose === item.id
-                        ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 border-transparent shadow-sm'
-                        : 'bg-neutral-100 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
+              <div className="p-5 space-y-1">
+                <span className="inline-flex items-center gap-2 text-paper-muted dark:text-editorial-textDark">
+                  <MapPin className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
+                  <span>Nơi làm việc</span>
+                </span>
+                <p className="text-sm font-semibold text-ink dark:text-paper">{profileData.location}</p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                  Họ và tên của bạn <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Ví dụ: Nguyễn Văn A"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl text-sm bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white focus:border-neutral-500 outline-none transition-colors"
-                />
+            {/* Official Social Channels */}
+            <div className="space-y-3 pt-2">
+              <p className="text-[11px] tabular-nums uppercase tracking-wider text-paper-muted dark:text-editorial-textDark">
+                4 KÊNH CHÍNH THỨC CỦA MÌNH
+              </p>
+              <SocialLinks />
+            </div>
+          </Reveal>
+
+          {/* Right Column: Job Ticket Inquiry Form */}
+          <Reveal className="lg:col-span-7" delay={80}>
+            <div className="border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark">
+              <div className="px-6 sm:px-8 py-4 bg-paper-beige dark:bg-editorial-surfaceDark border-b border-paper-line dark:border-editorial-borderDark flex flex-wrap items-center justify-between gap-2">
+                <span className="inline-flex items-center gap-2 text-[11px] tabular-nums uppercase tracking-wider font-semibold text-ink dark:text-paper">
+                  <RegistrationMark className="w-3.5 h-3.5" />
+                  <span>PHIẾU GỬI TIN NHẮN &amp; LỜI MỜI PHỎNG VẤN</span>
+                </span>
+                <span className="text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                  FORM SHEET · DIRECT INBOX
+                </span>
               </div>
 
-              <div className="space-y-1.5">
-                <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                  Địa chỉ Email <span className="text-rose-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  required
-                  placeholder="email@company.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl text-sm bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white focus:border-neutral-500 outline-none transition-colors"
-                />
+              <div className="p-6 sm:p-10 space-y-6">
+                <div className="space-y-1">
+                  <h2 className="font-heading font-bold text-2xl text-ink dark:text-paper">
+                    Nhắn trực tiếp cho Tiểu Ngọc
+                  </h2>
+                  <p className="text-xs text-paper-muted dark:text-editorial-textDark">
+                    Thông tin của bạn được bảo mật và gửi thẳng tới hộp thư công việc của mình.
+                  </p>
+                </div>
+
+                {success && (
+                  <div className="p-4 bg-paper-beige dark:bg-editorial-surfaceDark border-l-2 border-[#3f9a6b] flex items-start gap-3 text-sm text-ink dark:text-paper">
+                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-[#3f9a6b] mt-0.5" />
+                    <div className="space-y-1">
+                      <p className="font-semibold">Mình đã nhận được tin nhắn của bạn!</p>
+                      <p className="text-xs text-paper-text dark:text-editorial-textDark">
+                        Cảm ơn bạn đã kết nối. Mình sẽ đọc kỹ và phản hồi qua email trong vòng 24 giờ.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {errorMsg && (
+                  <div className="p-4 bg-paper-beige dark:bg-editorial-surfaceDark border-l-2 border-brand-600 flex items-start gap-3 text-sm text-ink dark:text-paper">
+                    <AlertCircle className="w-5 h-5 flex-shrink-0 text-brand-600 dark:text-brand-300 mt-0.5" />
+                    <div className="space-y-2">
+                      <p>{errorMsg}</p>
+                      <a
+                        href={`mailto:${profileData.email}?subject=${encodeURIComponent(formData.subject || 'Liên hệ từ tieungoc.site')}&body=${encodeURIComponent(formData.message)}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-300 underline"
+                      >
+                        <Mail className="w-3.5 h-3.5" />
+                        <span>Mở trình gửi email trực tiếp tới {profileData.email}</span>
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Purpose selector */}
+                  <div className="space-y-2">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-ink dark:text-paper">
+                      01 · Mục đích liên hệ
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                      {[
+                        { id: 'recruitment', label: 'Lời mời tuyển dụng / Nhận CV' },
+                        { id: 'project', label: 'Dự án thiết kế E-commerce' },
+                        { id: 'networking', label: 'Kết nối đồng nghiệp' },
+                      ].map((item) => {
+                        const active = formData.purpose === item.id;
+                        return (
+                          <button
+                            key={item.id}
+                            type="button"
+                            onClick={() => setFormData({ ...formData, purpose: item.id })}
+                            className={`py-2.5 px-3 rounded-sm text-xs font-semibold text-left border transition-colors ${
+                              active
+                                ? 'bg-ink text-paper dark:bg-paper dark:text-ink border-ink dark:border-paper'
+                                : 'bg-paper-beige/60 dark:bg-editorial-surfaceDark text-paper-text dark:text-editorial-textDark border-paper-line dark:border-editorial-borderDark hover:bg-paper-beige dark:hover:bg-editorial-cardDark'
+                            }`}
+                          >
+                            {item.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <label htmlFor="contact-name" className="block text-xs font-semibold text-ink dark:text-paper">
+                        02 · Họ và tên của bạn <span className="text-brand-600 dark:text-brand-300">*</span>
+                      </label>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        required
+                        placeholder="Ví dụ: Nguyễn Minh Anh (HR / Lead)"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full px-3.5 py-2.5 rounded-sm text-sm bg-paper-beige/50 dark:bg-editorial-surfaceDark border border-paper-line dark:border-editorial-borderDark text-ink dark:text-paper focus:border-brand-600 dark:focus:border-brand-300 outline-none transition-colors"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="contact-email" className="block text-xs font-semibold text-ink dark:text-paper">
+                        03 · Địa chỉ Email <span className="text-brand-600 dark:text-brand-300">*</span>
+                      </label>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        required
+                        placeholder="hr@company.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full px-3.5 py-2.5 rounded-sm text-sm bg-paper-beige/50 dark:bg-editorial-surfaceDark border border-paper-line dark:border-editorial-borderDark text-ink dark:text-paper focus:border-brand-600 dark:focus:border-brand-300 outline-none transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label htmlFor="contact-subject" className="block text-xs font-semibold text-ink dark:text-paper">
+                      04 · Tiêu đề <span className="text-brand-600 dark:text-brand-300">*</span>
+                    </label>
+                    <input
+                      id="contact-subject"
+                      type="text"
+                      required
+                      placeholder="Ví dụ: Mời phỏng vấn Senior Graphic Designer (E-commerce) tại [Tên Công Ty]"
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="w-full px-3.5 py-2.5 rounded-sm text-sm bg-paper-beige/50 dark:bg-editorial-surfaceDark border border-paper-line dark:border-editorial-borderDark text-ink dark:text-paper focus:border-brand-600 dark:focus:border-brand-300 outline-none transition-colors"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label htmlFor="contact-message" className="block text-xs font-semibold text-ink dark:text-paper">
+                      05 · Nội dung chi tiết <span className="text-brand-600 dark:text-brand-300">*</span>
+                    </label>
+                    <textarea
+                      id="contact-message"
+                      required
+                      rows={5}
+                      placeholder="Chia sẻ ngắn gọn về vị trí tuyển dụng, link JD, địa điểm làm việc hoặc yêu cầu dự án của bạn..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-3.5 py-2.5 rounded-sm text-sm bg-paper-beige/50 dark:bg-editorial-surfaceDark border border-paper-line dark:border-editorial-borderDark text-ink dark:text-paper focus:border-brand-600 dark:focus:border-brand-300 outline-none transition-colors resize-none"
+                    />
+                  </div>
+
+                  <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm bg-ink text-paper dark:bg-paper dark:text-ink text-sm font-semibold hover:bg-brand-600 dark:hover:bg-brand-300 transition-colors disabled:opacity-50"
+                    >
+                      {loading ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Đang gửi tin nhắn...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Gửi tin nhắn cho Tiểu Ngọc</span>
+                          <Send className="w-4 h-4" />
+                        </>
+                      )}
+                    </button>
+
+                    <span className="text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                      Hoặc gửi thẳng tới: <a href={`mailto:${profileData.email}`} className="underline text-ink dark:text-paper">{profileData.email}</a>
+                    </span>
+                  </div>
+                </form>
               </div>
             </div>
-
-            <div className="space-y-1.5">
-              <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                Tiêu đề <span className="text-rose-500">*</span>
-              </label>
-              <input
-                type="text"
-                required
-                placeholder="Ví dụ: Trao đổi dự án thiết kế E-commerce / Tuyển dụng Senior Graphic Designer (E-commerce)"
-                value={formData.subject}
-                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl text-sm bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white focus:border-neutral-500 outline-none transition-colors"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                Nội dung chi tiết <span className="text-rose-500">*</span>
-              </label>
-              <textarea
-                required
-                rows={5}
-                placeholder="Mô tả sơ lược về công ty, vị trí tuyển dụng, link JD hoặc yêu cầu dự án..."
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl text-sm bg-neutral-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white focus:border-neutral-500 outline-none transition-colors resize-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-8 py-3.5 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
-            >
-              {loading ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  <span>Đang gửi...</span>
-                </>
-              ) : (
-                <>
-                  <span>Gửi tin nhắn</span>
-                  <Send className="w-4 h-4" />
-                </>
-              )}
-            </button>
-          </form>
+          </Reveal>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

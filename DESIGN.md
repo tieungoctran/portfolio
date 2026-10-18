@@ -222,7 +222,7 @@ Bordered hairline lists on paper (dark: ground), two columns of muted key and se
 Four C/M/Y/K tabs in a grid (2 up mobile, 4 up desktop). Each carries a 28px square plate chip in its process ink with the letter; the selected tab gains a 3px top rule in its ink and a beige fill. Full arrow-key, Home and End support.
 
 ### Navigation
-Sticky 64px bar, paper at 95% with a light backdrop blur and a bottom hairline. Registration mark plus name (and role from sm) at left; 14px medium links; active link is ink semibold with a 2px coral underline. Theme toggle and a compact primary "Xin CV" button at right. Mobile menu is a hairline-ruled list with a coral square marking the active page and a full-width primary button.
+Sticky 64px bar, paper at 95% with a light backdrop blur and a bottom hairline. Registration mark plus name (and role from sm) at left; 14px medium links; active link is ink semibold with a 2px coral underline. Theme toggle and a compact primary "Nhận CV" button at right. Mobile menu is a hairline-ruled list with a coral square marking the active page and a full-width primary button.
 
 ### Social icons
 Four brand marks only (LinkedIn, Behance, Substack, Pinterest), inline SVG in currentColor inside 40px hairline-bordered squares; hover inverts to ink fill and paper glyph.

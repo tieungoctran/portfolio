@@ -1,196 +1,277 @@
 import React from 'react';
 import { profileData } from '../data/profile';
-import { ArrowUpRight, Check, Sparkles, Briefcase, Cpu, Rocket, GraduationCap, Globe2, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { CmykStrip, CropMarks, RegistrationMark } from '../components/print/PrintMarks';
 import { usePageMeta } from '../lib/page-meta';
+import { Reveal } from '../components/motion/Reveal';
+
+const keepCompounds = (text: string): React.ReactNode =>
+  text.split(/(E-commerce|E-Commerce|2D\/3D|Print-on-Demand)/).map((part, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+
+const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
+const swipeRail =
+  'flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain gap-4 -mx-4 px-4 pb-3 scroll-px-4 sm:-mx-6 sm:px-6 sm:scroll-px-6';
+const swipeItem = 'snap-start shrink-0 w-[84%] sm:w-[60%]';
 
 export const About: React.FC = () => {
   usePageMeta(
     'Giới thiệu Trần Tiểu Ngọc | Chuyên viên Thiết kế Đồ họa TMĐT',
     'Senior Graphic Designer (E-commerce) 4+ năm tại Vani Ecommerce, tốt nghiệp HCMUTE. Photoshop, Illustrator, Figma, công cụ AI và tự động hóa Photoshop.'
   );
+
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-20">
-      {/* Header & Portrait Bio */}
-      <div className="space-y-8">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-700 dark:text-brand-300 text-xs font-mono font-semibold">
-          <Sparkles className="w-3.5 h-3.5 text-brand-500" />
-          <span>Về Trần Tiểu Ngọc • {profileData.role}</span>
-        </div>
+    <div className="pb-14 sm:pb-28">
+      {/* Section 1: Portrait Proof Sheet & Bio */}
+      <section className="bg-paper-beige dark:bg-editorial-surfaceDark border-b border-paper-line dark:border-editorial-borderDark">
+        <div className={`${sectionShell} py-12 sm:py-20`}>
+          {/* Top Slug Bar */}
+          <Reveal className="flex flex-wrap items-center justify-between gap-2 pb-5 border-b border-paper-line dark:border-editorial-borderDark text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+            <span className="inline-flex items-center gap-2">
+              <RegistrationMark className="w-3.5 h-3.5 text-ink dark:text-paper" />
+              <span>DESIGNER DOSSIER · {profileData.name.toUpperCase()}</span>
+            </span>
+            <span>HCMUTE B.A. (2018–2022) · VANI ECOMMERCE (2022–NAY)</span>
+          </Reveal>
 
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white leading-[1.15]">
-          Mình là Tiểu Ngọc, người ngồi sau 5,000+ file in
-        </h1>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pt-6">
-          {/* Portrait Photo & Recruiter Actions */}
-          <div className="space-y-4">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 shadow-sm relative group">
-              <img
-                src={profileData.avatarUrl}
-                alt="Chân dung Trần Tiểu Ngọc, Senior Graphic Designer (E-commerce) tại TP.HCM"
-                className="w-full h-full object-cover grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80";
-                }}
-              />
-              <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-black/60 backdrop-blur-md text-white text-xs">
-                <span className="font-semibold block">{profileData.name}</span>
-                <span className="opacity-75">Senior Graphic Designer</span>
-              </div>
-            </div>
-
-            {/* Quick Contact Details */}
-            <div className="p-4 rounded-xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-2 text-xs">
-              <a
-                href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
-                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors font-mono"
-              >
-                <Phone className="w-3.5 h-3.5 text-brand-500 flex-shrink-0" />
-                <span>{profileData.phoneInternational}</span>
-              </a>
-              <a
-                href={`mailto:${profileData.email}`}
-                className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors font-mono"
-              >
-                <Mail className="w-3.5 h-3.5 text-brand-500 flex-shrink-0" />
-                <span>{profileData.email}</span>
-              </a>
-            </div>
-
-            {/* Quick Actions for Recruiters */}
-            <div className="space-y-2">
-              <a
-                href={profileData.cvRequestUrl}
-                className="w-full inline-flex items-center justify-center space-x-2 px-4 py-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-xs font-semibold hover:opacity-90 transition-opacity shadow-sm"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Xin CV qua email</span>
-              </a>
-
-              <Link
-                to="/contact"
-                className="w-full inline-flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700 text-neutral-800 dark:text-neutral-200 text-xs font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-              >
-                <span>Liên hệ hợp tác</span>
-              </Link>
-            </div>
-          </div>
-
-          {/* Bio text */}
-          <div className="md:col-span-2 space-y-6 text-neutral-600 dark:text-neutral-300 leading-relaxed font-light text-base">
-            {profileData.bio.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-
-            <div className="p-6 rounded-2xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/50 dark:border-brand-900/50 space-y-2">
-              <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-brand-800 dark:text-brand-300 font-semibold">
-                <Rocket className="w-4 h-4 text-brand-500" />
-                <span>Nếu bạn đang tuyển Senior Graphic Designer</span>
-              </div>
-              <p className="text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed">
-                {profileData.recruiterPitch}
-              </p>
-            </div>
-
-            {/* Job Search Preferences Box */}
-            <div className="p-5 rounded-2xl bg-neutral-100 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-3">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-                  Mình đang tìm việc gì
-                </span>
-                <span className="inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-emerald-700 dark:text-emerald-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>{profileData.jobPreferences.status}</span>
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs">
-                <div className="space-y-1">
-                  <span className="text-neutral-400 font-mono block">Vị trí mình nhắm tới:</span>
-                  <ul className="space-y-1 text-neutral-800 dark:text-neutral-200 font-medium">
-                    {profileData.jobPreferences.targetRoles.map((role) => (
-                      <li key={role}>• {role}</li>
-                    ))}
-                  </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pt-8 sm:pt-12 items-start">
+            {/* Left Column: Portrait Frame + Contact Spec Table */}
+            <Reveal className="lg:col-span-4 space-y-6">
+              <figure className="relative m-4">
+                <CropMarks offset={6} length={12} />
+                <div className="aspect-[4/5] overflow-hidden bg-paper dark:bg-editorial-cardDark border border-paper-line dark:border-editorial-borderDark">
+                  <img
+                    src={profileData.avatarUrl}
+                    alt="Chân dung Trần Tiểu Ngọc, Senior Graphic Designer (E-commerce) tại TP.HCM"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="space-y-1">
-                  <span className="text-neutral-400 font-mono block">Hình thức làm việc:</span>
-                  <ul className="space-y-1 text-neutral-800 dark:text-neutral-200 font-medium">
-                    {profileData.jobPreferences.workModes.map((mode) => (
-                      <li key={mode}>• {mode}</li>
-                    ))}
-                  </ul>
+                <figcaption className="pt-3 flex items-baseline justify-between gap-2">
+                  <span className="font-hand text-3xl leading-none text-brand-600 dark:text-brand-300 -rotate-2">
+                    Tiểu Ngọc
+                  </span>
+                  <span className="text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                    PISCES · 2000 · HCMC
+                  </span>
+                </figcaption>
+              </figure>
+
+              {/* Spec Table: Direct Contact & Privacy */}
+              <div className="border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark divide-y divide-paper-line dark:divide-editorial-borderDark text-xs">
+                <div className="px-4 py-2.5 bg-paper-beige/70 dark:bg-editorial-cardDark flex items-center justify-between text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                  <span>THÔNG TIN LIÊN HỆ</span>
+                  <span className="inline-flex items-center gap-1.5 font-semibold text-ink dark:text-paper">
+                    <span className="w-2 h-2 rounded-full bg-[#3f9a6b]" />
+                    Open to Work
+                  </span>
+                </div>
+                <div className="px-4 py-3 flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-2 text-paper-muted dark:text-editorial-textDark">
+                    <Mail className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
+                    <span>Email</span>
+                  </span>
+                  <a
+                    href={`mailto:${profileData.email}`}
+                    className="font-semibold text-ink dark:text-paper underline decoration-brand-500 dark:decoration-brand-300 hover:text-brand-600 dark:hover:text-brand-300"
+                  >
+                    {profileData.email}
+                  </a>
+                </div>
+                <div className="px-4 py-3 flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-2 text-paper-muted dark:text-editorial-textDark">
+                    <Phone className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
+                    <span>Điện thoại</span>
+                  </span>
+                  <span className="tabular-nums font-semibold text-ink dark:text-paper" title="Số điện thoại đầy đủ có trong bản CV gửi qua email">
+                    {profileData.phone} <span className="text-[11px] font-normal text-paper-muted dark:text-editorial-textDark">(trong CV)</span>
+                  </span>
+                </div>
+                <div className="px-4 py-3 flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-2 text-paper-muted dark:text-editorial-textDark">
+                    <MapPin className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
+                    <span>Khu vực</span>
+                  </span>
+                  <span className="font-semibold text-ink dark:text-paper">{profileData.location}</span>
                 </div>
               </div>
 
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 pt-2 border-t border-neutral-200 dark:border-neutral-800">
-                📍 {profileData.location} • {profileData.jobPreferences.availability} • Lương: {profileData.jobPreferences.salaryExpectation}
-              </p>
-            </div>
+              {/* Recruiter Action Buttons */}
+              <div className="flex flex-col gap-2.5">
+                <a
+                  href={profileData.cvRequestUrl}
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm bg-ink text-paper dark:bg-paper dark:text-ink text-xs font-semibold hover:bg-brand-600 dark:hover:bg-brand-300 transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Nhận CV đầy đủ qua email</span>
+                </a>
+                <Link
+                  to="/contact"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-sm border border-ink dark:border-paper text-ink dark:text-paper text-xs font-semibold hover:bg-paper dark:hover:bg-editorial-cardDark transition-colors"
+                >
+                  <span>Mời phỏng vấn / Liên hệ</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </Reveal>
+
+            {/* Right Column: Bio & Job Search Spec */}
+            <Reveal className="lg:col-span-8 space-y-8" delay={80}>
+              <div className="space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300">
+                  Về Trần Tiểu Ngọc · {keepCompounds(profileData.role)}
+                </p>
+                <h1 className="font-heading font-bold text-3xl sm:text-5xl leading-[1.15] sm:leading-[1.15] tracking-[-0.03em] text-ink dark:text-paper">
+                  Mình là Tiểu Ngọc, người ngồi sau 5,000+ file in
+                </h1>
+              </div>
+
+              <div className="space-y-4 text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark max-w-[66ch]">
+                {profileData.bio.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+
+              {/* Recruiter Pitch Callout */}
+              <div className="border-l-2 border-brand-500 dark:border-brand-300 pl-5 py-1 space-y-2 bg-paper/60 dark:bg-editorial-dark/60 p-5">
+                <p className="text-[11px] tabular-nums uppercase tracking-wider font-semibold text-brand-600 dark:text-brand-300">
+                  DÀNH CHO NHÀ TUYỂN DỤNG &amp; CREATIVE DIRECTOR
+                </p>
+                <p className="text-sm leading-relaxed text-ink dark:text-paper">
+                  {profileData.recruiterPitch}
+                </p>
+              </div>
+
+              {/* Job Search Preferences Spec Sheet */}
+              <div className="border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark">
+                <div className="px-5 py-3 bg-paper-beige/70 dark:bg-editorial-cardDark border-b border-paper-line dark:border-editorial-borderDark flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-[11px] tabular-nums uppercase tracking-wider font-semibold text-ink dark:text-paper">
+                    MỤC TIÊU NGHỀ NGHIỆP HIỆN TẠI
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink dark:text-paper">
+                    <span className="w-2 h-2 rounded-full bg-[#3f9a6b]" />
+                    <span>{profileData.jobPreferences.status}</span>
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-paper-line dark:divide-editorial-borderDark">
+                  <div className="p-5 space-y-2.5">
+                    <span className="text-[11px] tabular-nums uppercase tracking-wider text-paper-muted dark:text-editorial-textDark block">
+                      Vị trí mình nhắm tới
+                    </span>
+                    <ul className="space-y-1.5 text-xs font-semibold text-ink dark:text-paper">
+                      {profileData.jobPreferences.targetRoles.map((role) => (
+                        <li key={role} className="flex items-start gap-2">
+                          <span aria-hidden="true" className="mt-1.5 w-1.5 h-1.5 bg-brand-500 dark:bg-brand-300 shrink-0" />
+                          <span>{keepCompounds(role)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="p-5 space-y-2.5">
+                    <span className="text-[11px] tabular-nums uppercase tracking-wider text-paper-muted dark:text-editorial-textDark block">
+                      Hình thức &amp; Thời gian nhận việc
+                    </span>
+                    <ul className="space-y-1.5 text-xs font-semibold text-ink dark:text-paper">
+                      {profileData.jobPreferences.workModes.map((mode) => (
+                        <li key={mode} className="flex items-start gap-2">
+                          <span aria-hidden="true" className="mt-1.5 w-1.5 h-1.5 bg-brand-500 dark:bg-brand-300 shrink-0" />
+                          <span>{mode}</span>
+                        </li>
+                      ))}
+                      <li className="flex items-start gap-2 text-paper-text dark:text-editorial-textDark font-normal pt-1">
+                        <span aria-hidden="true" className="mt-1.5 w-1.5 h-1.5 bg-ink/40 dark:bg-paper/40 shrink-0" />
+                        <span>{profileData.jobPreferences.availability} · Lương kỳ vọng: {profileData.jobPreferences.salaryExpectation}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Skills Matrix */}
-      <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div className="space-y-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 font-mono">
-            Năng lực chuyên môn
-          </span>
-          <h2 className="font-serif text-3xl font-bold text-neutral-900 dark:text-white">
-            Đồ họa, in ấn, tự động hóa: những gì mình làm mỗi ngày
-          </h2>
-        </div>
+      {/* Section 2: Core Skills Matrix */}
+      <section className={`${sectionShell} py-14 sm:py-24`}>
+        <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10 sm:mb-14">
+          <div className="lg:col-span-7 space-y-2">
+            <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-600 dark:text-brand-300 font-semibold">
+              01 · NĂNG LỰC CHUYÊN MÔN CỐT LÕI
+            </p>
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl leading-[1.2] sm:leading-[1.2] text-ink dark:text-paper">
+              Đồ họa, in ấn, tự động hóa: những gì mình làm mỗi ngày
+            </h2>
+          </div>
+          <p className="lg:col-span-5 text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark">
+            Sắp xếp theo đúng thứ tự công việc thực chiến tại Vani Ecommerce: từ thiết kế sản phẩm in POD, banner quảng cáo chuyển đổi đến tự động hóa Photoshop và kiểm soát chất lượng in.
+          </p>
+        </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {profileData.skillCategories.map((cat) => (
-            <div
-              key={cat.title}
-              className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4"
-            >
-              <h3 className="font-serif text-lg font-bold text-neutral-900 dark:text-white flex items-center space-x-2">
-                <span>{cat.title}</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 border border-paper-line dark:border-editorial-borderDark divide-y md:divide-y-0 md:divide-x divide-paper-line dark:divide-editorial-borderDark bg-paper dark:bg-editorial-dark">
+          {profileData.skillCategories.slice(0, 2).map((cat, idx) => (
+            <Reveal key={cat.title} delay={idx * 80} className="p-6 sm:p-8 space-y-4">
+              <div className="flex items-center justify-between text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                <span>PILLAR 0{idx + 1}</span>
+                <RegistrationMark className="w-3.5 h-3.5" />
+              </div>
+              <h3 className="font-heading font-bold text-xl leading-snug text-ink dark:text-paper">
+                {keepCompounds(cat.title)}
               </h3>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2.5 pt-1">
                 {cat.skills.map((skill) => (
-                  <li key={skill} className="flex items-start space-x-2 text-sm text-neutral-600 dark:text-neutral-300 font-light">
-                    <Check className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <li key={skill} className="flex gap-2.5 text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">
+                    <span aria-hidden="true" className="mt-[7px] w-1.5 h-1.5 flex-shrink-0 bg-brand-500 dark:bg-brand-300" />
                     <span>{skill}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           ))}
         </div>
-      </div>
 
-      {/* AI Tools Suite */}
-      <div className="space-y-6 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div className="space-y-1">
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-            <Cpu className="w-4 h-4 text-brand-500" />
-            <span>Bộ đồ nghề của mình</span>
-          </div>
-          <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-            Những công cụ mình mở lên mỗi ngày
-          </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 border-x border-b border-paper-line dark:border-editorial-borderDark divide-y md:divide-y-0 md:divide-x divide-paper-line dark:divide-editorial-borderDark bg-paper dark:bg-editorial-dark">
+          {profileData.skillCategories.slice(2, 4).map((cat, idx) => (
+            <Reveal key={cat.title} delay={idx * 80} className="p-6 sm:p-8 space-y-4">
+              <div className="flex items-center justify-between text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
+                <span>PILLAR 0{idx + 3}</span>
+                <RegistrationMark className="w-3.5 h-3.5" />
+              </div>
+              <h3 className="font-heading font-bold text-xl leading-snug text-ink dark:text-paper">
+                {keepCompounds(cat.title)}
+              </h3>
+              <ul className="space-y-2.5 pt-1">
+                {cat.skills.map((skill) => (
+                  <li key={skill} className="flex gap-2.5 text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">
+                    <span aria-hidden="true" className="mt-[7px] w-1.5 h-1.5 flex-shrink-0 bg-brand-500 dark:bg-brand-300" />
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* Daily Tool Stack */}
+        <Reveal className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-paper-line dark:border-editorial-borderDark divide-y sm:divide-y-0 sm:divide-x divide-paper-line dark:divide-editorial-borderDark bg-paper-beige dark:bg-editorial-surfaceDark">
           {profileData.aiTools.map((group) => (
-            <div
-              key={group.category}
-              className="p-5 rounded-2xl bg-neutral-100/70 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-3"
-            >
-              <span className="text-xs font-semibold text-neutral-800 dark:text-neutral-200 block font-mono">
+            <div key={group.category} className="p-5 space-y-3">
+              <span className="text-[11px] tabular-nums uppercase tracking-wider font-semibold text-ink dark:text-paper block">
                 {group.category}
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {group.tools.map((tool) => (
                   <span
                     key={tool}
-                    className="text-xs px-2.5 py-1 rounded-md bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/80 dark:border-neutral-700/60"
+                    className="text-xs px-2.5 py-1 bg-paper dark:bg-editorial-dark text-paper-text dark:text-editorial-textDark border border-paper-line dark:border-editorial-borderDark"
                   >
                     {tool}
                   </span>
@@ -198,204 +279,229 @@ export const About: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+        </Reveal>
+      </section>
 
-      {/* Human-Crafted, AI-Accelerated Philosophy Section */}
-      <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-editorial-surfaceDark dark:text-neutral-100 border border-neutral-800 space-y-8 relative overflow-hidden">
-          <div className="space-y-3 max-w-3xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-mono font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-brand-400" />
-              <span>{profileData.aiPhilosophy.badge}</span>
+      {/* Section 3: Human-Crafted, AI-Accelerated Philosophy Band */}
+      <section className="bg-paper-beige dark:bg-editorial-surfaceDark border-y border-paper-line dark:border-editorial-borderDark py-14 sm:py-24">
+        <div className={sectionShell}>
+          <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10 sm:mb-14">
+            <div className="lg:col-span-7 space-y-3">
+              <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-600 dark:text-brand-300 font-semibold">
+                02 · {profileData.aiPhilosophy.badge}
+              </p>
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl leading-[1.2] sm:leading-[1.2] text-ink dark:text-paper">
+                {profileData.aiPhilosophy.headline}
+              </h2>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-              {profileData.aiPhilosophy.headline}
-            </h2>
-            <blockquote className="p-4 rounded-2xl bg-neutral-800/80 border-l-4 border-brand-400 text-sm sm:text-base font-quote italic text-brand-100 leading-relaxed">
+            <div className="lg:col-span-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-ink dark:text-paper border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark px-3.5 py-2 inline-block">
+                {profileData.aiPhilosophy.ratio}
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal className="mb-10 p-6 sm:p-8 bg-paper dark:bg-editorial-dark border border-paper-line dark:border-editorial-borderDark">
+            <blockquote className="font-quote italic text-lg sm:text-xl leading-relaxed text-ink dark:text-paper">
               &ldquo;{profileData.aiPhilosophy.coreBelief}&rdquo;
             </blockquote>
-            <div className="pt-1">
-              <span className="inline-block text-xs font-mono px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-semibold">
-                ✦ {profileData.aiPhilosophy.ratio}
-              </span>
-            </div>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {profileData.aiPhilosophy.pillars.map((pillar) => (
-              <div
+          <div className={`${swipeRail} md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:mx-0 md:px-0 md:pb-0`}>
+            {profileData.aiPhilosophy.pillars.map((pillar, i) => (
+              <Reveal
                 key={pillar.title}
-                className="p-5 rounded-2xl bg-neutral-800/60 border border-neutral-700/70 space-y-2.5 flex flex-col justify-between"
+                delay={i * 80}
+                className={`${swipeItem} md:w-auto p-6 bg-paper dark:bg-editorial-dark border border-paper-line dark:border-editorial-borderDark space-y-3`}
               >
-                <div className="space-y-2">
-                  <span className="text-[11px] font-mono text-brand-400 block font-semibold">
-                    {pillar.subtitle}
-                  </span>
-                  <h3 className="font-serif text-base font-bold text-white">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-xs text-neutral-300 font-light leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </div>
-              </div>
+                <span className="text-[11px] tabular-nums font-semibold text-brand-600 dark:text-brand-300 uppercase tracking-wider block">
+                  0{i + 1} · {pillar.subtitle}
+                </span>
+                <h3 className="font-heading font-bold text-lg leading-snug text-ink dark:text-paper">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">
+                  {pillar.description}
+                </p>
+              </Reveal>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Work Experience Timeline */}
-      <div className="space-y-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-          <Briefcase className="w-4 h-4" />
-          <span>Kinh nghiệm làm việc</span>
-        </div>
-        <h2 className="font-serif text-3xl font-bold text-neutral-900 dark:text-white">
-          4+ năm ở Vani Ecommerce, tính bằng kết quả
-        </h2>
+      {/* Section 4: Work Experience, Education & Languages */}
+      <section className={`${sectionShell} py-14 sm:py-24 space-y-16`}>
+        {/* Work Experience */}
+        <div className="space-y-8">
+          <Reveal className="space-y-2">
+            <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-600 dark:text-brand-300 font-semibold">
+              03 · KINH NGHIỆM THỰC CHIẾN
+            </p>
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl leading-[1.2] sm:leading-[1.2] text-ink dark:text-paper">
+              4+ năm ở Vani Ecommerce, tính bằng kết quả
+            </h2>
+          </Reveal>
 
-        <div className="space-y-8 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-neutral-200 dark:before:bg-neutral-800">
           {profileData.experiences.map((exp, index) => (
-            <div key={index} className="relative pl-10 space-y-3">
-              <span className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-neutral-900" />
-              <div className="flex flex-wrap items-center justify-between text-xs text-neutral-500 font-mono">
-                <span className="font-semibold text-brand-700 dark:text-brand-400">{exp.company}</span>
-                <span>{exp.period}</span>
+            <Reveal
+              key={index}
+              className="border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark p-6 sm:p-10 space-y-6"
+            >
+              <div className="flex flex-wrap items-baseline justify-between gap-2 pb-4 border-b border-paper-line dark:border-editorial-borderDark">
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300 block">
+                    {exp.company}
+                  </span>
+                  <h3 className="mt-1 font-heading font-bold text-2xl sm:text-3xl leading-snug sm:leading-snug text-ink dark:text-paper">
+                    {keepCompounds(exp.role)}
+                  </h3>
+                </div>
+                <span className="text-xs tabular-nums font-semibold px-3 py-1 bg-paper-beige dark:bg-editorial-cardDark text-ink dark:text-paper border border-paper-line dark:border-editorial-borderDark">
+                  {exp.period}
+                </span>
               </div>
-              <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-white">
-                {exp.role}
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-light">
+
+              <p className="text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark">
                 {exp.description}
               </p>
+
               {exp.highlights && exp.highlights.length > 0 && (
-                <ul className="space-y-2 pt-2">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                   {exp.highlights.map((item, idx) => (
-                    <li key={idx} className="flex items-start space-x-2 text-sm text-neutral-600 dark:text-neutral-300 font-light">
-                      <Check className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" />
+                    <li
+                      key={idx}
+                      className="p-4 bg-paper-beige/60 dark:bg-editorial-surfaceDark border border-paper-line dark:border-editorial-borderDark flex gap-3 text-sm leading-relaxed text-paper-text dark:text-editorial-textDark"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-[7px] w-1.5 h-1.5 flex-shrink-0 bg-brand-500 dark:bg-brand-300"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               )}
-            </div>
+            </Reveal>
           ))}
         </div>
-      </div>
 
-      {/* Education & Languages + Soft Skills */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        {/* Education & Languages */}
-        <div className="space-y-6">
-          <div className="space-y-2">
-            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-              <GraduationCap className="w-4 h-4 text-brand-500" />
-              <span>Học vấn & Đào tạo</span>
+        {/* Education, Languages & Soft Skills Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <Reveal className="lg:col-span-6 space-y-6">
+            <div className="space-y-1">
+              <p className="text-[11px] tabular-nums uppercase tracking-wider text-paper-muted dark:text-editorial-textDark">
+                04 · HỌC VẤN &amp; NGOẠI NGỮ
+              </p>
+              <h3 className="font-heading font-bold text-2xl leading-snug text-ink dark:text-paper">
+                Nền tảng đào tạo chính quy
+              </h3>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-              Nơi mình học nghề
-            </h3>
-          </div>
 
-          {profileData.educations.map((edu, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-2"
-            >
-              <span className="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">
-                {edu.period}
+            {profileData.educations.map((edu, index) => (
+              <div
+                key={index}
+                className="p-6 border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark space-y-2"
+              >
+                <span className="text-xs tabular-nums font-semibold text-brand-600 dark:text-brand-300 block">
+                  {edu.period}
+                </span>
+                <h4 className="font-heading font-bold text-lg text-ink dark:text-paper">
+                  {edu.degree}
+                </h4>
+                <p className="text-xs font-semibold text-ink dark:text-paper">
+                  {edu.institution}
+                </p>
+                <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark pt-1">
+                  {edu.description}
+                </p>
+              </div>
+            ))}
+
+            <div className="p-6 border border-paper-line dark:border-editorial-borderDark bg-paper dark:bg-editorial-dark space-y-4">
+              <span className="text-[11px] tabular-nums uppercase tracking-wider font-semibold text-paper-muted dark:text-editorial-textDark block">
+                NGOẠI NGỮ TRONG CÔNG VIỆC
               </span>
-              <h4 className="font-serif text-lg font-bold text-neutral-900 dark:text-white">
-                {edu.degree}
-              </h4>
-              <p className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                {edu.institution}
-              </p>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed pt-1">
-                {edu.description}
-              </p>
-            </div>
-          ))}
-
-          {/* Languages */}
-          <div className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4">
-            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-              <Globe2 className="w-4 h-4 text-brand-500" />
-              <span>Ngoại ngữ</span>
-            </div>
-            <div className="space-y-3">
-              {profileData.languages.map((lang) => (
-                <div key={lang.language} className="space-y-0.5">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="font-semibold text-neutral-900 dark:text-white">{lang.language}</span>
-                    <span className="text-brand-700 dark:text-brand-400 font-mono text-[11px]">{lang.level}</span>
+              <div className="divide-y divide-paper-line dark:divide-editorial-borderDark">
+                {profileData.languages.map((lang) => (
+                  <div key={lang.language} className="py-3 first:pt-0 last:pb-0 space-y-1">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="font-semibold text-ink dark:text-paper">{lang.language}</span>
+                      <span className="font-semibold text-brand-600 dark:text-brand-300">{lang.level}</span>
+                    </div>
+                    <p className="text-xs text-paper-text dark:text-editorial-textDark">
+                      {lang.detail}
+                    </p>
                   </div>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400 font-light">
-                    {lang.detail}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal className="lg:col-span-6 space-y-6" delay={80}>
+            <div className="space-y-1">
+              <p className="text-[11px] tabular-nums uppercase tracking-wider text-paper-muted dark:text-editorial-textDark">
+                05 · PHONG CÁCH PHỐI HỢP
+              </p>
+              <h3 className="font-heading font-bold text-2xl leading-snug text-ink dark:text-paper">
+                Cách mình làm việc cùng team
+              </h3>
+            </div>
+
+            <div className="p-6 sm:p-8 border border-paper-line dark:border-editorial-borderDark bg-paper-beige dark:bg-editorial-surfaceDark space-y-4">
+              <p className="text-sm leading-relaxed text-paper-text dark:text-editorial-textDark">
+                Mình nhạy cảm kiểu Song Ngư khi cảm thụ màu sắc và bố cục, nhưng khi chạy đơn hàng quốc tế thì làm việc theo hệ thống, quy chuẩn đặt tên file và tiến độ rõ ràng:
+              </p>
+              <ul className="space-y-3">
+                {profileData.softSkills.map((skill) => (
+                  <li key={skill} className="flex gap-3 text-sm leading-relaxed text-ink dark:text-paper">
+                    <span
+                      aria-hidden="true"
+                      className="mt-[7px] w-1.5 h-1.5 flex-shrink-0 bg-brand-500 dark:bg-brand-300"
+                    />
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Section 5: Recruiter Sign-Off Block */}
+      <section className={sectionShell}>
+        <Reveal className="relative bg-ink text-paper dark:bg-editorial-cardDark">
+          <CmykStrip className="h-1.5" />
+          <div className="px-5 sm:px-10 lg:px-14 py-10 sm:py-12 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="space-y-2 max-w-2xl">
+              <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-300">
+                OPEN TO WORK · TP. HỒ CHÍ MINH
+              </p>
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl leading-[1.2] sm:leading-[1.2]">
+                {keepCompounds('Team bạn đang tìm một Senior Graphic Designer (E-commerce)?')}
+              </h2>
+              <p className="text-sm leading-relaxed text-paper/80">
+                Mình sẵn sàng nhận việc trong 2 đến 4 tuần tại TP.HCM. Nhắn mình để nhận bản CV PDF 1 trang A4 (tiếng Việt hoặc tiếng Anh) và trao đổi trực tiếp.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href={profileData.cvRequestUrl}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm bg-paper text-ink font-semibold text-sm hover:bg-brand-300 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                Nhận CV qua email
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm border border-paper/40 text-paper font-semibold text-sm hover:border-paper transition-colors"
+              >
+                Liên hệ hợp tác
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
-        </div>
-
-        {/* Soft Skills */}
-        <div className="space-y-6">
-          <div className="space-y-2">
-            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-neutral-400">
-              <Sparkles className="w-4 h-4 text-brand-500" />
-              <span>Kỹ năng mềm & Phong cách làm việc</span>
-            </div>
-            <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">
-              Cách mình làm việc cùng team
-            </h3>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white dark:bg-editorial-surfaceDark border border-neutral-200 dark:border-neutral-800 space-y-4">
-            <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-              Mình nhạy cảm kiểu Song Ngư, nhưng làm cho khách quốc tế thì phải có hệ thống và đúng tiến độ. Đại loại thế này:
-            </p>
-            <ul className="space-y-2.5">
-              {profileData.softSkills.map((skill) => (
-                <li key={skill} className="flex items-start space-x-2 text-sm text-neutral-700 dark:text-neutral-300 font-light">
-                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
-                  <span>{skill}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Recruiter Callout */}
-      <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-        <div className="space-y-2 max-w-xl">
-          <h4 className="font-serif text-2xl font-bold">
-            Team bạn cần thêm một designer E-commerce?
-          </h4>
-          <p className="text-xs sm:text-sm opacity-85 font-light">
-            Mình nhận thiết kế sản phẩm in (Print-on-Demand), banner Facebook & Google Ads, mockup 2D/3D, POSM/in ấn và ứng dụng công cụ AI vào quy trình làm việc.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          <Link
-            to="/contact"
-            className="inline-flex items-center space-x-1.5 px-6 py-3 rounded-xl text-xs font-semibold bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white hover:opacity-90 transition-opacity"
-          >
-            <span>Liên hệ hợp tác</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </Link>
-          <a
-            href={profileData.cvRequestUrl}
-            className="inline-flex items-center space-x-1.5 px-5 py-3 rounded-xl text-xs font-semibold border border-neutral-700 dark:border-neutral-300 text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            <span>Xin CV</span>
-          </a>
-        </div>
-      </div>
+        </Reveal>
+      </section>
     </div>
   );
 };
