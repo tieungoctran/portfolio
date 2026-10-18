@@ -3,28 +3,57 @@
 @tailwind utilities;
 
 @layer base {
-  /* Base body font: Inter */
+  /* Body: Montserrat */
   html, body {
     scroll-behavior: smooth;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   /* Headings: Be Vietnam Pro */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
   }
 
-  /* Quotes & Philosophy: Lora */
+  /* Quotes: Montserrat Italic */
   blockquote, .font-quote, q {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-style: italic;
+  }
+
+  ::selection {
+    background: #d34e36;
+    color: #fdfbf7;
+  }
+
+  .dark ::selection {
+    background: #f0b4a8;
+    color: #121212;
+  }
+
+  :focus-visible {
+    outline: 2px solid #b33d27;
+    outline-offset: 3px;
+  }
+
+  .dark :focus-visible {
+    outline-color: #f0b4a8;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  html {
+    caret-color: #d34e36;
   }
 }
 
-/* Custom scrollbar for clean editorial look */
+/* Scrollbar in the paper and ink palette */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -32,10 +61,51 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(150, 150, 150, 0.3);
+  background: #d8d1c5;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(150, 150, 150, 0.5);
+  background: #b33d27;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3a3633;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #f0b4a8;
+}
+
+/* Signature moment: the display numeral prints in four separations that slide into register once */
+@keyframes plate-register {
+  from {
+    transform: translate(var(--plate-x), var(--plate-y));
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+.plate-ghost {
+  animation: plate-register 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+/* Proofer's pen: the coral circle draws itself once after the plates land */
+@keyframes pen-draw {
+  from { stroke-dashoffset: var(--pen-length, 900); }
+  to { stroke-dashoffset: 0; }
+}
+
+.pen-stroke {
+  stroke-dasharray: var(--pen-length, 900);
+  animation: pen-draw 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .plate-ghost { animation: none; opacity: 0; }
+  .pen-stroke { animation: none; stroke-dashoffset: 0; }
 }

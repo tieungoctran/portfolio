@@ -27,40 +27,40 @@ export const projectsData: Project[] = [
   {
     id: "p1",
     slug: "pod-anime-collection",
-    title: "POD Anime Collection — Bộ Sưu Tập Áo Thun Đạt Mốc Doanh Thu $20,000+",
-    subtitle: "50+ mẫu thiết kế thời trang ngách Anime chinh phục thị trường Mỹ, kết hợp vẽ minh họa Wacom chi tiết và tối ưu file in ấn sắc nét.",
+    title: "Dự Án D2C: 3 Thương Hiệu E-commerce, Đạt ~$25,000 Lợi Nhuận Team Q4/2025",
+    subtitle: "Phụ trách toàn bộ thiết kế cho 3 thương hiệu D2C từ các dòng sản phẩm in ấn POD đến hệ thống banner website, Klaviyo email và quảng cáo Google/Facebook Ads.",
     category: "POD & Apparel Design",
-    year: "2025",
-    client: "US Anime Niche Ecommerce Store",
-    role: "Lead Graphic Designer (Concepting, Wacom Artwork, Print Separation & Mockups)",
-    tools: ["Adobe Photoshop", "Adobe Illustrator", "Bảng vẽ Wacom", "Adobe Firefly", "PS Actions"],
+    year: "Q3–Q4/2025",
+    client: "Dự án D2C: 3 Thương hiệu E-commerce (US/EU)",
+    role: "Lead E-commerce Designer (Product Design, Ad Creatives, Website Banners & Mockups)",
+    tools: ["Adobe Photoshop", "Adobe Illustrator", "Bảng vẽ Wacom", "Adobe Firefly", "PS Actions & Scripts"],
     aiHighlights: [
-      "Ứng dụng Adobe Firefly & Generative Fill để mở rộng chi tiết background và hiệu ứng ánh sáng siêu thực",
-      "Khai thác prompt chuyên sâu về Anime Cyberpunk & Neo-Tokyo aesthetic",
-      "Sử dụng Photoshop Action tự động tách lớp màu và xuất file in 300 DPI kích thước lớn chỉ trong vài giây"
+      "Ứng dụng Adobe Firefly, ChatGPT Image & Gemini tạo moodboard và biến thể nhanh gấp 3 lần",
+      "Hoàn thiện thủ công 100% từng sản phẩm bằng Wacom: dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn",
+      "Sử dụng Photoshop Actions & Scripts tự động ghép mockup 2D/3D và xuất file in 300 DPI chuẩn SKU"
     ],
     coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
-        caption: "Bản vẽ Key Visual phong cách Dark Neo-Anime với độ tương phản cao, tối ưu tuyệt hảo trên nền áo thun đen."
+        caption: "Thiết kế sản phẩm in ấn (T-shirt, áo, quần, cốc, mũ, giày, poster) với độ tương phản cao, sẵn sàng sản xuất."
       },
       {
         url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=80",
-        caption: "Mockup sản phẩm thực tế trên mẫu áo Streetwear Oversize cho thị trường US và EU."
+        caption: "Hệ thống Mockup 2D/3D và Banner quảng cáo Facebook Ads, Google Ads đồng bộ từ sản phẩm đến chiến dịch."
       },
       {
         url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80",
-        caption: "Bộ sưu tập 50+ biến thể màu sắc và chi tiết typography được xuất tự động bằng Photoshop Script."
+        caption: "Hàng trăm biến thể kích thước và mockup được xuất tự động bằng Photoshop Actions & Script (.jsx)."
       }
     ],
-    overview: "Bộ sưu tập 50+ mẫu thiết kế áo thun thời trang dành riêng cho cộng đồng đam mê văn hóa Anime tại thị trường Mỹ, phát hành vào mùa cao điểm mua sắm quý 4 năm 2025.",
-    challenge: "Thị trường POD Anime tại Mỹ cạnh tranh cực kỳ khốc liệt với hàng vạn mẫu mã đại trà. Mẫu áo cần đạt độ độc bản cao, nét vẽ giàu cảm xúc, không dính bản quyền thương hiệu lớn và chất lượng in DTG (Direct-to-Garment) phải sắc sảo, không bị bệt màu.",
-    solution: "Tiểu Ngọc xây dựng quy trình kết hợp thông minh: Sử dụng AI để thử nghiệm các bố cục ánh sáng và hiệu ứng khói/lửa độc đáo, sau đó vẽ tay lại 100% bằng bảng vẽ Wacom Tablet để đảm bảo từng nét tóc, ánh mắt nhân vật đều có hồn. Đồng thời áp dụng kỹ thuật cân bằng dải màu CMYK để khi in lên vải cotton không bị xỉn màu.",
+    overview: "Trong Q3–Q4/2025, Tiểu Ngọc được giao phụ trách toàn bộ thiết kế cho 3 thương hiệu E-commerce thuộc dự án D2C, phối hợp chặt chẽ cùng team từ khâu phát triển sản phẩm in ấn đến toàn bộ visual marketing phục vụ mùa cao điểm mua sắm cuối năm.",
+    challenge: "Phải đồng thời vận hành khối lượng thiết kế lớn cho cả 3 thương hiệu trên nhiều dòng sản phẩm (t-shirt, áo, quần, cốc, mũ, giày, poster) và đa kênh quảng cáo (banner website, header email Klaviyo, Google Ads, Facebook Ads) mà vẫn phải giữ chất lượng thẩm mỹ độc bản và chuẩn kỹ thuật in ấn.",
+    solution: "Tiểu Ngọc áp dụng quy trình 'Con người dẫn dắt, AI tăng tốc': dùng AI để khám phá ý tưởng và bố cục quảng cáo nhanh, tự tay hoàn thiện nét vẽ Wacom và Typography, sau đó dùng bộ Photoshop Actions & Scripts tự viết để tự động hóa khâu ghép mockup và xuất file in 300 DPI.",
     results: [
-      "Mang về hơn $20,000 doanh thu thuần chỉ trong Q4/2025 cho thương hiệu",
-      "Tỷ lệ hoàn trả sản phẩm (Refund rate) do lỗi in ấn dưới 0.4% nhờ chuẩn hóa file in 300 DPI",
-      "Trở thành một trong những bộ sưu tập best-seller có vòng đời bán lại dài nhất của store"
+      "Đóng góp vào kết quả ~$25,000 USD lợi nhuận của team D2C trong Q4/2025",
+      "Giảm ~40% thời gian sản xuất và 99% lỗi đặt tên file theo SKU cho toàn bộ dự án",
+      "Tỷ lệ hoàn trả sản phẩm do lỗi in ấn giữ dưới 0.4% nhờ kiểm soát chặt hệ màu CMYK/RGB 300 DPI"
     ],
     behanceUrl: "https://www.behance.net/tieungoctran",
     featured: true,
@@ -68,15 +68,15 @@ export const projectsData: Project[] = [
   {
     id: "p2",
     slug: "racing-apparel-line",
-    title: "Racing Apparel Line — Hệ Thống Nhận Diện & Thời Trang Đường Đua Mỹ",
-    subtitle: "Trọn bộ cẩm nang nhận diện thương hiệu ngách Motorsport kết hợp 30 mẫu thiết kế thời trang POD in tràn viền All-Over-Print sống động.",
+    title: "Racing Apparel Line: Hệ Thống Nhận Diện & Thời Trang Đường Đua Mỹ",
+    subtitle: "Trọn bộ cẩm nang nhận diện thương hiệu ngách Motorsport kết hợp dòng thiết kế thời trang POD in tràn viền All-Over-Print sống động.",
     category: "Brand Visual Identity",
     year: "2024",
     client: "Apex US Racing Gear",
     role: "Brand Identity & Apparel Designer",
     tools: ["Adobe Illustrator", "Photoshop", "Wacom Tablet", "Banana Pro AI"],
     aiHighlights: [
-      "Tạo sinh hơn 100+ mẫu hoa văn thuật toán (Generative speed patterns) thể hiện vận tốc và khói bụi đường đua",
+      "Tạo sinh các mẫu hoa văn thuật toán (Generative speed patterns) thể hiện vận tốc và khói bụi đường đua",
       "Chắt lọc typography kim loại nặng, góc cạnh mang đậm tinh thần thể thao tốc độ",
       "Tự động hóa luồng mockup sản phẩm 3D áo khoác bomber, hoodie và nón snapback"
     ],
@@ -109,7 +109,7 @@ export const projectsData: Project[] = [
   {
     id: "p3",
     slug: "ecommerce-email-marketing-system",
-    title: "E-Commerce Email System — Chuỗi Giao Diện Tiếp Thị Chuyển Đổi Cao",
+    title: "E-Commerce Email System: Chuỗi Giao Diện Tiếp Thị Chuyển Đổi Cao",
     subtitle: "Thiết kế hệ thống 15+ mẫu email Klaviyo chuẩn Responsive cho thương hiệu thời trang POD, đạt tỷ lệ mở trung bình 28%.",
     category: "E-commerce & Email Visual",
     year: "2024",
@@ -117,7 +117,7 @@ export const projectsData: Project[] = [
     role: "Visual Designer & Email Template Creator",
     tools: ["Adobe Photoshop", "Canva Pro", "Klaviyo", "HTML/CSS cơ bản"],
     aiHighlights: [
-      "Ứng dụng AI tạo sinh các banner theo mùa (Black Friday, Halloween, Father's Day) nhanh gấp 4 lần",
+      "Ứng dụng AI tạo sinh các banner theo mùa (Black Friday, Halloween, Father's Day), rút ngắn thời gian lên ý tưởng",
       "Quy chuẩn hóa tỷ lệ typography và nút CTA để người dùng dễ thao tác trên màn hình điện thoại",
       "Tối ưu dung lượng hình ảnh dưới 200KB mà vẫn sắc nét, giúp email tải tức thì và không bị rơi vào hòm thư rác (Spam)"
     ],
@@ -133,10 +133,10 @@ export const projectsData: Project[] = [
       }
     ],
     overview: "Xây dựng hệ thống mẫu email marketing toàn diện trên nền tảng Klaviyo cho các nhãn hàng thời trang POD, từ chuỗi chào đón (Welcome Series), nhắc nhở giỏ hàng bị bỏ quên (Abandoned Cart) đến các đợt phát hành bộ sưu tập mới.",
-    challenge: "Email thời trang thường bị rơi vào tab Khuyến mãi (Promotions) hoặc Spam nếu chứa quá nhiều ảnh nặng, trong khi khách hàng US mở email trên điện thoại chiếm hơn 70% với thời gian lướt qua chỉ 3-5 giây.",
+    challenge: "Email thời trang thường bị rơi vào tab Khuyến mãi (Promotions) hoặc Spam nếu chứa quá nhiều ảnh nặng, trong khi phần lớn khách hàng US mở email trên điện thoại với thời gian lướt qua chỉ 3-5 giây.",
     solution: "Tiểu Ngọc thiết kế hệ thống layout dạng mô-đun (Modular blocks), kết hợp hài hòa giữa chữ và hình ảnh, giữ tỷ lệ dung lượng nhẹ tối đa và tạo điểm nhấn thị giác bằng các ảnh GIF động ngắn mô phỏng góc nhìn 360 độ của sản phẩm áo thun.",
     results: [
-      "Đạt tỷ lệ mở trung bình (Average Open Rate) 28% — vượt trội so với mức chuẩn chung của ngành e-commerce là 21%",
+      "Đạt tỷ lệ mở trung bình (Average Open Rate) 28%, vượt trội so với mức chuẩn chung của ngành e-commerce là 21%",
       "Tỷ lệ nhấp chuột trên lượt mở (Click-to-Open Rate) tăng 35% sau khi tối ưu lại nút CTA",
       "Tiết kiệm 50% thời gian dựng campaign hàng tuần cho team Marketing nhờ hệ thống thư viện mẫu linh hoạt"
     ],
@@ -146,8 +146,8 @@ export const projectsData: Project[] = [
   {
     id: "p4",
     slug: "photoshop-automation-toolkit",
-    title: "Photoshop Automation Toolkit — Giải Pháp Tự Động Hóa Giảm 40% Thời Gian",
-    subtitle: "Bộ kịch bản JavaScript & Actions tùy biến giúp tự động hóa khâu tách nền, tạo mockup và xuất file in ấn hàng loạt cho 3500+ sản phẩm.",
+    title: "Photoshop Automation Toolkit: Giải Pháp Tự Động Hóa Giảm ~40% Thời Gian",
+    subtitle: "Bộ kịch bản JavaScript (.jsx) & Actions (.atn) giúp tự động hóa khâu ghép mockup 2D/3D, xuất file in 300 DPI và đặt tên theo SKU cho 5,000+ sản phẩm.",
     category: "POD & Apparel Design",
     year: "2023",
     client: "Nội bộ Vani Ecommerce",

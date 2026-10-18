@@ -2,12 +2,18 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Figma, ExternalLink, Sparkles, Cpu } from 'lucide-react';
+import { usePageMeta } from '../lib/page-meta';
 
 export const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   const projectIndex = projectsData.findIndex((p) => p.slug === slug);
   const project = projectsData[projectIndex];
+
+  usePageMeta(
+    project ? `${project.title} | Trần Tiểu Ngọc` : 'Dự án | Trần Tiểu Ngọc',
+    project ? project.subtitle : 'Case study thiết kế đồ họa E-commerce của Trần Tiểu Ngọc.'
+  );
 
   if (!project) {
     return <Navigate to="/projects" replace />;
@@ -28,13 +34,13 @@ export const ProjectDetail: React.FC = () => {
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Quay lại danh sách dự án</span>
         </Link>
-        <span className="uppercase text-amber-600 dark:text-amber-400 font-semibold">{project.category}</span>
+        <span className="uppercase text-brand-600 dark:text-brand-400 font-semibold">{project.category}</span>
       </div>
 
       {/* Hero Header */}
       <div className="space-y-6">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-neutral-200/70 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200">
-          <Sparkles className="w-3 h-3 text-amber-500" />
+          <Sparkles className="w-3 h-3 text-brand-500" />
           <span>Case Study • {project.year}</span>
         </div>
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white leading-tight">
@@ -67,15 +73,15 @@ export const ProjectDetail: React.FC = () => {
 
       {/* AI Key Solutions Box (for Recruiters) */}
       {project.aiHighlights && project.aiHighlights.length > 0 && (
-        <div className="p-8 rounded-3xl bg-amber-500/10 dark:bg-amber-950/20 border border-amber-300/60 dark:border-amber-900/50 space-y-4">
-          <div className="flex items-center space-x-2 text-amber-800 dark:text-amber-300 font-semibold text-sm">
-            <Cpu className="w-5 h-5 text-amber-500" />
+        <div className="p-8 rounded-3xl bg-brand-500/10 dark:bg-brand-950/20 border border-brand-300/60 dark:border-brand-900/50 space-y-4">
+          <div className="flex items-center space-x-2 text-brand-800 dark:text-brand-300 font-semibold text-sm">
+            <Cpu className="w-5 h-5 text-brand-500" />
             <span>Điểm nhấn Giải pháp Đồ họa, In ấn & Tự động hóa:</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
             {project.aiHighlights.map((hl, i) => (
               <div key={i} className="flex items-start space-x-2">
-                <span className="text-amber-600 dark:text-amber-400 font-bold">✦</span>
+                <span className="text-brand-600 dark:text-brand-400 font-bold">✦</span>
                 <span>{hl}</span>
               </div>
             ))}
@@ -161,7 +167,7 @@ export const ProjectDetail: React.FC = () => {
       </div>
 
       {/* Key Results */}
-      <div className="p-8 rounded-3xl bg-neutral-900 text-white dark:bg-[#15171a] dark:text-neutral-100 border border-neutral-800 space-y-6">
+      <div className="p-8 rounded-3xl bg-neutral-900 text-white dark:bg-editorial-cardDark dark:text-neutral-100 border border-neutral-800 space-y-6">
         <h3 className="font-serif text-2xl font-bold">
           Hiệu quả & Tác động Kinh doanh (Business Impact)
         </h3>
@@ -214,7 +220,7 @@ export const ProjectDetail: React.FC = () => {
               <span className="text-xs uppercase tracking-wider text-neutral-400 font-mono">
                 Dự án tiếp theo
               </span>
-              <h4 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              <h4 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                 {nextProject.title}
               </h4>
               <p className="text-xs text-neutral-500 font-mono">

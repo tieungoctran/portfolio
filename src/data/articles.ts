@@ -13,13 +13,13 @@ export interface Article {
 export const articlesData: Article[] = [
   {
     id: "a1",
-    title: "Nhật ký làm nghề: Chuyện cô gái Song Ngư bắt trend áo thun thị trường Mỹ và bộ sưu tập $20,000 một quý",
+    title: "Nhật ký làm nghề: Chuyện cô gái Song Ngư phụ trách thiết kế 3 thương hiệu D2C đạt ~$25,000 lợi nhuận quý",
     date: "15 Tháng 01, 2026",
     readTime: "6 phút đọc",
-    excerpt: "Làm POD cho thị trường US không chỉ là vẽ đẹp, mà là cuộc đua thấu hiểu tâm lý khách hàng Âu Mỹ. Chia sẻ thật lòng về hành trình từ những mẫu áo đầu tiên đến bộ sưu tập anime cán mốc $20,000 trong mùa mua sắm cuối năm.",
+    excerpt: "Làm E-commerce & POD cho thị trường US/EU phải làm được hai việc cùng lúc: đẹp và bán được hàng. Chia sẻ thật lòng về hành trình thiết kế từ sản phẩm in ấn đến banner quảng cáo giúp team D2C đạt ~$25,000 lợi nhuận trong mùa mua sắm Q4/2025.",
     platform: "Substack",
     url: "https://tieungoc.substack.com/",
-    tags: ["Nhật Ký Làm Nghề", "POD US Market", "Storytelling", "Case Study"],
+    tags: ["Nhật Ký Làm Nghề", "D2C E-commerce", "Storytelling", "Case Study"],
     thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
   },
   {
@@ -35,7 +35,7 @@ export const articlesData: Article[] = [
   },
   {
     id: "a3",
-    title: "Overthinking nhưng làm siêu nhanh: Bí quyết vẽ Wacom và xử lý file in chuẩn chỉnh cho 3500+ sản phẩm POD",
+    title: "Overthinking nhưng làm siêu nhanh: Bí quyết vẽ Wacom và xử lý file in chuẩn chỉnh cho 5,000+ sản phẩm POD",
     date: "10 Tháng 09, 2025",
     readTime: "7 phút đọc",
     excerpt: "Người ta bảo Song Ngư hay mơ mộng và overthinking. Mình biến điều đó thành sự kỹ tính khắt khe trong việc kiểm soát dải màu in ấn, nét vẽ bảng Wacom và độ sắc nét 300 DPI để khách hàng nhận áo là ưng ý ngay.",
