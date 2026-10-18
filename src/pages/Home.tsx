@@ -25,28 +25,28 @@ const separations = [
     id: 'cyan',
     letter: 'C',
     ink: '#3fa7cf',
-    tab: 'Sản phẩm POD & In ấn',
-    heading: '5,000+ sản phẩm in, file nào cũng soi màu trước khi ra xưởng',
-    body: 'Áo, mũ, cốc, giày, thảm, home & living và poster cho các niche Anime, Racing, Sport, Music, bán cho khách Mỹ và Châu Âu. Mình vẽ hoàn thiện trên Wacom, rồi kiểm tra chế bản kỹ trước khi gửi xưởng.',
+    tab: 'Ad Creatives & Email',
+    heading: 'Từ feed Meta đến cover email, cùng một bộ nhận diện',
+    body: 'Ad Creatives cho Meta & Google Ads, hero banner website, banner shop Etsy, Amazon và cover email Klaviyo mình làm chung một bộ, để khách lướt tới đâu cũng nhận ra thương hiệu.',
     spec: [
-      ['Hệ màu', 'CMYK / RGB 300 DPI'],
-      ['Tách lớp', 'Halftone cho DTG & All-Over-Print'],
-      ['Lỗi in', 'Tỷ lệ hoàn trả dưới 0.4%'],
-      ['Thị trường', 'Mỹ (US) & Châu Âu (EU)'],
+      ['Quảng cáo', 'Meta Ads, Google Ads'],
+      ['Website', 'Banner cho Shopify, WooCommerce, Etsy, Amazon'],
+      ['Email', '15+ mẫu Klaviyo, tỷ lệ mở trung bình 28%'],
+      ['Mockup', 'Phối cảnh 2D/3D & POSM'],
     ],
   },
   {
     id: 'magenta',
     letter: 'M',
     ink: '#c8467f',
-    tab: 'Banner quảng cáo & Email',
-    heading: 'Từ feed Facebook đến header email, cùng một bộ nhận diện',
-    body: 'Banner Facebook & Google Ads, banner website và header email Klaviyo mình làm chung một bộ, để khách lướt tới đâu cũng nhận ra thương hiệu.',
+    tab: 'POD Artwork & In ấn',
+    heading: 'Hàng nghìn file in sản phẩm, cái nào cũng soi màu trước khi ra xưởng',
+    body: 'Áo, mũ, cốc, giày, thảm, home & living và poster cho các niche Anime, Racing, Sport, Music, làm cho đơn hàng của các team D2C, Etsy, Amazon bán sang Mỹ và Châu Âu. Mình vẽ hoàn thiện trên Wacom, rồi kiểm tra chế bản kỹ trước khi gửi xưởng.',
     spec: [
-      ['Quảng cáo', 'Facebook Ads, Google Ads'],
-      ['Website', 'Banner cho Shopify, WooCommerce, Etsy, Amazon'],
-      ['Email', '15+ mẫu Klaviyo, tỷ lệ mở trung bình 28%'],
-      ['Mockup', 'Phối cảnh 2D/3D & POSM'],
+      ['Hệ màu', 'CMYK / RGB 300 DPI'],
+      ['Tách lớp', 'Halftone cho DTG & All-Over-Print'],
+      ['Lỗi in', 'Tỷ lệ hoàn trả dưới 0.4%'],
+      ['Thị trường', 'Mỹ (US) & Châu Âu (EU)'],
     ],
   },
   {
@@ -190,8 +190,8 @@ const ProofCard: React.FC<{ project: Project; lead?: boolean }> = ({ project, le
 
 export const Home: React.FC = () => {
   usePageMeta(
-    'Trần Tiểu Ngọc | Senior Graphic Designer E-commerce, TP.HCM',
-    'Trần Tiểu Ngọc, Senior Graphic Designer (E-commerce) tại TP.HCM. Thiết kế sản phẩm Print-on-Demand, banner Facebook & Google Ads, mockup 2D/3D, 5,000+ thiết kế.'
+    'Trần Tiểu Ngọc | Senior E-commerce Graphic Designer, TP.HCM',
+    'Trần Tiểu Ngọc, Senior E-commerce Graphic Designer tại TP.HCM. Ad Creatives cho Meta (Facebook) & Google Ads, website & email, POD artwork, 6,500+ thiết kế trong 4+ năm.'
   );
   const featuredProjects = projectsData.filter((p) => p.featured);
   const [leadProject, ...otherProjects] = featuredProjects;
@@ -200,7 +200,7 @@ export const Home: React.FC = () => {
   const [activePlate, setActivePlate] = useState(0);
   const [plateSwitched, setPlateSwitched] = useState(false);
   // The display numeral counts up while its separations slide into register (same clock as plate-register)
-  const heroCount = useCountUp('5,000+', true, { delay: 250, duration: 1100 });
+  const heroCount = useCountUp('6,500+', true, { delay: 250, duration: 1100 });
   const [copiedEmail, setCopiedEmail] = useState(false);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -265,16 +265,19 @@ export const Home: React.FC = () => {
                   <p className="mt-2 font-heading font-semibold text-base sm:text-lg text-brand-600 dark:text-brand-300">
                     {keepCompounds(profileData.role)}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-paper-text dark:text-editorial-textDark max-w-xl">
+                  <p className="mt-3 text-[15px] leading-relaxed text-ink dark:text-paper max-w-xl">
+                    {profileData.summary}
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-paper-text dark:text-editorial-textDark max-w-xl">
                     {profileData.subRole}
                   </p>
 
                   <div className="mt-10 sm:mt-14">
                     <div className="relative inline-block px-3">
                       <span className="relative block font-heading font-extrabold leading-[0.85] tracking-[-0.04em] tabular-nums text-[clamp(4rem,11vw,6rem)] text-ink dark:text-paper">
-                        <span className="invisible" aria-hidden="true">5,000+</span>
+                        <span className="invisible" aria-hidden="true">6,500+</span>
                         <span className="absolute left-0 top-0" aria-hidden="true">{heroCount}</span>
-                        <span className="sr-only">5,000+</span>
+                        <span className="sr-only">6,500+</span>
                         {plateGhosts.map((g) => (
                           <span
                             key={g.color}
@@ -296,15 +299,15 @@ export const Home: React.FC = () => {
                     </div>
                   </div>
                   <p className="mt-6 sm:mt-3 text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark max-w-md">
-                    sản phẩm in POD mình thiết kế cho khách Mỹ và Châu Âu, qua 4+ năm ở Vani Ecommerce.
+                    thiết kế trong 4+ năm ở Vani Ecommerce: file in, Ad Creatives, banner và mockup cho khách Mỹ và Châu Âu, trung bình hơn 1,500 file mỗi năm.
                   </p>
 
                   <blockquote className="mt-10 pt-6 border-t border-paper-line dark:border-editorial-borderDark max-w-2xl">
                     <p className="font-quote italic text-lg sm:text-xl leading-snug text-ink dark:text-paper">
-                      Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn.
+                      Gu dẫn lối. AI tiếp sức. Thiết kế có hồn.
                     </p>
                     <p className="font-quote italic mt-1 text-sm text-paper-muted dark:text-editorial-textDark">
-                      AI with taste, design with soul. Never AI slop.
+                      Taste leads. AI empowers. Design has soul.
                     </p>
                   </blockquote>
                 </div>

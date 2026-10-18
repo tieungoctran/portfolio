@@ -28,7 +28,7 @@ export const projectsData: Project[] = [
     id: "p1",
     slug: "pod-anime-collection",
     title: "Dự Án D2C: 3 Thương Hiệu E-commerce, Đạt ~$25,000 Lợi Nhuận Team Q4/2025",
-    subtitle: "Phụ trách toàn bộ thiết kế cho 3 thương hiệu D2C từ các dòng sản phẩm in ấn POD đến hệ thống banner website, Klaviyo email và quảng cáo Google/Facebook Ads.",
+    subtitle: "Phụ trách toàn bộ thiết kế cho 3 thương hiệu D2C từ các dòng sản phẩm in ấn POD đến Ad Creatives cho Meta & Google Ads, banner website và email Klaviyo.",
     category: "POD & Apparel Design",
     year: "Q3–Q4/2025",
     client: "Dự án D2C: 3 Thương hiệu E-commerce (US/EU)",
@@ -36,7 +36,7 @@ export const projectsData: Project[] = [
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Bảng vẽ Wacom", "Adobe Firefly", "PS Actions & Scripts"],
     aiHighlights: [
       "Ứng dụng Adobe Firefly, ChatGPT Image & Gemini tạo moodboard và biến thể nhanh gấp 3 lần",
-      "Hoàn thiện thủ công 100% từng sản phẩm bằng Wacom: dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn",
+      "Hoàn thiện thủ công 100% từng sản phẩm bằng Wacom: gu dẫn lối, AI tiếp sức, thiết kế có hồn",
       "Sử dụng Photoshop Actions & Scripts tự động ghép mockup 2D/3D và xuất file in 300 DPI chuẩn SKU"
     ],
     coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
@@ -47,7 +47,7 @@ export const projectsData: Project[] = [
       },
       {
         url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=80",
-        caption: "Hệ thống Mockup 2D/3D và Banner quảng cáo Facebook Ads, Google Ads đồng bộ từ sản phẩm đến chiến dịch."
+        caption: "Hệ thống Mockup 2D/3D và Ad Creatives cho Meta & Google Ads đồng bộ từ sản phẩm đến chiến dịch."
       },
       {
         url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80",
@@ -92,7 +92,7 @@ export const projectsData: Project[] = [
       },
       {
         url: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1400&q=80",
-        caption: "Bộ mockup trang phục và phụ kiện hoàn chỉnh sẵn sàng cho chiến dịch quảng cáo Facebook/TikTok Ads."
+        caption: "Bộ mockup trang phục và phụ kiện hoàn chỉnh sẵn sàng cho chiến dịch quảng cáo Meta Ads."
       }
     ],
     overview: "Dự án xây dựng trọn gói từ hệ thống nhận diện thương hiệu cốt lõi (Logo, Brand Guidelines, Typography) đến bộ sưu tập 30 sản phẩm thời trang POD phục vụ người hâm mộ đua xe thể thao tại Mỹ.",
@@ -147,7 +147,7 @@ export const projectsData: Project[] = [
     id: "p4",
     slug: "photoshop-automation-toolkit",
     title: "Photoshop Automation Toolkit: Giải Pháp Tự Động Hóa Giảm ~40% Thời Gian",
-    subtitle: "Bộ kịch bản JavaScript (.jsx) & Actions (.atn) giúp tự động hóa khâu ghép mockup 2D/3D, xuất file in 300 DPI và đặt tên theo SKU cho 5,000+ sản phẩm.",
+    subtitle: "Bộ kịch bản JavaScript (.jsx) & Actions (.atn) giúp tự động hóa khâu ghép mockup 2D/3D, xuất file in 300 DPI và đặt tên theo SKU cho hàng nghìn file in sản phẩm.",
     category: "POD & Apparel Design",
     year: "2023",
     client: "Nội bộ Vani Ecommerce",

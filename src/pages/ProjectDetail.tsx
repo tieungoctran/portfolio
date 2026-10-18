@@ -338,7 +338,7 @@ export const ProjectDetail: React.FC = () => {
                 {keepCompounds('Bạn cần người giải bài toán tương tự cho team E-commerce?')}
               </h2>
               <p className="text-sm leading-relaxed text-paper/80 max-w-[60ch]">
-                Mình đang tìm vị trí Full-time Senior Graphic Designer (E-commerce) tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ kèm danh mục sản phẩm thực tế của dự án này.
+                Mình đang tìm vị trí Full-time Senior E-commerce Graphic Designer tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ kèm danh mục sản phẩm thực tế của dự án này.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">

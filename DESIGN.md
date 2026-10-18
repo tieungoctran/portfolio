@@ -1,6 +1,6 @@
 ---
 name: Trần Tiểu Ngọc
-description: Press proof sheet portfolio for a Senior Graphic Designer (E-commerce) in HCMC
+description: Press proof sheet portfolio for a Senior E-commerce Graphic Designer in HCMC
 colors:
   coral: "#d34e36"
   coral-ink: "#b33d27"
@@ -236,7 +236,7 @@ Four brand marks only (LinkedIn, Behance, Substack, Pinterest), inline SVG in cu
 ### Motion
 Precise like a press: one signature ease `cubic-bezier(0.16, 1, 0.3, 1)`, no overshoot, durations 150ms (hover), 320ms (state), 700ms (entrance). Code lives in `src/lib/motion.ts`, `src/components/motion/` and the motion block of `src/index.css`.
 
-- **Load clock:** the hero numeral's three process ghosts slide into register over 1.1s (0.25s delay) and fade while the numeral counts up to 5,000+; then the pen draws over 0.9s at 1.15s.
+- **Load clock:** the hero numeral's three process ghosts slide into register over 1.1s (0.25s delay) and fade while the numeral counts up to 6,500+; then the pen draws over 0.9s at 1.15s.
 - **Ink pass (the only entrance):** blocks print left to right (clip-path) with an 8px rise when first scrolled into view, staggered 60 to 90ms, total under 400ms. Route changes get one short 0.42s ink pass.
 - **Measured figures count up** once when visible (900ms, quartic ease-out); the final figure reserves the width and is what screen readers hear.
 - **Reading progress:** a 3px CMYK control strip prints across the top edge with scroll.

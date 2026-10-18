@@ -25,7 +25,7 @@ const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
 export const Projects: React.FC = () => {
   usePageMeta(
     'Dự án thiết kế đồ họa E-commerce | Trần Tiểu Ngọc',
-    'Case study thiết kế đồ họa thương mại điện tử: sản phẩm POD, banner quảng cáo Facebook & Google Ads, email Klaviyo và tự động hóa Photoshop cho thị trường US/EU.'
+    'Case study thiết kế đồ họa thương mại điện tử: file in POD, Ad Creatives cho Meta & Google Ads, email Klaviyo và tự động hóa Photoshop cho thị trường US/EU.'
   );
   const [selectedCategory, setSelectedCategory] = useState<string>('Tất cả');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -75,7 +75,7 @@ export const Projects: React.FC = () => {
             </div>
             <div className="lg:col-span-4">
               <p className="text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark">
-                Sản phẩm in POD, banner quảng cáo Facebook &amp; Google Ads, email Klaviyo và bộ công cụ tự động hóa Photoshop mình đã làm cho khách Mỹ và Châu Âu. Mỗi bản lưu đều ghi rõ bài toán, cách giải và kết quả đo được.
+                File in sản phẩm POD, Ad Creatives cho Meta &amp; Google Ads, email Klaviyo và bộ công cụ tự động hóa Photoshop mình đã làm cho khách Mỹ và Châu Âu. Mỗi bản lưu đều ghi rõ bài toán, cách giải và kết quả đo được.
               </p>
             </div>
           </Reveal>
