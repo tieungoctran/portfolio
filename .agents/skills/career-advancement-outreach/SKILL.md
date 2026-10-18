@@ -29,7 +29,7 @@ flowchart LR
 - ✅ **Chuẩn Google XYZ:** *"Phụ trách toàn bộ thiết kế sản phẩm in ấn và visual quảng cáo cho 3 thương hiệu E-commerce (D2C), đóng góp vào kết quả **~$25,000 USD lợi nhuận của team D2C trong Q4/2025** thông qua việc kết hợp nét vẽ Wacom chi tiết cao, AI có chọn lọc và quy trình tách màu in chuẩn 300 DPI."*
 
 - ❌ **Cách viết cũ (yếu):** *"Tự động hóa công việc thiết kế bằng photoshop."*
-- ✅ **Chuẩn Google XYZ:** *"Cắt giảm **~40% thời gian sản xuất** và **99% lỗi đặt tên file theo SKU** cho hơn **5,000+ sản phẩm in ấn** bằng cách tự xây dựng hệ thống Photoshop Actions (`.atn`) và JavaScript Scripts (`.jsx`)."*
+- ✅ **Chuẩn Google XYZ:** *"Cắt giảm **~40% thời gian sản xuất** và **99% lỗi đặt tên file theo SKU** cho hàng nghìn file in sản phẩm (tổng **6,500+ thiết kế** trong 4+ năm) bằng cách tự xây dựng hệ thống Photoshop Actions (`.atn`) và JavaScript Scripts (`.jsx`)."*
 
 ---
 
@@ -38,12 +38,12 @@ flowchart LR
 Chiến lược tiếp cận trực tiếp nhà tuyển dụng qua LinkedIn hoặc Email:
 
 ### Tier 1: Lời Mời Kết Nối (Dưới 300 ký tự - Connection Request)
-> *"Chào anh/chị [Tên], em theo dõi các sản phẩm của [Tên công ty] và rất ấn tượng với phong cách hình ảnh của team. Em là Tiểu Ngọc, Senior Graphic Designer chuyên E-commerce & POD (5,000+ sản phẩm) kết hợp AI và tự động hóa Photoshop. Rất vui được kết nối cùng anh/chị ạ!"*
+> *"Chào anh/chị [Tên], em theo dõi các sản phẩm của [Tên công ty] và rất ấn tượng với phong cách hình ảnh của team. Em là Tiểu Ngọc, Senior E-commerce Graphic Designer (6,500+ thiết kế trong 4+ năm) kết hợp AI và tự động hóa Photoshop. Rất vui được kết nối cùng anh/chị ạ!"*
 
 ### Tier 2: Tin Nhắn Trực Tiếp / InMail (Dưới 150 từ - Giá trị đi trước)
 > *"Chào anh/chị [Tên],  
 > Em thấy [Tên công ty] đang tuyển vị trí [Tên vị trí] để mở rộng quy mô hình ảnh E-commerce / Marketing.  
-> Với hơn 4 năm kinh nghiệm thiết kế 5,000+ sản phẩm in ấn, banner quảng cáo Facebook/Google Ads cho thị trường US/EU (đóng góp ~$25,000 USD lợi nhuận team D2C trong Q4/2025) và tự viết Photoshop Scripts giúp giảm 40% thời gian sản xuất, em tin mình có thể hỗ trợ team tăng tốc độ ra mắt ấn phẩm mới mà vẫn giữ trọn chất lượng chuẩn chỉ.  
+> Với hơn 4 năm kinh nghiệm và 6,500+ thiết kế: file in, Ad Creatives cho Meta & Google Ads, banner cho thị trường US/EU (đóng góp ~$25,000 USD lợi nhuận team D2C trong Q4/2025) và tự viết Photoshop Scripts giúp giảm 40% thời gian sản xuất, em tin mình có thể hỗ trợ team tăng tốc độ ra mắt ấn phẩm mới mà vẫn giữ trọn chất lượng chuẩn chỉ.  
 > Anh/chị có thể xem nhanh các case study và quy trình thực tế của em tại: **tieungoc.site**  
 > Nếu anh/chị thấy phù hợp, em rất vui được gửi CV chi tiết và trao đổi thêm cùng team ạ!"*
 
@@ -64,13 +64,13 @@ Job Description (JD):
 [DÁN BẢNG MÔ TẢ CÔNG VIỆC TẠI ĐÂY]
 
 My Background:
-- 4+ years as Senior Graphic Designer at Vani Ecommerce (US/EU E-commerce & POD market)
-- Designed 5,000+ print products, Facebook/Google Ads banners, website banners & 2D/3D mockups
+- 4+ years as Graphic Designer at Vani Ecommerce (US/EU E-commerce & POD market)
+- Produced 6,500+ designs in 4+ years: print files, Ad Creatives for Meta & Google Ads, website banners & 2D/3D mockups
 - Owned all visuals for D2C Project (3 E-commerce brands), contributing to ~$25,000 USD D2C team profit in Q4/2025
 - Built Photoshop Actions (.atn) & JS Scripts (.jsx) reducing production time by 40% and SKU naming errors by 99%
 - Wacom illustration, CMYK/RGB 300 DPI print QC (<0.4% return rate)
 - Klaviyo email marketing visuals with 28% open rate
-- Tagline: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn. — AI with taste, design with soul. Never AI slop."
+- Tagline: "Gu dẫn lối. AI tiếp sức. Thiết kế có hồn." / "Taste leads. AI empowers. Design has soul."
 
 Tasks:
 1. Extract top 8 ATS keywords and core competencies from the JD.

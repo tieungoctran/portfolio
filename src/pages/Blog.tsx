@@ -209,7 +209,7 @@ export const Blog: React.FC = () => {
                 {keepCompounds('Thích cách mình tư duy sản phẩm và quy trình làm việc?')}
               </h2>
               <p className="text-sm leading-relaxed text-paper/80">
-                Mình đang mở cho cơ hội Full-time Senior Graphic Designer (E-commerce) tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ hoặc trao đổi về vị trí tuyển dụng của team bạn.
+                Mình đang mở cho cơ hội Full-time Senior E-commerce Graphic Designer tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ hoặc trao đổi về vị trí tuyển dụng của team bạn.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">

@@ -46,6 +46,9 @@ export interface AiWorkflowStep {
   title: string;
   tools: string[];
   description: string;
+  // Split of work shown on the About page: what AI or scripts handle vs. what the designer decides
+  aiRole: string;
+  humanRole: string;
 }
 
 export interface AiPhilosophyPillar {
@@ -67,6 +70,7 @@ export interface ProfileData {
   birthYear: number;
   zodiac: string;
   role: string;
+  summary: string;
   subRole: string;
   tagline: string;
   avatarUrl: string;
@@ -98,16 +102,17 @@ export const profileData: ProfileData = {
   name: "Trần Tiểu Ngọc",
   birthYear: 2000,
   zodiac: "Cung Song Ngư (Pisces) ♓",
-  role: "Senior Graphic Designer (E-commerce)",
-  subRole: "Chuyên viên Thiết kế Đồ họa TMĐT · Sản phẩm Print-on-Demand (POD) · Banner Facebook & Google Ads · Banner Website & Email · Mockup 2D/3D · Tự động hóa Photoshop",
-  tagline: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn. AI with taste, design with soul. Never AI slop.",
+  role: "Senior E-commerce Graphic Designer",
+  summary: "Thiết kế hình ảnh sản phẩm và quảng cáo cho thương mại điện tử.",
+  subRole: "Meta & Google Ad Creatives · Website & Email Design · POD Artwork",
+  tagline: "Gu dẫn lối. AI tiếp sức. Thiết kế có hồn. Taste leads. AI empowers. Design has soul.",
   avatarUrl: "/images/avatar.jpg",
-  recruiterPitch: "Team bạn cần một Senior Graphic Designer mảng E-commerce, làm được từ sản phẩm in đến banner Facebook/Google Ads. Mình kiểm soát chất lượng in chuẩn xưởng (<0.4% lỗi), và tự viết Photoshop Actions & Scripts giúp cả team giảm ~40% thời gian sản xuất. Nếu hợp, nhắn mình nhé.",
+  recruiterPitch: "Graphic Designer 4+ năm tại Vani Ecommerce (cross-border Print-on-Demand, US/EU), ứng tuyển vị trí Senior E-commerce Graphic Designer. Ứng dụng AI vào quy trình thiết kế hằng ngày. Thế mạnh: Ad Creatives cho Meta & Google Ads, thiết kế website & email, POD artwork. Nổi bật nhất: dự án D2C 3 thương hiệu, góp vào ~$25K lợi nhuận team Q4/2025. Nhận việc full-time tại TP.HCM sau 2–4 tuần.",
   jobPreferences: {
     status: "Open to Work • Toàn thời gian tại TP. Hồ Chí Minh",
     targetRoles: [
-      "Senior Graphic Designer (E-commerce Design)",
-      "Product / POD & Marketing Visual Designer",
+      "Senior E-commerce Graphic Designer",
+      "E-commerce Visual & Ad Creative Designer",
       "Brand & E-commerce Graphic Designer"
     ],
     workModes: [
@@ -115,20 +120,21 @@ export const profileData: ProfileData = {
       "Hybrid / Remote cho đội ngũ E-commerce & D2C",
       "Freelance Thiết kế & Tự động hóa Photoshop Scripts"
     ],
-    availability: "Nhận việc trong 2–4 tuần, có thể trao đổi thêm khi phỏng vấn",
-    salaryExpectation: "Mong muốn 15–20 triệu VNĐ/tháng"
+    availability: "Nhận việc sau 2–4 tuần, có thể trao đổi thêm khi phỏng vấn",
+    salaryExpectation: "Thỏa thuận trong quá trình phỏng vấn"
   },
   bio: [
-    "Xin chào! Mình là Tiểu Ngọc, Senior Graphic Designer sinh năm 2000, tốt nghiệp Cử nhân Thiết kế Đồ họa và Truyền thông tại Trường Đại học Công nghệ Kỹ thuật TP.HCM (HCMUTE). Mình là Song Ngư, dễ rung động và hay nghĩ nhiều, nhưng với E-commerce thì mình tin một thiết kế tốt phải làm được hai việc: đẹp, và bán được hàng.",
-    "4+ năm toàn thời gian ở Vani Ecommerce (từ 08/2022 đến nay), mình đã thiết kế 5,000+ sản phẩm in (POD) cùng toàn bộ hình ảnh bán hàng đi kèm: banner Facebook Ads, Google Ads, banner website, header email Klaviyo và mockup 2D/3D, cho khách Mỹ (US) và Châu Âu (EU). Q3–Q4/2025, mình phụ trách toàn bộ thiết kế cho Dự án D2C gồm 3 thương hiệu E-commerce, từ sản phẩm đến quảng cáo. Cả team khép lại Q4/2025 với khoảng $25,000 USD lợi nhuận.",
-    "Cách làm của mình gói trong một câu: 'Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn' (AI with taste, design with soul. Never AI slop). Mình dùng AI (Adobe Firefly, ChatGPT Image, Claude, Gemini, AI Agent) để lên ý tưởng nhanh gấp 3 lần, và tự viết Photoshop Actions (.atn) & JS Scripts (.jsx) để cả team bớt ~40% thời gian cho việc lặp lại. Còn sản phẩm cuối cùng thì luôn được hoàn thiện bằng tay trên Wacom, với màu in CMYK 300 DPI chuẩn xưởng."
+    "Mình là Trần Tiểu Ngọc, Graphic Designer với 4+ năm toàn thời gian tại Vani Ecommerce, công ty cross-border theo mô hình Print-on-Demand bán cho khách Mỹ và Châu Âu trên Amazon, Etsy, Shopify và WooCommerce. Việc chính của mình là làm file in sản phẩm cho đơn hàng của các team D2C, Etsy và Amazon, gồm thiết kế mới và re-design, cho các niche Anime, Racing, Sport, Music. Tính cả file in, Ad Creatives, banner và mockup, 4 năm qua mình đã làm hơn 6,500 thiết kế, trung bình hơn 1,500 file mỗi năm. Đi kèm là hình ảnh bán hàng: Ad Creatives cho Meta & Google Ads, cover email Klaviyo, hero banner và banner quảng cáo cho website, shop Etsy, Amazon.",
+    "AI có mặt trong quy trình của mình ngay từ khâu đầu. Claude, ChatGPT và Gemini giúp mình đọc nhanh xu hướng và gom insight khách hàng. Adobe Firefly, ChatGPT Image và FLUX.1 cho mình thử nhiều hướng moodboard, ánh sáng, bố cục trước khi đặt bút. Nhờ vậy khâu lên ý tưởng nhanh gấp 3 lần. Còn chọn hướng nào, sửa nét nào, đặt chữ ở đâu thì mình quyết, và bản cuối luôn được hoàn thiện bằng tay trên Wacom.",
+    "Việc lặp lại thì mình giao cho máy theo cách khác: tự viết Photoshop Actions (.atn) và Scripts (.jsx) để ghép mockup, xuất file in 300 DPI, đặt tên theo SKU. Cả team giảm ~40% thời gian sản xuất và giảm 99% lỗi đặt tên file. Thành tích mình tự hào nhất trong 4 năm là dự án D2C gồm 3 thương hiệu E-commerce: Q3–Q4/2025 mình phụ trách toàn bộ thiết kế, góp vào khoảng $25,000 USD lợi nhuận của team D2C trong Q4/2025.",
+    "Mình sinh năm 2000, Song Ngư, tốt nghiệp Thiết kế Đồ họa và Truyền thông ở HCMUTE. Hay nghĩ nhiều thật, nhưng cũng nhờ vậy mà mình soi file rất kỹ trước khi gửi xưởng: tỷ lệ hoàn trả do lỗi in dưới 0.4%."
   ],
-  philosophy: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn. AI with taste, design with soul. Never AI slop.",
+  philosophy: "Gu dẫn lối. AI tiếp sức. Thiết kế có hồn. Taste leads. AI empowers. Design has soul.",
   aiPhilosophy: {
     badge: "Cách mình làm • Con người dẫn dắt, AI tăng tốc",
-    headline: "Dùng AI có gu, tạo sản phẩm có hồn, không rập khuôn.",
+    headline: "Gu dẫn lối. AI tiếp sức. Thiết kế có hồn.",
     coreBelief: "Gu thẩm mỹ cho từng insight khách hàng là của con người. Chỉ con người mới hiểu sâu góc nhìn, tâm tư và sự rung động của con người, hơn bất kỳ thuật toán nào.",
-    ratio: "Human-Crafted, AI-Accelerated • AI with taste, design with soul. Never AI slop.",
+    ratio: "Human-Crafted, AI-Accelerated • Taste leads. AI empowers. Design has soul.",
     pillars: [
       {
         title: "01. AI gom dữ liệu cũ, còn gu là của mình",
@@ -182,10 +188,10 @@ export const profileData: ProfileData = {
   ],
   skillCategories: [
     {
-      title: "Thiết kế E-commerce, Sản phẩm In ấn (POD), Banner Ads & Mockup 2D/3D",
+      title: "Ad Creatives, E-commerce Visuals, POD Artwork & Mockup 2D/3D",
       skills: [
-        "Thiết kế sản phẩm in ấn (POD, 5,000+ sản phẩm): T-shirt, áo, quần, mũ, cốc, giày, thảm, home & living, poster cho thị trường US/EU",
-        "Thiết kế Banner quảng cáo chuyển đổi: Facebook Ads, Google Ads, Banner Website & Header Email đồng bộ theo chiến dịch",
+        "Thiết kế Ad Creatives cho Meta & Google Ads, cover hero email Klaviyo, hero banner & banner quảng cáo cho website, shop Etsy, Amazon",
+        "POD Artwork: file in sản phẩm (thiết kế mới & re-design) cho T-shirt, áo, quần, mũ, cốc, giày, thảm, home & living, poster theo đơn hàng US/EU",
         "Phối cảnh Mockup 2D/3D & POSM: Ghép mockup sản phẩm chân thực, Displacement Map, Poster, Standee, Banner, Voucher & Bao bì",
         "Vẽ minh họa kỹ thuật số trên bảng vẽ Wacom Tablet: Line-art, Character/Mascot & hoàn thiện chi tiết thủ công độc bản",
         "Chế bản & Kiểm soát chất lượng in ấn (Print QC): Hệ màu CMYK / RGB 300 DPI, tách lớp Halftone DTG & All-Over-Print (tỷ lệ lỗi <0.4%)",
@@ -196,7 +202,7 @@ export const profileData: ProfileData = {
       title: "Thiết kế Ứng dụng AI, Tự động hóa Photoshop & Đa nền tảng E-commerce",
       skills: [
         "Tự động hóa Photoshop: Tự xây dựng Actions (.atn) & JavaScript Scripts (.jsx) giúp giảm ~40% thời gian sản xuất và 99% lỗi đặt tên file theo SKU",
-        "Thiết kế ứng dụng AI có chọn lọc: Adobe Firefly, ChatGPT Image, Claude, Gemini, AI Agent, Generative Fill, FLUX.1, Banana Pro (Nhanh gấp 3 lần, không rập khuôn)",
+        "Ứng dụng AI vào thiết kế: Adobe Firefly, ChatGPT Image, FLUX.1, Banana Pro, Generative Fill cho ý tưởng và visual; Claude, Gemini, ChatGPT cho nghiên cứu xu hướng và insight. Lên ý tưởng nhanh gấp 3 lần, thành phẩm vẫn hoàn thiện tay",
         "Email Marketing & Giữ chân khách hàng: Xây dựng 15+ mẫu email Klaviyo đạt tỷ lệ mở trung bình 28% (cao hơn mức chuẩn 21% của ngành)",
         "Biên tập Video ngắn & Ấn phẩm động: CapCut Pro, Canva Pro, Topview AI & GIF Animation cho chiến dịch quảng cáo đa kênh",
         "Nền tảng E-commerce thực chiến: Thiết kế tối ưu hiển thị và chuyển đổi trên Shopify, WooCommerce, Etsy, Amazon & Klaviyo"
@@ -279,40 +285,48 @@ export const profileData: ProfileData = {
       phase: "01. Insight & Trend",
       title: "Đọc khách hàng và xu hướng",
       tools: ["ChatGPT / Claude", "Pinterest", "Market Research"],
-      description: "Mình tìm hiểu khách hàng, văn hóa và xu hướng thị trường US/EU/VN. AI giúp tổng hợp dữ liệu nhanh, còn chọn concept nào thì mình dựa vào trực giác và gu của người làm thiết kế."
+      description: "Mình tìm hiểu khách hàng, văn hóa và xu hướng thị trường US/EU/VN. AI giúp tổng hợp dữ liệu nhanh, còn chọn concept nào thì mình dựa vào trực giác và gu của người làm thiết kế.",
+      aiRole: "Claude, ChatGPT, Gemini tổng hợp nhanh xu hướng, slang và thị hiếu thị trường US/EU",
+      humanRole: "Chọn concept hợp với người mua và với thương hiệu"
     },
     {
       phase: "02. Ý tưởng cùng AI",
       title: "Thử ý tưởng cùng AI",
       tools: ["Adobe Firefly", "ChatGPT Image", "Gemini", "FLUX.1"],
-      description: "Lên nhanh moodboard, thử biến thể ánh sáng và bố cục cho sản phẩm và banner quảng cáo. Mình chọn lọc khắt khe bằng gu, để không ra sản phẩm rập khuôn."
+      description: "Lên nhanh moodboard, thử biến thể ánh sáng và bố cục cho sản phẩm và banner quảng cáo. Mình chọn lọc khắt khe bằng gu, để không ra sản phẩm rập khuôn.",
+      aiRole: "Adobe Firefly, ChatGPT Image, FLUX.1, Banana Pro ra nhiều biến thể ánh sáng, bố cục, phong cách để so sánh",
+      humanRole: "Loại phương án đại trà, chốt một hướng có cá tính"
     },
     {
       phase: "03. Đôi tay Designer",
       title: "Vẽ tay trên Wacom, soi màu in",
       tools: ["Wacom Tablet", "Photoshop", "Illustrator", "CMYK 300 DPI"],
-      description: "Từng sản phẩm mình hoàn thiện bằng bảng vẽ Wacom, chỉnh typography cho chuẩn, rồi kiểm tra tách màu CMYK / Halftone DTG để tỷ lệ lỗi in dưới 0.4%."
+      description: "Từng sản phẩm mình hoàn thiện bằng bảng vẽ Wacom, chỉnh typography cho chuẩn, rồi kiểm tra tách màu CMYK / Halftone DTG để tỷ lệ lỗi in dưới 0.4%.",
+      aiRole: "Generative Fill trong Photoshop hỗ trợ chỉnh sửa ảnh",
+      humanRole: "Vẽ tay trên Wacom, chỉnh typography, tách màu CMYK / Halftone cho DTG"
     },
     {
       phase: "04. Tự động hóa",
       title: "Để script chạy hàng loạt",
       tools: ["PS Scripts (.jsx)", "Actions (.atn)", "Batch Mockups"],
-      description: "Photoshop Actions và Script mình tự viết lo phần lặp lại: ghép mockup 2D/3D, xuất file in 300 DPI, đặt tên theo SKU. Cả team giảm ~40% thời gian sản xuất."
+      description: "Photoshop Actions và Script mình tự viết lo phần lặp lại: ghép mockup 2D/3D, xuất file in 300 DPI, đặt tên theo SKU. Cả team giảm ~40% thời gian sản xuất.",
+      aiRole: "Photoshop Actions & Scripts mình tự viết: ghép mockup 2D/3D, xuất 300 DPI, đặt tên theo SKU",
+      humanRole: "Soát từng file trước khi gửi xưởng"
     }
   ],
   experiences: [
     {
       period: "08/2022 – Hiện tại (4+ năm)",
-      role: "Senior Graphic Designer (E-commerce)",
-      company: "Vani Ecommerce · Toàn thời gian · TP. Hồ Chí Minh",
-      description: "Chuyên thiết kế sản phẩm in ấn (POD), banner quảng cáo Facebook Ads & Google Ads, banner website, email Klaviyo và mockup 2D/3D cho thị trường Mỹ (US) và Châu Âu (EU). Áp dụng quy trình 'Con người dẫn dắt, AI tăng tốc': dùng AI có gu kết hợp hoàn thiện thủ công trên Wacom và tự động hóa Photoshop để làm nhanh mà vẫn giữ chất lượng.",
+      role: "Graphic Designer",
+      company: "Vani Ecommerce · Cross-border Print-on-Demand · Toàn thời gian · TP. Hồ Chí Minh",
+      description: "Vani Ecommerce bán sản phẩm in ấn theo mô hình Print-on-Demand cho khách Mỹ và Châu Âu trên Amazon, Etsy, Shopify và WooCommerce. Mình vào làm ngay sau khi tốt nghiệp. Việc chính: nhận yêu cầu từ đơn hàng của các team D2C, Etsy, Amazon, làm file in 300 DPI bằng Photoshop và Illustrator, chuyển cho xưởng và vendor, đồng thời đưa thiết kế lên mockup để khách duyệt trước khi in. Đi kèm là Ad Creatives cho Meta & Google Ads, cover email Klaviyo, hero banner và banner quảng cáo cho website, shop Etsy, Amazon.",
       highlights: [
-        "Thiết kế 5,000+ sản phẩm in ấn (POD) cho các niche Anime, Racing, Sport, Music trên nhiều dòng sản phẩm: quần áo, mũ, cốc, giày, thảm, home & living, poster, banner và cover email.",
-        "Dự án D2C: 3 thương hiệu E-commerce (Q3–Q4/2025): Phụ trách toàn bộ thiết kế cho 3 thương hiệu, phối hợp cùng team D2C từ sản phẩm in ấn đến visual marketing (banner website, header email Klaviyo, Google Ads & Facebook Ads), đóng góp vào kết quả ~$25,000 USD lợi nhuận team D2C trong Q4/2025.",
-        "Tự xây dựng Photoshop Actions (.atn) và Script (.jsx) để tự động hóa việc lặp lại: ghép mockup 2D/3D, xuất file in 300 DPI, đặt tên file theo SKU, giúp giảm ~40% thời gian sản xuất và 99% lỗi đặt tên file cho toàn team.",
+        "Dự án D2C: 3 thương hiệu E-commerce (Q3–Q4/2025): Phụ trách toàn bộ thiết kế cho 3 thương hiệu, phối hợp cùng team D2C từ sản phẩm in ấn đến visual marketing (Ad Creatives cho Meta & Google Ads, banner website, header email Klaviyo), đóng góp vào kết quả ~$25,000 USD lợi nhuận team D2C trong Q4/2025.",
+        "Thiết kế Ad Creatives cho Meta & Google Ads, hero banner và banner quảng cáo cho website, shop Etsy, Amazon, cùng 15+ mẫu email Klaviyo đạt tỷ lệ mở trung bình 28% (cao hơn chuẩn ngành 21%).",
+        "Hơn 6,500 thiết kế trong 4+ năm (file in, Ad Creatives, banner, mockup), trung bình hơn 1,500 file mỗi năm. Phần lớn là file in sản phẩm (thiết kế mới và re-design) cho đơn hàng của các team D2C, Etsy, Amazon, thuộc các niche Anime, Racing, Sport, Music trên quần áo, mũ, cốc, giày, thảm, home & living và poster.",
         "Ứng dụng AI (Adobe Firefly, ChatGPT Image, Gemini, Claude, AI Agent) vào khâu ý tưởng và visual quảng cáo, sau đó hoàn thiện thủ công từng sản phẩm, tăng tốc độ đầu ra gấp 3 lần mà vẫn độc bản và an toàn bản quyền.",
-        "Kiểm soát chất lượng in cho áo, POSM và merchandise (CMYK/RGB 300 DPI, tách Halftone cho DTG & All-Over-Print), giữ tỷ lệ hoàn trả do lỗi in dưới 0.4%.",
-        "Xây dựng 15+ mẫu email Klaviyo đạt tỷ lệ mở trung bình 28% (cao hơn chuẩn ngành 21%) và hỗ trợ xây dựng bộ nhận diện thương hiệu (logo, bảng màu, typography)."
+        "Tự xây dựng Photoshop Actions (.atn) và Script (.jsx) để tự động hóa việc lặp lại: ghép mockup 2D/3D, xuất file in 300 DPI, đặt tên file theo SKU, giúp giảm ~40% thời gian sản xuất và 99% lỗi đặt tên file cho toàn team.",
+        "Kiểm soát chất lượng in cho áo, POSM và merchandise (CMYK/RGB 300 DPI, tách Halftone cho DTG & All-Over-Print), giữ tỷ lệ hoàn trả do lỗi in dưới 0.4%."
       ]
     }
   ],

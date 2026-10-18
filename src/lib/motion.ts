@@ -39,7 +39,7 @@ interface ParsedFigure {
   grouped: boolean;
 }
 
-// Splits a printed figure such as "~$25K", "−40%", "<0.4%" or "5,000+" into its counting parts
+// Splits a printed figure such as "~$25K", "−40%", "<0.4%" or "6,500+" into its counting parts
 function parseFigure(text: string): ParsedFigure | null {
   const match = text.match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);
   if (!match) return null;
