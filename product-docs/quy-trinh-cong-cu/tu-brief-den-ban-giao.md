@@ -1,14 +1,14 @@
 ---
-description: Từ đọc brief đến kiểm tra và bàn giao file.
+description: Các bước làm rõ yêu cầu, duyệt hướng và kiểm tra file cuối.
 ---
 
-# Quy trình thiết kế
+# Từ brief đến file bàn giao
 
 Một đầu ra rõ mục đích bắt đầu từ brief đủ thông tin. Quy trình dưới đây có thể rút gọn theo quy mô công việc, nhưng cần giữ bước duyệt hướng và kiểm tra file cuối.
 
 {% stepper %}
 {% step %}
-### Làm rõ brief
+#### Làm rõ brief
 
 Xác định người xem, sản phẩm, kênh sử dụng, thông điệp chính, deadline và danh sách đầu ra. Với file in, cần thêm template cùng yêu cầu của nhà sản xuất.
 
@@ -16,7 +16,7 @@ Xác định người xem, sản phẩm, kênh sử dụng, thông điệp chín
 {% endstep %}
 
 {% step %}
-### Chọn hướng hình ảnh
+#### Chọn hướng hình ảnh
 
 Gom reference theo mục đích: bố cục, typography, màu sắc hoặc chất liệu. Ghi lý do chọn từng hướng và giới hạn cần tránh. Reference giúp xác định hướng, không thay thế phần thiết kế riêng.
 
@@ -24,7 +24,7 @@ Gom reference theo mục đích: bố cục, typography, màu sắc hoặc chấ
 {% endstep %}
 
 {% step %}
-### Phát triển thiết kế
+#### Phát triển thiết kế
 
 Ưu tiên thông điệp và hierarchy (thứ bậc thị giác), sau đó mới hoàn thiện chi tiết. Đặt thiết kế vào đúng kích thước và bối cảnh sử dụng để đánh giá.
 
@@ -32,7 +32,7 @@ Gom reference theo mục đích: bố cục, typography, màu sắc hoặc chấ
 {% endstep %}
 
 {% step %}
-### Xử lý feedback
+#### Xử lý feedback
 
 Gom phản hồi theo vòng sửa. Với mỗi yêu cầu, làm rõ phần cần đổi, mục đích và phạm vi ảnh hưởng đến các phiên bản khác.
 
@@ -40,7 +40,7 @@ Gom phản hồi theo vòng sửa. Với mỗi yêu cầu, làm rõ phần cần
 {% endstep %}
 
 {% step %}
-### Kiểm tra và bàn giao
+#### Kiểm tra và bàn giao
 
 Đối chiếu đầu ra với brief. Mở kiểm tra file đã xuất, soát tên file, nội dung, kích thước và thư mục. Giữ artwork gốc, mockup và file sản xuất ở các vị trí riêng.
 

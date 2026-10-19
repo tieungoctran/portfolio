@@ -1,66 +1,50 @@
 ---
-description: >-
-  Ghi chép thiết kế của Trần Tiểu Ngọc: dự án, quy trình và kinh nghiệm làm
-  E-commerce.
+description: Sổ tay làm nghề, học thiết kế và ứng dụng AI của Trần Tiểu Ngọc.
 icon: pen-ruler
 ---
 
-# TN Design Notes
+# Bắt đầu ở đây
 
-### Trần Tiểu Ngọc
+Mình là Ngọc, Designer làm artwork sản phẩm POD, mockup và hình ảnh E-commerce. Mình dùng sổ tay này để ghi lại công việc, những lần thử AI và điều học được qua từng lần làm.
 
-Mình là Ngọc, Senior E-commerce Graphic Designer tại TP. Hồ Chí Minh. Bốn năm qua, mình làm artwork sản phẩm POD, mockup và hình ảnh marketing cho thị trường US/EU.
+Bạn có thể đọc theo ngày trong Nhật ký, hoặc tìm một vấn đề cụ thể trong các ngăn sổ tay.
 
-Ở đây mình ghi lại cách đọc brief, chọn phương án và chuẩn bị file bàn giao.
+<a href="nhat-ky-lam-nghe/" class="button primary">Mở nhật ký</a>
 
-<a href="du-an.md" class="button primary">Xem dự án</a>
+<a href="so-tay-thiet-ke/" class="button secondary">Tra cứu sổ tay</a>
 
-<a href="ghi-chep-nghe.md" class="button secondary">Đọc ghi chép</a>
+### Đang tìm hiểu
 
-### Dự án chọn lọc
+| Chủ đề             | Câu hỏi đang mở                                                |
+| ------------------ | -------------------------------------------------------------- |
+| Ghi chép nghề      | Lưu thế nào để tìm lại và áp dụng được trong lần làm sau?      |
+| AI cho thiết kế    | Giữ lại những thông tin nào để so sánh các lần thử?            |
+| Quy trình sản xuất | Những bước nào cần kiểm tra bằng tay khi dùng công cụ tự động? |
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Thiết kế cho ba thương hiệu D2C</strong></td><td>Từ artwork sản phẩm đến mockup, hình quảng cáo và visual email. Bài phân tích đang bổ sung hình ảnh thực tế.</td><td><a href="https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/boc-tach-du-an/d2c-three-brands">Thiết kế cho ba thương hiệu D2C</a></td></tr><tr><td><strong>Khi Photoshop làm phần việc lặp lại</strong></td><td>Actions, Scripts và các bước kiểm tra khi sản xuất nhiều file. Bài phân tích đang bổ sung bằng chứng kết quả.</td><td><a href="https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/boc-tach-du-an/photoshop-automation">Khi Photoshop làm phần việc lặp lại</a></td></tr></tbody></table>
+### Ghi chép gần đây
 
-[Xem thành phẩm trên portfolio](https://tieungoc.site/projects)
+| Ngày       | Ghi chép                                                      | Nội dung                                              |
+| ---------- | ------------------------------------------------------------- | ----------------------------------------------------- |
+| 20/10/2026 | [Bắt đầu một sổ tay Design & AI](nhat-ky-lam-nghe/2026-10.md) | Cách chia nhật ký theo tháng và kiến thức theo chủ đề |
 
-### Từ brief đến file bàn giao
+### Các ngăn sổ tay
 
-| Giai đoạn       | Câu hỏi cần trả lời                                           |
-| --------------- | ------------------------------------------------------------- |
-| Hiểu yêu cầu    | Thiết kế dành cho ai, xuất hiện ở đâu và cần đạt mục tiêu gì? |
-| Chọn phương án  | Bố cục và hình ảnh nào giúp thể hiện đúng thông điệp?         |
-| Kiểm tra đầu ra | File đã đúng nội dung, kích thước và yêu cầu sử dụng chưa?    |
-
-[Đọc quy trình thiết kế](quy-trinh-thiet-ke.md)
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Sổ tay thiết kế</strong></td><td>Brief, layout, typography, artwork và file sản xuất.</td><td><a href="so-tay-thiet-ke/">so-tay-thiet-ke</a></td></tr><tr><td><strong>AI trong công việc</strong></td><td>Đưa AI vào từng đầu việc và xác định phần cần kiểm tra.</td><td><a href="ai-trong-cong-viec.md">ai-trong-cong-viec.md</a></td></tr><tr><td><strong>Phòng thử nghiệm</strong></td><td>Lưu câu hỏi, prompt, kết quả và cả những lượt chưa đạt.</td><td><a href="phong-thu-nghiem.md">phong-thu-nghiem.md</a></td></tr><tr><td><strong>Quy trình &#x26; công cụ</strong></td><td>Các bước làm việc, Photoshop Actions, Scripts và bàn giao.</td><td><a href="quy-trinh-cong-cu/">quy-trinh-cong-cu</a></td></tr></tbody></table>
 
 ### Ghi chép để bắt đầu
 
-{% columns %}
-{% column %}
-#### Trước khi mở Photoshop
+* [Đọc brief trước khi mở Photoshop](https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/so-tay-thiet-ke/read-the-brief).
+* [Kiểm tra artwork trước khi gửi sản xuất](https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/so-tay-thiet-ke/artwork-to-production).
+* [Từ brief đến file bàn giao](quy-trinh-cong-cu/tu-brief-den-ban-giao.md).
 
-Một brief đủ rõ giúp xác định thông điệp, người xem và đầu ra trước khi đi vào chi tiết.
+### Viết một ghi chép mới
 
-[Đọc bài về brief](https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/so-tay-thiet-ke/read-the-brief)
-{% endcolumn %}
+[Mẫu nhật ký ngày](tai-nguyen/mau-nhat-ky.md) · [Mẫu thử nghiệm AI](tai-nguyen/mau-thu-nghiem-ai.md) · [Mẫu lưu prompt](tai-nguyen/mau-luu-prompt.md)
 
-{% column %}
-#### Trước khi gửi file in
+[Tìm thêm checklist trong Kho tài nguyên](tai-nguyen/)
 
-Artwork, mockup và file sản xuất cần được kiểm tra theo mục đích riêng.
+### Về người viết
 
-[Đọc bài về file sản xuất](https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/so-tay-thiet-ke/artwork-to-production)
-{% endcolumn %}
-{% endcolumns %}
+Mình là Trần Tiểu Ngọc, Senior E-commerce Graphic Designer tại TP. Hồ Chí Minh. Sổ tay này ghi lại quá trình học và làm; những kết luận có thể được sửa khi có ví dụ hoặc kết quả mới.
 
-### Tài nguyên thực hành
-
-[Mẫu brief thiết kế](tai-nguyen/mau-brief.md) · [Checklist bàn giao](tai-nguyen/checklist-ban-giao.md) · [Đặt tên file](tai-nguyen/dat-ten-file.md)
-
-### Kết nối với Ngọc
-
-Bạn có thể gửi sản phẩm, mục tiêu, đầu ra cần có và thời gian dự kiến để trao đổi công việc.
-
-<a href="mailto:ngoctt.design@gmail.com" class="button primary">Trao đổi công việc</a>
-
-[Tìm hiểu về TN và nhận CV](ve-tn.md)
+[Đọc thêm về Ngọc](ve-tn.md)

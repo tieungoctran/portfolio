@@ -1,25 +1,21 @@
 ---
-description: Mẫu brief và checklist dùng khi chuẩn bị, kiểm tra, bàn giao thiết kế.
+description: Mẫu ghi chép, prompt, brief và checklist để sử dụng trong công việc.
 ---
 
-# Tài nguyên
+# Kho tài nguyên
 
-Dùng các biểu mẫu này như điểm bắt đầu, rồi điều chỉnh theo sản phẩm, kênh sử dụng và cách phối hợp của team.
+Chọn biểu mẫu theo việc cần làm. Mỗi mẫu có hướng dẫn điền; prompt chỉ được đưa vào danh sách đã kiểm chứng khi có kết quả thực tế đi kèm.
 
-### Trước khi thiết kế
+### Ghi lại quá trình học
 
-Mẫu brief giúp thống nhất mục tiêu và danh sách đầu ra trước khi mở file.
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Nhật ký ngày</strong></td><td>Ghi bối cảnh, điều đã thử và bước tiếp theo.</td><td><a href="mau-nhat-ky.md">mau-nhat-ky.md</a></td></tr><tr><td><strong>Thử nghiệm AI</strong></td><td>Lưu input, công cụ, các lượt thử và phần sửa tay.</td><td><a href="mau-thu-nghiem-ai.md">mau-thu-nghiem-ai.md</a></td></tr><tr><td><strong>Lưu prompt</strong></td><td>Lưu tác vụ, prompt nguyên văn, đầu ra mẫu và giới hạn.</td><td><a href="mau-luu-prompt.md">mau-luu-prompt.md</a></td></tr></tbody></table>
 
-### Trước khi bàn giao
+### Chuẩn bị và bàn giao thiết kế
 
-Checklist giúp đối chiếu file xuất với yêu cầu đã duyệt. Với file in, thông số của nhà sản xuất là căn cứ cuối cùng.
+* [Mẫu brief thiết kế](mau-brief.md).
+* [Checklist bàn giao file](checklist-ban-giao.md).
+* [Đặt tên và quản lý phiên bản](dat-ten-file.md).
 
-[Mở mẫu brief](mau-brief.md)
+### Lưu reference
 
-[Mở checklist bàn giao](checklist-ban-giao.md)
-
-### Tổ chức file
-
-Tên file, thư mục và số phiên bản giúp người nhận chọn đúng đầu ra.
-
-[Đọc cách đặt tên file](dat-ten-file.md)
+Khi lưu một hình tham khảo, ghi nguồn, tác giả nếu biết, chi tiết muốn học và phạm vi sử dụng. Phân biệt hình để nghiên cứu với asset được phép đưa vào thành phẩm.
