@@ -1,0 +1,33 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Tieu-Ngoc Docs
+  structure:
+    - type: section
+      key: section-1
+      title: Tieu Ngoc Docs
+      path: tieu-ngoc-docs
+      description: ""
+      icon: cat
+      default: true
+      children:
+        - type: space
+          key: space-1
+          title: Tieu Ngoc Docs
+          path: docs
+          default: true
+          content:
+            directory: ./docs
+    - type: section
+      key: section-2
+      title: Product Docs
+      path: product-docs
+      icon: palette
+      children:
+        - type: space
+          key: space-2
+          title: Product Docs
+          path: product-docs
+          default: true
+          draft: true
+          content:
+            directory: ./product-docs
