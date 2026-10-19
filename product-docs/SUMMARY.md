@@ -1,27 +1,12 @@
 # Table of contents
 
-* [Welcome](README.md)
-
-## Getting Started
-
-* [Getting started](getting-started/getting-started.md)
-* [Quickstart](getting-started/quickstart.md)
-* [Your first project](getting-started/your-first-project.md)
-
-## Core concepts
-
-* [Core concepts](core-concepts/core-concepts.md)
-* [Workspaces and projects](core-concepts/workspaces-and-projects.md)
-* [Permissions](core-concepts/permissions.md)
-
-## Guides
-
-* [Guides](guides/guides.md)
-* [Custom domains](guides/custom-domains.md)
-* [Automations](guides/automations.md)
-
-## Reference
-
-* [Reference](reference/reference.md)
-* [Configuration](reference/configuration.md)
-* [Glossary](reference/glossary.md)
+* [TN Design Notes](README.md)
+* [Dự án](du-an.md)
+* [Quy trình thiết kế](quy-trinh-thiet-ke.md)
+* [Ghi chép nghề](ghi-chep-nghe.md)
+* [Tài nguyên](tai-nguyen/README.md)
+  * [Mẫu brief thiết kế](tai-nguyen/mau-brief.md)
+  * [Checklist bàn giao file](tai-nguyen/checklist-ban-giao.md)
+  * [Đặt tên và quản lý phiên bản](tai-nguyen/dat-ten-file.md)
+* [Về TN](ve-tn.md)
+* [Kế hoạch nội dung 4 tuần](ke-hoach-noi-dung.md)

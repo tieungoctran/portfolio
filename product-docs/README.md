@@ -1,30 +1,66 @@
 ---
 description: >-
-  Everything you need to build, deploy, and manage your projects on the
-  platform.
-icon: hand-wave
+  Ghi chép thiết kế của Trần Tiểu Ngọc: dự án, quy trình và kinh nghiệm làm
+  E-commerce.
+icon: pen-ruler
 ---
 
-# Welcome
+# TN Design Notes
 
-Welcome to the platform. These docs cover everything from your first project to advanced workflows — pick a starting point below or ask the Assistant to jump straight to what you need.
+### Trần Tiểu Ngọc
 
-<button type="button" class="button primary" data-action="ask" data-icon="gitbook-assistant">Ask a question…</button>
+Mình là Ngọc, Senior E-commerce Graphic Designer tại TP. Hồ Chí Minh. Bốn năm qua, mình làm artwork sản phẩm POD, mockup và hình ảnh marketing cho thị trường US/EU.
 
-<button type="button" class="button secondary" data-action="ask" data-query="How do I deploy my first project" data-icon="rocket-launch">Deploy your first project</button><button type="button" class="button secondary" data-action="ask" data-query="How do I set up a custom domain" data-icon="globe">Set up a custom domain</button><button type="button" class="button secondary" data-action="ask" data-query="How do I invite my team" data-icon="user-group">Invite your team</button>
+Ở đây mình ghi lại cách đọc brief, chọn phương án và chuẩn bị file bàn giao.
 
-***
+<a href="du-an.md" class="button primary">Xem dự án</a>
 
-{% hint style="success" icon="sparkles" %}
-**New: scheduled deploys and team-level audit logs.** Schedule deploys for any future date and review every action taken in your workspace.
+<a href="ghi-chep-nghe.md" class="button secondary">Đọc ghi chép</a>
 
-<a href="https://app.gitbook.com/s/euz6U9T9Ui1Un0dUKuuZ/" class="button secondary">See what's new</a>
-{% endhint %}
+### Dự án chọn lọc
 
-## Where to start
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Thiết kế cho ba thương hiệu D2C</strong></td><td>Từ artwork sản phẩm đến mockup, hình quảng cáo và visual email. Bài phân tích đang bổ sung hình ảnh thực tế.</td><td><a href="https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/boc-tach-du-an/d2c-three-brands">Thiết kế cho ba thương hiệu D2C</a></td></tr><tr><td><strong>Khi Photoshop làm phần việc lặp lại</strong></td><td>Actions, Scripts và các bước kiểm tra khi sản xuất nhiều file. Bài phân tích đang bổ sung bằng chứng kết quả.</td><td><a href="https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/boc-tach-du-an/photoshop-automation">Khi Photoshop làm phần việc lặp lại</a></td></tr></tbody></table>
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h4><i class="fa-rocket-launch" style="color:$primary;">:rocket-launch:</i></h4></td><td><h4>Getting started</h4></td><td>Set up your account and ship your first project in minutes.</td><td><a href="getting-started/getting-started.md">getting-started.md</a></td></tr><tr><td><h4><i class="fa-book" style="color:$primary;">:book:</i></h4></td><td><h4>Core concepts</h4></td><td>Understand workspaces, projects, and how permissions work.</td><td><a href="core-concepts/core-concepts.md">core-concepts.md</a></td></tr><tr><td><h4><i class="fa-graduation-cap" style="color:$primary;">:graduation-cap:</i></h4></td><td><h4>Guides</h4></td><td>Walkthroughs for common tasks like custom domains and automations.</td><td><a href="guides/guides.md">guides.md</a></td></tr><tr><td><h4><i class="fa-book-open" style="color:$primary;">:book-open:</i></h4></td><td><h4>Reference</h4></td><td>Detailed configuration options, limits, and terminology.</td><td><a href="reference/reference.md">reference.md</a></td></tr></tbody></table>
+[Xem thành phẩm trên portfolio](https://tieungoc.site/projects)
 
-## Popular tasks
+### Từ brief đến file bàn giao
 
-<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-type="content-ref"></th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><h4>For builders</h4></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td><td><a href="getting-started/your-first-project.md">your-first-project.md</a></td><td><a href="guides/custom-domains.md">custom-domains.md</a></td></tr><tr><td><h4>For admins</h4></td><td><a href="core-concepts/permissions.md">permissions.md</a></td><td><a href="reference/configuration.md">configuration.md</a></td><td><a href="core-concepts/workspaces-and-projects.md">workspaces-and-projects.md</a></td></tr><tr><td><h4>For developers</h4></td><td><a href="guides/automations.md">automations.md</a></td><td><a href="reference/glossary.md">glossary.md</a></td><td><a href="reference/configuration.md">configuration.md</a></td></tr></tbody></table>
+| Giai đoạn       | Câu hỏi cần trả lời                                           |
+| --------------- | ------------------------------------------------------------- |
+| Hiểu yêu cầu    | Thiết kế dành cho ai, xuất hiện ở đâu và cần đạt mục tiêu gì? |
+| Chọn phương án  | Bố cục và hình ảnh nào giúp thể hiện đúng thông điệp?         |
+| Kiểm tra đầu ra | File đã đúng nội dung, kích thước và yêu cầu sử dụng chưa?    |
+
+[Đọc quy trình thiết kế](quy-trinh-thiet-ke.md)
+
+### Ghi chép để bắt đầu
+
+{% columns %}
+{% column %}
+#### Trước khi mở Photoshop
+
+Một brief đủ rõ giúp xác định thông điệp, người xem và đầu ra trước khi đi vào chi tiết.
+
+[Đọc bài về brief](https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/so-tay-thiet-ke/read-the-brief)
+{% endcolumn %}
+
+{% column %}
+#### Trước khi gửi file in
+
+Artwork, mockup và file sản xuất cần được kiểm tra theo mục đích riêng.
+
+[Đọc bài về file sản xuất](https://app.gitbook.com/s/oolFh6BUc0QHbnICziHQ/so-tay-thiet-ke/artwork-to-production)
+{% endcolumn %}
+{% endcolumns %}
+
+### Tài nguyên thực hành
+
+[Mẫu brief thiết kế](tai-nguyen/mau-brief.md) · [Checklist bàn giao](tai-nguyen/checklist-ban-giao.md) · [Đặt tên file](tai-nguyen/dat-ten-file.md)
+
+### Kết nối với Ngọc
+
+Bạn có thể gửi sản phẩm, mục tiêu, đầu ra cần có và thời gian dự kiến để trao đổi công việc.
+
+<a href="mailto:ngoctt.design@gmail.com" class="button primary">Trao đổi công việc</a>
+
+[Tìm hiểu về TN và nhận CV](ve-tn.md)
