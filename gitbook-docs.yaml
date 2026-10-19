@@ -19,15 +19,17 @@ site:
             directory: ./docs
     - type: section
       key: section-2
-      title: Product Docs
+      title: Sổ tay của Ngọc
       path: product-docs
-      icon: palette
+      description: "Design & AI Notebook: nhật ký làm nghề, sổ tay thiết kế và thử nghiệm AI của Trần Tiểu Ngọc."
+      icon: book-open
       children:
         - type: space
           key: space-2
-          title: Product Docs
+          title: Trần Tiểu Ngọc / Design & AI Notebook
           path: product-docs
           default: true
           draft: true
           content:
             directory: ./product-docs
+            language: vi
