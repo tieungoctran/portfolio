@@ -13,10 +13,11 @@ site:
         - type: space
           key: space-1
           title: Tieu Ngoc Docs
-          path: docs
+          path: tran-tieu-ngoc-design-and-ai-notebook
           default: true
           content:
-            directory: ./docs
+            directory: ./product-docs
+            language: vi
     - type: section
       key: section-2
       title: Sổ tay của Ngọc
@@ -26,10 +27,9 @@ site:
       children:
         - type: space
           key: space-2
-          title: Trần Tiểu Ngọc / Design & AI Notebook
+          title: Tieu Ngoc Docs
           path: product-docs
           default: true
-          draft: true
           content:
             directory: ./product-docs
             language: vi
