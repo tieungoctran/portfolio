@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { projectsData } from '../data/projects';
+import { projectsData, isReconstructedVisual } from '../data/projects';
 import { profileData } from '../data/profile';
 import { ArrowLeft, ArrowRight, ArrowUpRight, ExternalLink, Figma, Mail } from 'lucide-react';
 import { CmykStrip, CropMarks, RegistrationMark } from '../components/print/PrintMarks';
@@ -17,8 +17,6 @@ const keepCompounds = (text: string): React.ReactNode =>
       part
     )
   );
-
-const isPlaceholderImage = (url: string) => url.includes('images.unsplash.com');
 
 const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
 
@@ -122,8 +120,8 @@ export const ProjectDetail: React.FC = () => {
                 <RegistrationMark className="w-3 h-3" />
                 <span>COVER PLATE · {project.title}</span>
               </span>
-              {isPlaceholderImage(project.coverImage) && (
-                <span>Ảnh minh họa tạm thời (sẽ cập nhật mockup thực tế)</span>
+              {isReconstructedVisual(project.coverImage) && (
+                <span>Bản tái dựng minh họa · NDA, không phải sản phẩm khách hàng</span>
               )}
             </figcaption>
           </figure>
@@ -250,9 +248,9 @@ export const ProjectDetail: React.FC = () => {
                         FIG 0{index + 1} · {img.caption}
                       </span>
                     </span>
-                    {isPlaceholderImage(img.url) && (
+                    {isReconstructedVisual(img.url) && (
                       <span className="text-[11px] tabular-nums text-paper-muted dark:text-editorial-textDark">
-                        Ảnh minh họa tạm thời
+                        Bản tái dựng minh họa · NDA
                       </span>
                     )}
                   </figcaption>
@@ -338,7 +336,7 @@ export const ProjectDetail: React.FC = () => {
                 {keepCompounds('Bạn cần người giải bài toán tương tự cho team E-commerce?')}
               </h2>
               <p className="text-sm leading-relaxed text-paper/80 max-w-[60ch]">
-                Mình đang tìm vị trí Full-time Senior E-commerce Graphic Designer tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ kèm danh mục sản phẩm thực tế của dự án này.
+                Mình đang tìm vị trí Full-time Senior E-commerce Graphic Designer tại TP.HCM. Hình ảnh trên đây là bản tái dựng vì hợp đồng bảo mật. Nhắn mình để nhận CV và bản case study chi tiết, phần còn lại mình kể kỹ hơn trong buổi phỏng vấn.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
@@ -348,6 +346,12 @@ export const ProjectDetail: React.FC = () => {
               >
                 <Mail className="w-4 h-4" />
                 Nhận CV đầy đủ qua email
+              </a>
+              <a
+                href={profileData.caseStudyRequestUrl}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-sm border border-paper/40 text-paper font-semibold text-sm hover:border-paper transition-colors"
+              >
+                Nhận case study chi tiết
               </a>
               <Link
                 to="/contact"

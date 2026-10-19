@@ -83,6 +83,7 @@ export interface ProfileData {
   email: string;
   website: string;
   cvRequestUrl: string;
+  caseStudyRequestUrl: string;
   recruiterPitch: string;
   jobPreferences: JobPreferences;
   socials: SocialLink[];
@@ -160,6 +161,8 @@ export const profileData: ProfileData = {
   website: "https://tieungoc.site",
   // CV is shared by email on request to keep personal contact details off the public site
   cvRequestUrl: "mailto:ngoctt.design@gmail.com?subject=Nh%E1%BA%ADn%20CV%20Tr%E1%BA%A7n%20Ti%E1%BB%83u%20Ng%E1%BB%8Dc",
+  // The long-form case studies live on the private noindex CV site and are sent on request
+  caseStudyRequestUrl: "mailto:ngoctt.design@gmail.com?subject=Nh%E1%BA%ADn%20case%20study%20chi%20ti%E1%BA%BFt%20Tr%E1%BA%A7n%20Ti%E1%BB%83u%20Ng%E1%BB%8Dc",
   socials: [
     {
       name: "LinkedIn",

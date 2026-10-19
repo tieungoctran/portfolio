@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { projectsData, type Project } from '../data/projects';
+import { projectsData, isReconstructedVisual, type Project } from '../data/projects';
 import { profileData } from '../data/profile';
 import { ArrowRight, ArrowUpRight, Mail, Search, X } from 'lucide-react';
 import { CmykStrip, CropMarks, RegistrationMark } from '../components/print/PrintMarks';
@@ -17,8 +17,6 @@ const keepCompounds = (text: string): React.ReactNode =>
       part
     )
   );
-
-const isPlaceholderImage = (url: string) => url.includes('images.unsplash.com');
 
 const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
 
@@ -163,8 +161,8 @@ export const Projects: React.FC = () => {
                             SHEET 0{i + 1} · {project.category} · {project.year}
                           </span>
                         </span>
-                        {isPlaceholderImage(project.coverImage) && (
-                          <span>Ảnh minh họa tạm thời</span>
+                        {isReconstructedVisual(project.coverImage) && (
+                          <span>Bản tái dựng minh họa · NDA</span>
                         )}
                       </p>
                     </div>

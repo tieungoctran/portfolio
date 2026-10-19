@@ -23,6 +23,9 @@ export interface Project {
   featured: boolean;
 }
 
+// Case-study plates are redrawn reconstructions, never client files (NDA); pages label them so
+export const isReconstructedVisual = (url: string) => url.startsWith('/images/projects/');
+
 export const projectsData: Project[] = [
   {
     id: "p1",
@@ -39,19 +42,15 @@ export const projectsData: Project[] = [
       "Hoàn thiện thủ công 100% từng sản phẩm bằng Wacom: gu dẫn lối, AI tiếp sức, thiết kế có hồn",
       "Sử dụng Photoshop Actions & Scripts tự động ghép mockup 2D/3D và xuất file in 300 DPI chuẩn SKU"
     ],
-    coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
+    coverImage: "/images/projects/d2c-cover.svg",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
-        caption: "Thiết kế sản phẩm in ấn (T-shirt, áo, quần, cốc, mũ, giày, poster) với độ tương phản cao, sẵn sàng sản xuất."
+        url: "/images/projects/d2c-products.svg",
+        caption: "Một artwork triển khai đồng bộ trên áo, cốc, mũ và poster, file in 300 DPI tách lớp cho DTG và All-Over-Print."
       },
       {
-        url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=80",
-        caption: "Hệ thống Mockup 2D/3D và Ad Creatives cho Meta & Google Ads đồng bộ từ sản phẩm đến chiến dịch."
-      },
-      {
-        url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80",
-        caption: "Hàng trăm biến thể kích thước và mockup được xuất tự động bằng Photoshop Actions & Script (.jsx)."
+        url: "/images/projects/d2c-ads.svg",
+        caption: "Một concept quảng cáo xuất đủ kích thước cho feed, story, Google Display và hero banner website."
       }
     ],
     overview: "Trong Q3–Q4/2025, Tiểu Ngọc được giao phụ trách toàn bộ thiết kế cho 3 thương hiệu E-commerce thuộc dự án D2C, phối hợp chặt chẽ cùng team từ khâu phát triển sản phẩm in ấn đến toàn bộ visual marketing phục vụ mùa cao điểm mua sắm cuối năm.",
@@ -72,7 +71,7 @@ export const projectsData: Project[] = [
     subtitle: "Trọn bộ cẩm nang nhận diện thương hiệu ngách Motorsport kết hợp dòng thiết kế thời trang POD in tràn viền All-Over-Print sống động.",
     category: "Brand Visual Identity",
     year: "2024",
-    client: "Apex US Racing Gear",
+    client: "Thương hiệu Racing apparel tại Mỹ (ẩn tên theo NDA)",
     role: "Brand Identity & Apparel Designer",
     tools: ["Adobe Illustrator", "Photoshop", "Wacom Tablet", "Banana Pro AI"],
     aiHighlights: [
@@ -80,28 +79,24 @@ export const projectsData: Project[] = [
       "Chắt lọc typography kim loại nặng, góc cạnh mang đậm tinh thần thể thao tốc độ",
       "Tự động hóa luồng mockup sản phẩm 3D áo khoác bomber, hoodie và nón snapback"
     ],
-    coverImage: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1400&q=80",
+    coverImage: "/images/projects/racing-cover.svg",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1400&q=80",
-        caption: "Bộ logo biểu tượng đại bàng kim loại và hệ thống màu sắc nhận diện đặc trưng của thương hiệu Apex."
+        url: "/images/projects/racing-identity.svg",
+        caption: "Hệ thống nhận diện: wordmark, bảng màu, typography và cách áp lên áo, nón, cốc, poster."
       },
       {
-        url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1400&q=80",
-        caption: "Thiết kế áo đua All-Over-Print 3D với các mảng khối khí động học và typography thể thao sắc sảo."
-      },
-      {
-        url: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1400&q=80",
-        caption: "Bộ mockup trang phục và phụ kiện hoàn chỉnh sẵn sàng cho chiến dịch quảng cáo Meta Ads."
+        url: "/images/projects/racing-aop.svg",
+        caption: "Khung lưới All-Over-Print cho thân trước, thân sau và tay áo, có vùng bleed và safe zone theo từng size."
       }
     ],
-    overview: "Dự án xây dựng trọn gói từ hệ thống nhận diện thương hiệu cốt lõi (Logo, Brand Guidelines, Typography) đến bộ sưu tập 30 sản phẩm thời trang POD phục vụ người hâm mộ đua xe thể thao tại Mỹ.",
+    overview: "Dự án xây dựng trọn gói từ hệ thống nhận diện thương hiệu cốt lõi (Logo, Brand Guidelines, Typography) đến bộ sưu tập sản phẩm thời trang POD phục vụ người hâm mộ đua xe thể thao tại Mỹ.",
     challenge: "Khách hàng ngách thể thao tốc độ yêu cầu đồ họa phải toát lên năng lượng mạnh mẽ, gai góc và hiện đại. Việc dựng các mẫu in tràn viền 3D (All-Over-Print) yêu cầu sự chính xác tuyệt đối ở các đường may, khớp nối giữa thân áo và tay áo.",
     solution: "Tiểu Ngọc xây dựng khung lưới (grid template) riêng cho từng kích thước áo, sử dụng Illustrator để hoàn thiện vector chính xác đến từng mi-li-mét, kết hợp kỹ thuật gradient kim loại để tạo chiều sâu thị giác khi sản phẩm hiển thị trên màn hình quảng cáo trực tuyến.",
     results: [
-      "Hoàn thiện toàn bộ hệ thống nhận diện và 30 thiết kế thương phẩm chỉ trong vòng 3 tuần",
-      "Tăng chỉ số nhấp chuột quảng cáo (CTR) lên 45% nhờ mockups bắt mắt và độ phân giải cao",
-      "Khách hàng ký tiếp hợp đồng phát triển dòng phụ kiện (ly giữ nhiệt, cờ lưu niệm, poster canvas)"
+      "Bàn giao trọn bộ nhận diện và dòng sản phẩm POD đồng bộ, sẵn sàng lên chiến dịch Meta Ads",
+      "Khung lưới All-Over-Print theo từng size giúp hình in khớp đường may từ S đến 5XL",
+      "Mockup 3D áo, hoodie và nón snapback xuất tự động bằng Photoshop Actions, rút ngắn khâu chuẩn bị ảnh quảng cáo"
     ],
     behanceUrl: "https://www.behance.net/tieungoctran",
     featured: true,
@@ -113,7 +108,7 @@ export const projectsData: Project[] = [
     subtitle: "Thiết kế hệ thống 15+ mẫu email Klaviyo chuẩn Responsive cho thương hiệu thời trang POD, đạt tỷ lệ mở trung bình 28%.",
     category: "E-commerce & Email Visual",
     year: "2024",
-    client: "Vani Ecommerce Global Brands",
+    client: "Các thương hiệu POD tại Vani Ecommerce (US/EU)",
     role: "Visual Designer & Email Template Creator",
     tools: ["Adobe Photoshop", "Canva Pro", "Klaviyo", "HTML/CSS cơ bản"],
     aiHighlights: [
@@ -121,15 +116,15 @@ export const projectsData: Project[] = [
       "Quy chuẩn hóa tỷ lệ typography và nút CTA để người dùng dễ thao tác trên màn hình điện thoại",
       "Tối ưu dung lượng hình ảnh dưới 200KB mà vẫn sắc nét, giúp email tải tức thì và không bị rơi vào hòm thư rác (Spam)"
     ],
-    coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=80",
+    coverImage: "/images/projects/email-cover.svg",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=80",
-        caption: "Mẫu email Welcome Series với bố cục phân cấp thị giác rõ ràng, dẫn dắt khách hàng khám phá sản phẩm mới."
+        url: "/images/projects/email-flows.svg",
+        caption: "Ba luồng email chính: Welcome Series, Abandoned Cart và Flash Sale theo mùa."
       },
       {
-        url: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=80",
-        caption: "Chiến dịch Flash Sale theo chủ đề Black Friday với visual tương phản cao kích thích hành vi mua sắm."
+        url: "/images/projects/email-modules.svg",
+        caption: "Thư viện khối mô-đun: hero, lưới sản phẩm, nút CTA, khối GIF và footer, ghép lại thành campaign mới."
       }
     ],
     overview: "Xây dựng hệ thống mẫu email marketing toàn diện trên nền tảng Klaviyo cho các nhãn hàng thời trang POD, từ chuỗi chào đón (Welcome Series), nhắc nhở giỏ hàng bị bỏ quên (Abandoned Cart) đến các đợt phát hành bộ sưu tập mới.",
@@ -137,8 +132,8 @@ export const projectsData: Project[] = [
     solution: "Tiểu Ngọc thiết kế hệ thống layout dạng mô-đun (Modular blocks), kết hợp hài hòa giữa chữ và hình ảnh, giữ tỷ lệ dung lượng nhẹ tối đa và tạo điểm nhấn thị giác bằng các ảnh GIF động ngắn mô phỏng góc nhìn 360 độ của sản phẩm áo thun.",
     results: [
       "Đạt tỷ lệ mở trung bình (Average Open Rate) 28%, vượt trội so với mức chuẩn chung của ngành e-commerce là 21%",
-      "Tỷ lệ nhấp chuột trên lượt mở (Click-to-Open Rate) tăng 35% sau khi tối ưu lại nút CTA",
-      "Tiết kiệm 50% thời gian dựng campaign hàng tuần cho team Marketing nhờ hệ thống thư viện mẫu linh hoạt"
+      "Hệ thống 15+ mẫu email responsive dùng lại được cho Welcome, Abandoned Cart và Flash Sale theo mùa",
+      "Dựng campaign mới bằng cách ghép khối có sẵn thay vì thiết kế lại từ đầu mỗi tuần"
     ],
     behanceUrl: "https://www.behance.net/tieungoctran",
     featured: true,
@@ -156,20 +151,20 @@ export const projectsData: Project[] = [
     aiHighlights: [
       "Tự lập trình các kịch bản JS mở rộng tính năng của Photoshop mà phần mềm gốc không hỗ trợ",
       "Tự động canh chỉnh tỷ lệ hình in theo từng size áo từ S đến 5XL mà không cần thao tác tay",
-      "Tích hợp phím tắt thông minh giảm bớt 80% các thao tác lặp đi lặp lại hàng ngày của designer"
+      "Gói chuỗi thao tác lặp lại hằng ngày vào một phím tắt, designer chỉ cần bấm một lần cho cả quy trình xuất file"
     ],
-    coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    coverImage: "/images/projects/automation-cover.svg",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
-        caption: "Giao diện bảng điều khiển Photoshop Action với các lệnh xuất file in tự động chỉ bằng 1 phím tắt."
+        url: "/images/projects/automation-script.svg",
+        caption: "Actions panel và đoạn ExtendScript rút gọn: kiểm tra 300 DPI, ghép mockup 4 góc, đặt tên theo SKU."
       },
       {
-        url: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1400&q=80",
-        caption: "Quy trình batch process tự động ghép 50 mẫu áo lên 4 góc nhìn khác nhau trong vòng chưa đầy 5 phút."
+        url: "/images/projects/automation-batch.svg",
+        caption: "Trước và sau khi tự động hóa: tên file theo SKU và mockup 4 góc nhìn xuất cùng một lần chạy."
       }
     ],
-    overview: "Để giải quyết áp lực tiến độ khi phải sản xuất hàng trăm mẫu thiết kế mới mỗi tuần cho các chiến dịch bán hàng quốc tế, Tiểu Ngọc đã tự nghiên cứu và viết bộ kịch bản tự động hóa chuyên biệt cho Photoshop.",
+    overview: "Để giải quyết áp lực tiến độ khi khối lượng file in mỗi tuần ngày càng lớn cho các chiến dịch bán hàng quốc tế, Tiểu Ngọc đã tự nghiên cứu và viết bộ kịch bản tự động hóa chuyên biệt cho Photoshop.",
     challenge: "Các thao tác thủ công như đổi hệ màu, kiểm tra độ phân giải, tạo bóng đổ mockup, đổi tên file theo mã SKU tốn hàng giờ đồng hồ mỗi ngày và rất dễ xảy ra nhầm lẫn.",
     solution: "Viết kịch bản tự động hóa bằng Photoshop JavaScript (ExtendScript) kết hợp Actions: Tự động phát hiện kích thước canvas, căn giữa đồ họa, ghép vào khung áo thun và xuất đa định dạng (PNG trong suốt, JPEG mockup) theo đúng cây thư mục của nhà in.",
     results: [

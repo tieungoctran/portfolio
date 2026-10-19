@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { profileData } from '../data/profile';
-import { projectsData, type Project } from '../data/projects';
+import { projectsData, isReconstructedVisual, type Project } from '../data/projects';
 import { articlesData } from '../data/articles';
 import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
 import { Copy, Check } from 'lucide';
@@ -135,9 +135,6 @@ const SectionHead: React.FC<{ id: string; title: string; intro?: string; link?: 
   </Reveal>
 );
 
-// Stock covers stand in until Ngoc's own mockups arrive; label them so they are never read as her work
-const isPlaceholderImage = (url: string) => url.includes('images.unsplash.com');
-
 const ProofCard: React.FC<{ project: Project; lead?: boolean }> = ({ project, lead = false }) => (
   <Link
     to={`/projects/${project.slug}`}
@@ -158,7 +155,7 @@ const ProofCard: React.FC<{ project: Project; lead?: boolean }> = ({ project, le
           <RegistrationMark className="w-3 h-3" />
           {project.category} · {project.year}
         </span>
-        {isPlaceholderImage(project.coverImage) && <span>Ảnh minh họa tạm thời</span>}
+        {isReconstructedVisual(project.coverImage) && <span>Bản tái dựng minh họa · NDA</span>}
       </p>
     </div>
     <div className={`space-y-3 px-1 ${lead ? 'lg:col-span-5' : ''}`}>
