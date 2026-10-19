@@ -4,19 +4,19 @@ site:
   structure:
     - type: section
       key: section-1
-      title: Tieu Ngoc Docs
+      title: Giới thiệu Tiểu Ngọc
       path: tieu-ngoc-docs
-      description: ""
-      icon: cat
+      description: Trần Tiểu Ngọc — công việc thiết kế, kinh nghiệm và thông tin kết nối.
+      icon: user
       default: true
       children:
         - type: space
           key: space-1
-          title: Tieu Ngoc Docs
+          title: Giới thiệu Tiểu Ngọc
           path: tran-tieu-ngoc-design-and-ai-notebook
           default: true
           content:
-            directory: ./product-docs
+            directory: ./tieu-ngoc-docs/tran-tieu-ngoc-design-and-ai-notebook
             language: vi
     - type: section
       key: section-2
@@ -27,7 +27,7 @@ site:
       children:
         - type: space
           key: space-2
-          title: Tieu Ngoc Docs
+          title: Sổ tay của Ngọc
           path: product-docs
           default: true
           content:
