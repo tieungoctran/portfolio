@@ -4,6 +4,7 @@
 * [Nhật ký làm nghề](nhat-ky-lam-nghe/README.md)
   * [2026-10-19 | Redraw V6 và thiết kế GitBook](nhat-ky-lam-nghe/2026-10-19.md)
   * [Tháng 10/2026](nhat-ky-lam-nghe/2026-10.md)
+  * [2026-10-20 | Sắp xếp GitBook và chuẩn hóa nhật ký làm nghề](nhat-ky-lam-nghe/2026-10-20.md)
 * [Sổ tay thiết kế](so-tay-thiet-ke/README.md)
   * [Tư liệu dự án](so-tay-thiet-ke/du-an.md)
 * [AI trong công việc](ai-trong-cong-viec.md)
