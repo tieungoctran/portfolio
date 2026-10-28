@@ -203,13 +203,13 @@ export const Blog: React.FC = () => {
           <div className="px-5 sm:px-10 lg:px-14 py-10 sm:py-12 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
             <div className="space-y-2 max-w-2xl">
               <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-300">
-                OPEN TO WORK · SENIOR GRAPHIC DESIGNER (E-COMMERCE)
+                OPEN TO WORK · E-COMMERCE GRAPHIC DESIGNER
               </p>
               <h2 className="font-heading font-bold text-2xl sm:text-3xl leading-[1.2] sm:leading-[1.2]">
                 {keepCompounds('Thích cách mình tư duy sản phẩm và quy trình làm việc?')}
               </h2>
               <p className="text-sm leading-relaxed text-paper/80">
-                Mình đang mở cho cơ hội Full-time Senior E-commerce Graphic Designer tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ hoặc trao đổi về vị trí tuyển dụng của team bạn.
+                Mình đang mở cho cơ hội Full-time E-commerce Graphic Designer tại TP.HCM. Nhắn mình để nhận bản CV đầy đủ hoặc trao đổi về vị trí tuyển dụng của team bạn.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">

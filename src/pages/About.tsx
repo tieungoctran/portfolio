@@ -24,8 +24,8 @@ const swipeItem = 'snap-start shrink-0 w-[84%] sm:w-[60%]';
 
 export const About: React.FC = () => {
   usePageMeta(
-    'Giới thiệu Trần Tiểu Ngọc | Senior E-commerce Graphic Designer ứng dụng AI',
-    'Senior E-commerce Graphic Designer, 4+ năm tại Vani Ecommerce. Ad Creatives cho Meta & Google Ads, website & email, POD artwork, ứng dụng AI và tự động hóa Photoshop.'
+    'Giới thiệu Trần Tiểu Ngọc | E-commerce Graphic Designer ứng dụng AI',
+    'E-commerce Graphic Designer, 4+ năm tại Vani Ecommerce. Ad Creatives cho Meta & Google Ads, website & email, POD artwork, ứng dụng AI và tự động hóa Photoshop.'
   );
 
   return (
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
                 <div className="aspect-[4/5] overflow-hidden bg-paper dark:bg-editorial-cardDark border border-paper-line dark:border-editorial-borderDark">
                   <img
                     src={profileData.avatarUrl}
-                    alt="Chân dung Trần Tiểu Ngọc, Senior E-commerce Graphic Designer tại TP.HCM"
+                    alt="Chân dung Trần Tiểu Ngọc, E-commerce Graphic Designer tại TP.HCM"
                     className="w-full h-full object-cover"
                   />
                 </div>

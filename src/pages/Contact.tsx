@@ -25,7 +25,7 @@ const sectionShell = 'max-w-6xl mx-auto px-4 sm:px-6';
 export const Contact: React.FC = () => {
   usePageMeta(
     'Liên hệ tuyển dụng Graphic Designer E-commerce | Trần Tiểu Ngọc',
-    'Open to Work: Senior E-commerce Graphic Designer toàn thời gian tại TP.HCM. Gửi lời mời phỏng vấn, yêu cầu CV hoặc dự án thiết kế.'
+    'Open to Work: E-commerce Graphic Designer toàn thời gian tại TP.HCM. Gửi lời mời phỏng vấn, yêu cầu CV hoặc dự án thiết kế.'
   );
   const [formData, setFormData] = useState({
     name: '',
@@ -103,7 +103,7 @@ export const Contact: React.FC = () => {
             <div className="lg:col-span-5">
               <p className="text-[15px] leading-relaxed text-paper-text dark:text-editorial-textDark">
                 {keepCompounds(
-                  'Mình đang mở cho lời mời phỏng vấn vị trí Full-time Senior E-commerce Graphic Designer tại TP.HCM, cùng các dự án thiết kế sản phẩm in POD, banner quảng cáo, mockup 2D/3D và tự động hóa Photoshop.'
+                  'Mình đang mở cho lời mời phỏng vấn vị trí Full-time E-commerce Graphic Designer tại TP.HCM, cùng các dự án thiết kế sản phẩm in POD, banner quảng cáo, mockup 2D/3D và tự động hóa Photoshop.'
                 )}
               </p>
             </div>
@@ -334,7 +334,7 @@ export const Contact: React.FC = () => {
                       id="contact-subject"
                       type="text"
                       required
-                      placeholder="Ví dụ: Mời phỏng vấn Senior E-commerce Graphic Designer tại [Tên Công Ty]"
+                      placeholder="Ví dụ: Mời phỏng vấn E-commerce Graphic Designer tại [Tên Công Ty]"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-sm text-sm bg-paper-beige/50 dark:bg-editorial-surfaceDark border border-paper-line dark:border-editorial-borderDark text-ink dark:text-paper focus:border-brand-600 dark:focus:border-brand-300 outline-none transition-colors"

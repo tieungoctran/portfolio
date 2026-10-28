@@ -103,16 +103,16 @@ export const profileData: ProfileData = {
   name: "Trần Tiểu Ngọc",
   birthYear: 2000,
   zodiac: "Cung Song Ngư (Pisces) ♓",
-  role: "Senior E-commerce Graphic Designer",
+  role: "E-commerce Graphic Designer",
   summary: "Thiết kế hình ảnh sản phẩm và quảng cáo cho thương mại điện tử.",
   subRole: "Meta & Google Ad Creatives · Website & Email Design · POD Artwork",
   tagline: "Gu dẫn lối. AI tiếp sức. Thiết kế có hồn. Taste leads. AI empowers. Design has soul.",
   avatarUrl: "/images/avatar.jpg",
-  recruiterPitch: "Graphic Designer 4+ năm tại Vani Ecommerce (cross-border Print-on-Demand, US/EU), ứng tuyển vị trí Senior E-commerce Graphic Designer. Ứng dụng AI vào quy trình thiết kế hằng ngày. Thế mạnh: Ad Creatives cho Meta & Google Ads, thiết kế website & email, POD artwork. Nổi bật nhất: dự án D2C 3 thương hiệu, góp vào ~$25K lợi nhuận team Q4/2025. Nhận việc full-time tại TP.HCM sau 2–4 tuần.",
+  recruiterPitch: "Graphic Designer 4+ năm tại Vani Ecommerce (cross-border Print-on-Demand, US/EU), ứng tuyển vị trí E-commerce Graphic Designer. Ứng dụng AI vào quy trình thiết kế hằng ngày. Thế mạnh: Ad Creatives cho Meta & Google Ads, thiết kế website & email, POD artwork. Nổi bật nhất: dự án D2C 3 thương hiệu, góp vào ~$25K lợi nhuận team Q4/2025. Nhận việc full-time tại TP.HCM sau 2–4 tuần.",
   jobPreferences: {
     status: "Open to Work • Toàn thời gian tại TP. Hồ Chí Minh",
     targetRoles: [
-      "Senior E-commerce Graphic Designer",
+      "E-commerce Graphic Designer",
       "E-commerce Visual & Ad Creative Designer",
       "Brand & E-commerce Graphic Designer"
     ],

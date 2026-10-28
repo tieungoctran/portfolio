@@ -330,13 +330,13 @@ export const ProjectDetail: React.FC = () => {
           <div className="px-5 sm:px-10 lg:px-14 py-10 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-2.5">
               <p className="text-[11px] tabular-nums uppercase tracking-wider text-brand-300">
-                TUYỂN DỤNG &amp; HỢP TÁC · SENIOR GRAPHIC DESIGNER (E-COMMERCE)
+                TUYỂN DỤNG &amp; HỢP TÁC · E-COMMERCE GRAPHIC DESIGNER
               </p>
               <h2 className="font-heading font-bold text-2xl sm:text-3xl leading-[1.2] sm:leading-[1.2]">
                 {keepCompounds('Bạn cần người giải bài toán tương tự cho team E-commerce?')}
               </h2>
               <p className="text-sm leading-relaxed text-paper/80 max-w-[60ch]">
-                Mình đang tìm vị trí Full-time Senior E-commerce Graphic Designer tại TP.HCM. Hình ảnh trên đây là bản tái dựng vì hợp đồng bảo mật. Nhắn mình để nhận CV và bản case study chi tiết, phần còn lại mình kể kỹ hơn trong buổi phỏng vấn.
+                Mình đang tìm vị trí Full-time E-commerce Graphic Designer tại TP.HCM. Hình ảnh trên đây là bản tái dựng vì hợp đồng bảo mật. Nhắn mình để nhận CV và bản case study chi tiết, phần còn lại mình kể kỹ hơn trong buổi phỏng vấn.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">

@@ -1,15 +1,15 @@
 # 🎨 tieungoc.site — Trần Tiểu Ngọc Portfolio & Personal Branding
 
-Website portfolio chính thức và không gian trưng bày tác phẩm thiết kế của **Trần Tiểu Ngọc** — **Senior Graphic Designer (E-commerce)** tại TP. Hồ Chí Minh.
+Website portfolio chính thức và không gian trưng bày tác phẩm thiết kế của **Trần Tiểu Ngọc** - **E-commerce Graphic Designer** tại TP. Hồ Chí Minh.
 
 ---
 
 ## 🌟 Giới Thiệu Chủ Nhân
 - **Chủ sở hữu:** Trần Tiểu Ngọc (Nữ, sinh năm 2000, cung Song Ngư ♓)
-- **Công ty:** Vani Ecommerce (Tháng 8/2022 — Hiện tại, 4+ năm kinh nghiệm)
-- **Chuyên môn cốt lõi:** E-commerce Design: sản phẩm in ấn (POD), banner quảng cáo Facebook & Google Ads, banner website & email Klaviyo, mockup 2D/3D, tự động hóa Photoshop. Nhận diện thương hiệu là kỹ năng bổ trợ.
+- **Công ty:** Vani Ecommerce (Tháng 8/2022 - Hiện tại, 4+ năm kinh nghiệm)
+- **Chuyên môn cốt lõi:** E-commerce Design: Ad Creatives cho Meta & Google Ads, banner website & email Klaviyo, sản phẩm in ấn (POD), mockup 2D/3D, tự động hóa Photoshop. Nhận diện thương hiệu là kỹ năng bổ trợ.
 - **Thành tích nổi bật:**
-  - 5,000+ sản phẩm in ấn (POD) cho niche Anime, Racing, Sport, Music, phục vụ thị trường Mỹ & Châu Âu.
+  - 6,500+ thiết kế trong 4+ năm (file in sản phẩm POD, Ad Creatives, banner, mockup) cho niche Anime, Racing, Sport, Music, phục vụ thị trường Mỹ & Châu Âu.
   - Phụ trách toàn bộ thiết kế Dự án D2C 3 thương hiệu E-commerce (Q3–Q4/2025), đóng góp ~$25,000 USD lợi nhuận team D2C trong Q4/2025.
   - Tự lập trình Photoshop Actions & JS Scripts cắt giảm ~40% thời gian sản xuất.
   - Quy trình "Con người dẫn dắt, AI tăng tốc" (Adobe Firefly, ChatGPT Image, Claude, Gemini, Generative Fill) tăng tốc lên ý tưởng gấp 3 lần, hoàn thiện thủ công bằng Wacom.

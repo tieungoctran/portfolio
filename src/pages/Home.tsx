@@ -187,8 +187,8 @@ const ProofCard: React.FC<{ project: Project; lead?: boolean }> = ({ project, le
 
 export const Home: React.FC = () => {
   usePageMeta(
-    'Trần Tiểu Ngọc | Senior E-commerce Graphic Designer, TP.HCM',
-    'Trần Tiểu Ngọc, Senior E-commerce Graphic Designer tại TP.HCM. Ad Creatives cho Meta (Facebook) & Google Ads, website & email, POD artwork, 6,500+ thiết kế trong 4+ năm.'
+    'Trần Tiểu Ngọc | E-commerce Graphic Designer, TP.HCM',
+    'Trần Tiểu Ngọc, E-commerce Graphic Designer tại TP.HCM. Ad Creatives cho Meta (Facebook) & Google Ads, website & email, POD artwork, 6,500+ thiết kế trong 4+ năm.'
   );
   const featuredProjects = projectsData.filter((p) => p.featured);
   const [leadProject, ...otherProjects] = featuredProjects;
